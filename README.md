@@ -92,23 +92,10 @@ python main.py
 ### Scrapers
 
 #### `scraping/all/main.py`
-- Fetches all guideline URLs from NHG sitemap
-- Scrapes full content from each guideline
-- Filters by heading names (default: "diagnostiek", "beleid")
-- **Features**:
-  - Automatic UI text removal ("Volledige tekst", "Kopieer ankerlink", etc.)
-  - Duplicate content removal
-  - Link conversion to format: "text (URL)"
-  - h2/h3 heading hierarchy preservation
 
 #### `scraping/10_guidelines/main.py`
-- Scrapes 10 specific predefined NHG guidelines
-- Same content cleaning as all-scraper
-- Faster execution for testing
 
 #### `scraping/astma/main.py`
-- Example single-guideline scraper for "Astma bij volwassenen"
-- Can be adapted for other guidelines
 
 ### Benchmark
 

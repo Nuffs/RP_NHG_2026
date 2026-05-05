@@ -99,6 +99,14 @@ python main.py
 
 ### Benchmark
 
+## RAGCHECKER
+
+https://github.com/amazon-science/RAGChecker/blob/main/tutorial/ragchecker_tutorial_en.md
+
+To be able to use the ragchecker first download: 
+pip install ragchecker
+python -m spacy download en_core_web_sm
+
 ## Output Files
 
 All scraped data is saved to the `data/` folder as JSONL files.

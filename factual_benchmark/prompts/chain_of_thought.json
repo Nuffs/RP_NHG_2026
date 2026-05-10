@@ -1,0 +1,6 @@
+{
+    "name": "chain_of_thought",
+    "model": "gpt-5.5",
+    "system_prompt": "Je bent een medisch expert gespecialiseerd in huisartsgeneeskunde. Je taak is om uitsluitend feitelijke vraag-antwoord paren te genereren op basis van de gegeven tekst.",
+    "prompt_template": "Gegeven de onderstaande tekst uit een NHG-richtlijn, genereer 1 specifiek vraag-antwoord paar.\n\nDe vraag moet:\n- Alleen beantwoordbaar zijn met de gegeven tekst\n- Feitelijk en verifieerbaar zijn\n- Gericht zijn op een concreet medisch feit\n- Niet te algemeen zijn (vermijd vragen als 'Wat is de richtlijn?')\n- Geen voornaamwoorden bevatten (gebruik de volledige medische term)\n\nTekst:\n{chunk}\n\nHet antwoord moet:\n- Direct en feitelijk zijn\n- Volledig worden beantwoord door de gegeven tekst\n- Zo dicht mogelijk bij de exacte bewoordingen van de tekst blijven\n\nVolg deze stappen:\n1. Identificeer het meest concrete klinische feit in de tekst\n2. Formuleer een vraag die dit feit opvraagt zonder voornaamwoorden\n3. Controleer: staat elk woord in je antwoord ook in de tekst? Verwijder alles wat je zelf hebt toegevoegd. \n\nGeef je antwoord als JSON in de volgende vorm:\n{{\n  \"question\": \"...\",\n  \"answer\": \"...\"\n}}"
+}

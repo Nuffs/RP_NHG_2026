@@ -23,7 +23,7 @@ Rules:
 4. Write realistic clinical questions about diagnosis, beleid, behandeling, verwijzing, follow‑up.
 5. Use natural Dutch clinical language.
 6. Do NOT invent facts not present in the text.
-7. For each question, provide a short, strictly text‑grounded answer.
+7. For each question provide a strictly text‑grounded answer.
 
 Output format (strict JSON)
 Code

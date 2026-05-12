@@ -84,6 +84,7 @@ ipython_config.py
 
 # pipenv
 Pipfile.lock
+.env
 
 # PEP 582
 __pypackages__/

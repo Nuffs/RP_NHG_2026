@@ -17,3 +17,5 @@ evaluator = RAGChecker(
 # generator_metrics, all_metrics
 evaluator.evaluate(rag_results, all_metrics)
 print(rag_results)
+
+# I directly copied this from the RAGChecker website, might need to rewrite this!!

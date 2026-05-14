@@ -8,4 +8,7 @@ requests==2.33.1
 selenium==4.43.0
 spacy==3.8.14
 webdriver-manager==4.0.2
+google-genai>=0.1.0
+numpy>=1.24.0
+tiktoken>=0.5.0
 

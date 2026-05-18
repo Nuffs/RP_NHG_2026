@@ -8,6 +8,22 @@ from pathlib import Path
 nlp = spacy.load("nl_core_news_sm")
 
 def chunck_text_on_sentences(text, max_tokens=400, overlap_sentences=1):
+    """
+    Chunk text into sentence-based segments with optional overlap.
+    
+    Args:
+        text (str): The input text.
+        max_tokens (int, optional): Maximum number of tokens (words) per chunk. Defaults to 400.
+        overlap_sentences (int, optional): Number of sentences to overlap between chunks. Defaults to 1.
+    
+    Returns:
+        list: List of text chunks (strings), each approximately max_tokens words long.
+    
+    Example:
+        >>> text = "First sentence. Second sentence. Third sentence."
+        >>> chunks = chunck_text_on_sentences(text, max_tokens=10, overlap_sentences=1)
+        >>> len(chunks)  # Number of chunks created
+    """
     doc = nlp(text)
     sentences = [sent.text.strip() for sent in doc.sents]
     
@@ -36,6 +52,25 @@ def chunck_text_on_sentences(text, max_tokens=400, overlap_sentences=1):
     return chunks
 
 def chunk_document(raw_chunk, max_tokens=400):
+    """
+    Rechunk a raw document chunk using sentence-based segmentation.
+    
+    Args:
+        raw_chunk (dict): Input chunk dictionary with keys:
+            - 'text' (str): The text content to rechunk
+            - 'doc_id' (str): Document identifier
+            - 'chunk_id' (str): Original chunk identifier
+            - 'section_path' (list): Hierarchy path of sections
+        max_tokens (int, optional): Maximum tokens per rechunked segment. Defaults to 400.
+    
+    Returns:
+        list: List of rechunked item dictionaries with keys:
+            - 'doc_id' (str): Same as input
+            - 'chunk_id' (str): Updated with _XXXX suffix indicating position
+            - 'section_path' (list): Same as input
+            - 'text' (str): Rechunked text segment
+            - 'tokens' (int): Word count of this segment
+    """
     text = raw_chunk["text"]
     sentences = chunck_text_on_sentences(text, max_tokens=max_tokens)
     
@@ -50,7 +85,25 @@ def chunk_document(raw_chunk, max_tokens=400):
         })
     return chunks
 
-def sample_chunks_per_guideline(all_chunks, n=3, seed=42):
+def sample_chunks_per_guideline(all_chunks, n=20):
+    """
+    Sample the n longest chunks (by token count) from each guideline.
+    """
+    chunks_by_doc = {}
+    for chunk in all_chunks:
+        doc_id = chunk["doc_id"]
+        if doc_id not in chunks_by_doc:
+            chunks_by_doc[doc_id] = []
+        chunks_by_doc[doc_id].append(chunk)
+
+    sampled_chunks = []
+    for doc_id, chunks in chunks_by_doc.items():
+        sorted_chunks = sorted(chunks, key=lambda x: x["tokens"], reverse=True)
+        sampled_chunks.extend(sorted_chunks[:n])
+
+    return sampled_chunks
+
+def sample_chunks_per_guideline_prompt_experiment(all_chunks, n=3, seed=42):
     random.seed(seed)
     chunks_by_doc = {}
     
@@ -77,8 +130,6 @@ if __name__ == "__main__":
         all_chunks.extend(chunks)
     
     sampled = sample_chunks_per_guideline(all_chunks)
-    
-    print(f"Sampled {len(sampled)} chunks across guidelines.")
     
     with open("data/benchmark_chunks.jsonl", "w", encoding="utf-8") as f:
         for item in sampled:

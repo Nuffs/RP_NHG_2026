@@ -1,23 +1,10 @@
 {
   "results": [
     {
-      "query_id": "227d291d",
-      "query": "Meneer Jansen, 67 jaar, komt op uw spreekuur met acute kortademigheid die sinds enkele uren is verergerd. Hij heeft een voorgeschiedenis van COPD en rookt nog steeds 5 sigaretten per dag. Bij lichamelijk onderzoek constateert u een ademfrequentie van 28/min, gebruik van hulpademhalingsspieren en een verlengd expirium. U overweegt de ernst van zijn aanval. Wat is de meest geschikte maat om de ernst van zijn dyspneu te objectiveren?",
-      "gt_answer": "Saturatiemeting is informatief om de ernst van aanwezige dyspneuklachten te objectiveren, ondanks dat het geen astma kan aantonen.",
-      "source_span": "Saturatiebepaling is daarentegen informatief om de ernst van aanwezige dyspneuklachten te objectiveren.",
-      "doc_id": "astma_bij_volwassenen",
-      "chunk_id": "astma_bij_volwassenen_0002",
-      "section_path": [
-        "Richtlijnen diagnostiek",
-        "Lichamelijk onderzoek"
-      ],
-      "strategy": "few_shot"
-    },
-    {
-      "query_id": "3d2daf22",
-      "query": "Meneer Jansen, 38 jaar, komt op uw spreekuur met klachten van piepen en kortademigheid, vooral 's nachts en in de vroege ochtend. Hij gebruikt al een jaar een inhalator met salbutamol, maar merkt dat zijn klachten de laatste tijd niet goed onder controle zijn. In de anamnese geeft hij aan dat hij zich zorgen maakt over allergieën, aangezien zijn klachten verergeren in het voorjaar. U overweegt de mogelijkheid van astma. Welk aanvullend onderzoek is geïndiceerd voordat u meneer Jansen verwijst naar de longarts?",
-      "gt_answer": "Een screeningstest op inhalatieallergenen in het bloed is geïndiceerd, aangezien meneer Jansen onvoldoende astmacontrole heeft ondanks medicatie. Dit is noodzakelijk voor een goed beleid vóór verwijzing naar de longarts.",
-      "source_span": "Een screeningstest is daarmee altijd geïndiceerd vóór verwijzing een longarts.",
+      "query_id": "c40fc5f9",
+      "query": "De heer Jansen, 45 jaar, komt op het spreekuur met aanhoudende hoest en piepende ademhaling gedurende de afgelopen drie maanden. Hij is een actieve roker en heeft een voorgeschiedenis van allergische rhinitis. Ondanks het gebruik van inhalatiecorticosteroïden blijft zijn astma niet goed onder controle. U overweegt een allergieonderzoek. Wanneer is een screeningstest op inhalatieallergenen geïndiceerd?",
+      "gt_answer": "Een screeningstest is geïndiceerd bij patiënten met onvoldoende astmacontrole ondanks medicatie en moet altijd worden overwogen vóór verwijzing naar een longarts.",
+      "source_span": "Verricht een screeningstest bij patiënten met onvoldoende astmacontrole ondanks medicatie. Een screeningstest is daarmee altijd geïndiceerd vóór verwijzing een longarts.",
       "doc_id": "astma_bij_volwassenen",
       "chunk_id": "astma_bij_volwassenen_0003",
       "section_path": [
@@ -27,9 +14,9 @@
       "strategy": "few_shot"
     },
     {
-      "query_id": "d461be5d",
-      "query": "Jongen van 16 jaar, Tom, komt bij u op het spreekuur vanwege aanvalsgewijze kortademigheid en piepen bij inspanning, sinds ongeveer een jaar. Hij heeft geen significante medische voorgeschiedenis en gebruikt geen medicatie. Hij sport regelmatig, maar heeft het idee dat zijn klachten verergeren tijdens het sporten. Bij lichamelijk onderzoek is de longfunctie normaal en de longauscultatie is vrij. Tom maakt zich zorgen dat hij misschien astma heeft. Wat is de meest waarschijnlijke diagnose?",
-      "gt_answer": "Astma is onwaarschijnlijk omdat bij spirometrie geen obstructie en reversibiliteit aanwezig zijn, ondanks de aanvalsgewijze dyspneu en piepen.",
+      "query_id": "9545af87",
+      "query": "Jongen van 15 jaar, Tom, komt op uw spreekuur met een geschiedenis van aanvalsgewijze dyspneu en expiratoir piepen, vooral na inspanning. Hij sport regelmatig en heeft daarnaast geen significante voorgeschiedenis. Bij lichamelijk onderzoek zijn zijn longen helder, maar bij spirometrie blijkt hij geen obstructie en geen reversibiliteit te vertonen. Wat is de meest waarschijnlijke diagnose?",
+      "gt_answer": "Astma is onwaarschijnlijk als ten tijde van dyspneuklachten bij spirometrie geen obstructie en reversibiliteit aanwezig zijn.",
       "source_span": "Astma is onwaarschijnlijk als ten tijde van dyspneuklachten bij spirometrie geen obstructie en reversibiliteit aanwezig zijn.",
       "doc_id": "astma_bij_volwassenen",
       "chunk_id": "astma_bij_volwassenen_0004",
@@ -40,9 +27,22 @@
       "strategy": "few_shot"
     },
     {
-      "query_id": "6a1f6a00",
-      "query": "Meneer Jansen, 45 jaar, komt op uw spreekuur omdat hij de laatste maanden steeds vaker last heeft van astmaklachten, vooral 's nachts en bij inspanning. Hij gebruikt momenteel een inhalator met een luchtwegverwijder, maar heeft het gevoel dat zijn klachten toenemen. U overweegt het opstellen van een individueel zorgplan. Wat is het belangrijkste doel van het individueel zorgplan voor meneer Jansen in deze situatie?",
-      "gt_answer": "Het individu is verantwoordelijk voor zijn behandeling, en het zorgplan is vooral zinvol bij patiënten met onvoldoende astmacontrole om persoonlijke behandeldoelen vast te leggen en zelfmanagement te bevorderen.",
+      "query_id": "e0b942b4",
+      "query": "Meneer Jansen, 45 jaar, komt op uw spreekuur met klachten van kortademigheid, vooral bij inspanning, en piepen. Hij rookt al 20 jaar een pakje per dag en heeft een geschiedenis van allergieën, waaronder een allergie voor huisdieren. U vermoedt dat zijn klachten verband houden met zijn astma. Welk advies geeft u meneer Jansen met betrekking tot het verminderen van zijn astmaklachten?",
+      "gt_answer": "Geef rokers een krachtig ‘stoppen met roken’-advies en adviseer een gestructureerde aanpak, gevolgd door intensieve begeleiding door bijvoorbeeld een deskundige praktijkondersteuner.",
+      "source_span": "Geef rokers een krachtig ‘stoppen met roken’-advies en adviseer een gestructureerde aanpak, gevolgd door intensieve begeleiding door bijvoorbeeld een deskundige praktijkondersteuner.",
+      "doc_id": "astma_bij_volwassenen",
+      "chunk_id": "astma_bij_volwassenen_0006",
+      "section_path": [
+        "Richtlijnen beleid",
+        "Voorlichting en niet-medicamenteuze adviezen"
+      ],
+      "strategy": "few_shot"
+    },
+    {
+      "query_id": "fa5ea5b2",
+      "query": "De heer Jansen, 45 jaar, komt op uw spreekuur met klachten van toenemende kortademigheid en hoesten. Hij heeft sinds zijn kindertijd astma, maar voelt dat zijn klachten de laatste maanden verergeren. Hij is niet consistent met zijn medicatie en heeft geen individueel zorgplan. U overweegt om hem beter te begeleiden in zijn zelfmanagement. Wat is de meest aangewezen aanpak om de heer Jansen te ondersteunen in zijn astmabehandeling?",
+      "gt_answer": "Het is belangrijk om een individueel zorgplan op te stellen waarin persoonlijke behandeldoelen en afspraken over medicatiegebruik worden vastgelegd, vooral gezien zijn blijvend onvoldoende astmacontrole.",
       "source_span": "Afspraken over persoonsgerichte zorg zijn vooral – maar niet uitsluitend – zinvol bij patiënten met blijvend onvoldoende astmacontrole.",
       "doc_id": "astma_bij_volwassenen",
       "chunk_id": "astma_bij_volwassenen_0007",
@@ -53,9 +53,9 @@
       "strategy": "few_shot"
     },
     {
-      "query_id": "3dd8f6ca",
-      "query": "De heer Jansen, 45 jaar, komt op uw spreekuur met aanhoudende hoest en kortademigheid die hij al zes weken ervaart. Hij gebruikt drie keer per week een salbutamol-inhalator voor zijn klachten. Hij rookt niet en heeft een geschiedenis van allergieën, maar geen eerdere astma- of COPD-diagnose. Bij lichamelijk onderzoek zijn de longen helder, maar hij heeft frequente piepende ademhaling bij expiratie. U overweegt de diagnose astma en denkt na over het behandelbeleid. Welk beleid is het meest aangewezen gezien het frequent gebruik van de SABA?",
-      "gt_answer": "U dient de medicatie aan te passen volgens het stappenplan en een onderhoudsbehandeling met inhalatiecorticosteroïden (ICS) te overwegen, aangezien gebruik van SABA > 2x/week wijst op onvoldoende astmacontrole.",
+      "query_id": "cd73c816",
+      "query": "Meneer Jansen, 45 jaar, komt op uw spreekuur met een geschiedenis van astma. Hij gebruikt regelmatig salbutamol (SABA) voor acute klachten, maar de afgelopen maanden heeft hij meer dan 2 keer per week SABA gebruikt. Hij meldt dat zijn klachten toenemen, vooral 's nachts en tijdens inspanning. Hij heeft een rookverleden van 15 jaar, maar is sinds 2 jaar gestopt. U overweegt zijn behandelplan aan te passen. Wat is de meest aangewezen stap in het beleid gezien zijn toenemende klachten en frequent gebruik van SABA?",
+      "gt_answer": "Bij gebruik van SABA > 2 keer per week wijst op onvoldoende astmacontrole en moet het medicatiebeleid worden aangepast volgens het stappenplan. Een volgende stap in het beleid is het overwegen van een onderhoudsbehandeling met ICS of ICS-formoterol zo nodig.",
       "source_span": "Gebruik > 2/week wijst op onvoldoende astmacontrole.",
       "doc_id": "astma_bij_volwassenen",
       "chunk_id": "astma_bij_volwassenen_0008",
@@ -66,10 +66,10 @@
       "strategy": "few_shot"
     },
     {
-      "query_id": "885707d7",
-      "query": "Mevrouw Jansen, 45 jaar, komt op uw spreekuur met een recente toename van astmaklachten, waaronder piepende ademhaling en hoesten, die zij al enkele weken ervaart. Ze gebruikt dagelijks een inhalator met een bèta-2-agonist, maar geeft aan dat de klachten ondanks het gebruik niet verminderen. Ze heeft geen significante voorgeschiedenis en gebruikt geen andere medicatie. Bij lichamelijk onderzoek zijn er geen afwijkingen behalve een licht verhoogde hartslag. U overweegt een behandeling met een bètablokker voor haar hypertensie. Is het veilig om een bèta-1-selectieve bètablokker voor te schrijven in deze situatie?",
-      "gt_answer": "Bèta-1-selectieve bètablokkers veroorzaken op korte termijn geen respiratoire bijwerkingen bij patiënten met licht of matig ernstig astma. Daarom kan het veilig zijn om een bèta-1-selectieve bètablokker voor te schrijven.",
-      "source_span": "Bij licht of matig ernstig astma veroorzaken bèta-1-selectieve bètablokkers op korte termijn geen respiratoire bijwerkingen.",
+      "query_id": "54acc9ff",
+      "query": "De heer Jansen, 45 jaar, komt op uw spreekuur met een recente toename van astmasymptomen, waaronder hoesten en piepen, ondanks zijn onderhoudsbehandeling met inhalatiecorticosteroïden. Hij vraagt of hij ipratropium kan gebruiken om zijn klachten 'zo nodig' te verlichten. Wat is uw advies?",
+      "gt_answer": "Adviseer geen SAMA bij de behandeling van volwassen patiënten met astma voor gebruik zo nodig of als onderhoudsbehandeling. Ipratropium heeft geen plaats in de standaardbehandeling van volwassen patiënten met astma.",
+      "source_span": "Adviseer geen SAMA bij de behandeling van volwassen patiënten met astma voor gebruik zo nodig of als onderhoudsbehandeling.",
       "doc_id": "astma_bij_volwassenen",
       "chunk_id": "astma_bij_volwassenen_0009",
       "section_path": [
@@ -82,19 +82,35 @@
   "strategy_comparison": [
     {
       "strategy": "zero_shot",
-      "n_generated": 5,
-      "n_failed_chunks": 5,
+      "n_generated": 8,
+      "n_failed_chunks": 2,
       "round_trip_hit_rate": 0.0,
-      "bertscore_recall_vs_source": 0.5785,
-      "combined_score": 0.2892
+      "bertscore_recall_vs_source": 0.5601,
+      "combined_score": 0.2801
     },
     {
       "strategy": "few_shot",
       "n_generated": 6,
       "n_failed_chunks": 4,
       "round_trip_hit_rate": 0.0,
-      "bertscore_recall_vs_source": 0.5852,
-      "combined_score": 0.2926
+      "bertscore_recall_vs_source": 0.5896,
+      "combined_score": 0.2948
+    },
+    {
+      "strategy": "cot",
+      "n_generated": 7,
+      "n_failed_chunks": 3,
+      "round_trip_hit_rate": 0.0,
+      "bertscore_recall_vs_source": 0.5797,
+      "combined_score": 0.2898
+    },
+    {
+      "strategy": "self_critique",
+      "n_generated": 7,
+      "n_failed_chunks": 3,
+      "round_trip_hit_rate": 0.0,
+      "bertscore_recall_vs_source": 0.5775,
+      "combined_score": 0.2888
     }
   ]
 }

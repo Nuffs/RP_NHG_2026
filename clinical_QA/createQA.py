@@ -72,6 +72,9 @@ Sluit af met één concrete klinische vraag over:
 5. De casus moet de arts dwingen tot redeneren, niet tot het opzoeken van een definitie.
 6. Schrijf in natuurlijk Nederlands, zoals een ervaren huisarts zou communiceren.
 7. Verzin GEEN feiten die niet in de tekst staan.
+8. source_span MOET een exacte kopie zijn uit de gegeven tekst.
+9. Je mag de tekst NIET parafraseren.
+10. Kies alleen een letterlijke zin of zinsdeel uit de bron.
 
 ## Regels antwoord
 1. Het antwoord (gt_answer) bestaat uit maximaal 2-3 zinnen.
@@ -110,6 +113,20 @@ Genereer nu een vergelijkbare KFQ op basis van de onderstaande tekst.
 
 SYSTEM_PROMPT_ZERO_SHOT = SYSTEM_PROMPT_BASE
 SYSTEM_PROMPT_FEW_SHOT = SYSTEM_PROMPT_BASE + FEW_SHOT_EXAMPLE
+SYSTEM_PROMPT_COT = SYSTEM_PROMPT_BASE + """
+
+## INTERNE REDENEERSTAPPEN (niet tonen):
+1. Zoek het beslismoment
+2. Selecteer relevante klinische factoren
+3. Kies relevante zin uit de tekst (letterlijk)
+4. Bouw KFQ rond deze exacte zin
+
+## OUTPUT REGELS (strikt):
+- Alleen JSON output
+- source_span = exact citaat uit brontekst
+- geen uitleg, geen tussenstappen
+"""
+
 
 # ---------------------------------------------------------------------------
 # EMBEDDING + RETRIEVAL (mirrors query.py, no import dependency)
@@ -160,15 +177,81 @@ def run_query(prompt: str, embeddings_file: str, top_k: int = TOP_K) -> list[str
 def strip_markdown_fences(text: str) -> str:
     return re.sub(r"```(?:json)?\s*(.*?)\s*```", r"\1", text, flags=re.DOTALL).strip()
 
+def critique_and_refine(chunk: dict, draft_qa: dict) -> dict:
+    """
+    Second-pass refinement: model critiques and improves its own KFQ.
+    """
+
+    critique_prompt = f"""
+    Je beoordeelt een KFQ.
+
+    ## BRONTEKST:
+    \"\"\"{chunk['text']}\"\"\"
+
+    ## KFQ:
+    {json.dumps(draft_qa, ensure_ascii=False)}
+
+    ## CRITICAL RULE:
+    Je mag GEEN inhoud uit de bron herschrijven.
+
+    Je mag alleen:
+    - formulering verbeteren
+    - structuur verbeteren
+    - maar source_span MOET EXACT ONGEWIJZIGD blijven uit de bron
+
+    ## OUTPUT:
+    Return exact JSON:
+    [
+      {{
+        "query": "...",
+        "gt_answer": "...",
+        "source_span": "EXACTE TEKST UIT BRON (niet wijzigen!)"
+      }}
+    ]
+    """
+
+    response = client.chat.completions.create(
+        model=MODEL,
+        messages=[
+            {"role": "system", "content": "Je bent een kritische medische onderwijsassistent."},
+            {"role": "user", "content": critique_prompt},
+        ],
+        temperature=0.3,
+    )
+
+    raw = strip_markdown_fences(response.choices[0].message.content)
+
+    try:
+        return json.loads(raw)[0]
+    except:
+        return draft_qa  # fallback
 
 def validate_qa(qa: dict, source_text: str) -> bool:
     if not all(k in qa for k in ("query", "gt_answer", "source_span")):
         return False
-    if qa["source_span"] not in source_text:
+
+    def normalize(text):
+        return " ".join(text.lower().split())
+
+    if normalize(qa["source_span"]) not in normalize(source_text):
         print(f"    ⚠ source_span not found in chunk: {qa['source_span'][:60]}...")
         return False
     return True
 
+def generate_questions_with_strategy(chunk, system_prompt, strategy_name):
+    if strategy_name == "self_critique":
+        # Step 1: draft
+        drafts = generate_questions(chunk, SYSTEM_PROMPT_BASE)
+
+        refined = []
+        for draft in drafts:
+            refined_qa = critique_and_refine(chunk, draft)
+            refined.append(refined_qa)
+
+        return refined
+
+    else:
+        return generate_questions(chunk, system_prompt)
 
 def generate_questions(chunk: dict, system_prompt: str, n: int = N_QUESTIONS) -> list[dict]:
     text = chunk["text"]
@@ -264,7 +347,7 @@ def run_strategy(
     for i, chunk in enumerate(chunks[:limit]):
         print(
             f"[{i + 1}/{limit}] chunk_id={chunk.get('chunk_id', '?')} — {chunk.get('section_path', '?')}")
-        qa_pairs = generate_questions(chunk, system_prompt)
+        qa_pairs = generate_questions_with_strategy(chunk, system_prompt, strategy_name)
 
         if not qa_pairs:
             failed.append(chunk.get("chunk_id", f"index_{i}"))
@@ -318,6 +401,8 @@ def main():
     strategies = [
         ("zero_shot", SYSTEM_PROMPT_ZERO_SHOT),
         ("few_shot", SYSTEM_PROMPT_FEW_SHOT),
+        ("cot", SYSTEM_PROMPT_COT),
+        ("self_critique", SYSTEM_PROMPT_BASE),
     ]
 
     all_metrics = []

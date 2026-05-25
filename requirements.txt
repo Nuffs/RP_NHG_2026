@@ -3,7 +3,7 @@ lxml==6.1.0
 openai~=2.34.0
 OpenAI
 python-dotenv==1.2.2
-ragchecker
+ragchecker~=0.1.9
 requests==2.33.1
 selenium==4.43.0
 spacy==3.8.14
@@ -15,3 +15,7 @@ tiktoken>=0.5.0
 
 anthropic~=0.102.0
 query~=0.1.4
+transformers~=4.57.6
+torch~=2.12.0
+pandas~=2.3.0
+statsmodels~=0.14.6

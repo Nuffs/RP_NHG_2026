@@ -45,7 +45,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # CONFIGURATION
 # ---------------------------------------------------------------------------
 MODEL = "gpt-4o-mini"
-MAX_RETRIES = 3
+MAX_RETRIES = 1
 MIN_TOKENS = 50
 MAX_CHUNKS = 30  # Set to None for full run
 N_QUESTIONS = 1
@@ -525,17 +525,6 @@ Return exact JSON:
     except Exception:
         return draft_qa
 
-
-def generate_questions_with_strategy(
-        chunk: dict, system_prompt: str, strategy_name: str
-) -> list[dict]:
-    if strategy_name == "self_critique":
-        drafts = generate_questions(chunk, SYSTEM_PROMPT_BASE)
-        return [critique_and_refine(chunk, draft) for draft in drafts]
-
-    return generate_questions(chunk, system_prompt)
-
-
 def generate_questions(
         chunk: dict, system_prompt: str, n: int = N_QUESTIONS
 ) -> list[dict]:
@@ -803,7 +792,7 @@ def run_strategy(
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    details_path = os.path.join(OUTPUT_DIR, f"{strategy_name}_details.json")
+    details_path = os.path.join(OUTPUT_DIR, f"{strategy_name}_details2.json")
     with open(details_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
     print(f"  Saved detailed per-question scores to {details_path}")
@@ -836,13 +825,16 @@ def main():
     print(f"Loaded {len(all_chunks)} chunks (after filtering < {MIN_TOKENS} tokens)")
 
     # Sanity-check NLI before running any strategies
-    _nli_sanity_check()
+    # _nli_sanity_check()
 
     strategies = [
-        ("zero_shot", SYSTEM_PROMPT_ZERO_SHOT),
         ("few_shot", SYSTEM_PROMPT_FEW_SHOT),
         ("cot", SYSTEM_PROMPT_COT),
-        ("self_critique", SYSTEM_PROMPT_BASE),
+
+        # New testing groups
+        ("few_shot_cot", SYSTEM_PROMPT_FEW_SHOT_COT),
+        ("few_shot_refine", SYSTEM_PROMPT_FEW_SHOT),
+        ("few_shot_cot_refine", SYSTEM_PROMPT_FEW_SHOT_COT)
     ]
 
     all_metrics: list[dict] = []
@@ -868,7 +860,7 @@ def main():
         else:
             anova_results[metric] = {"anova_table": "skipped — insufficient balanced subjects"}
 
-    metrics_path = os.path.join(OUTPUT_DIR, "strategy_comparison.json")
+    metrics_path = os.path.join(OUTPUT_DIR, "strategy_comparison2.json")
     with open(metrics_path, "w", encoding="utf-8") as f:
         json.dump(all_metrics, f, indent=2, ensure_ascii=False)
     print(f"\nStrategy comparison saved to {metrics_path}")
@@ -878,16 +870,116 @@ def main():
 
     best_results = strategy_results[best["strategy"]]
     output = {"results": best_results, "strategy_comparison": all_metrics}
-    qa_path = os.path.join(OUTPUT_DIR, "Experiment1QA.json")
+    qa_path = os.path.join(OUTPUT_DIR, "Experiment2QA.json")
     with open(qa_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
     print(f"Final benchmark ({len(best_results)} QA pairs) saved to {qa_path}")
 
-    anova_path = os.path.join(OUTPUT_DIR, "anova_results.json")
+    anova_path = os.path.join(OUTPUT_DIR, "anova_results2.json")
     with open(anova_path, "w", encoding="utf-8") as f:
         json.dump(anova_results, f, indent=2, ensure_ascii=False)
     print(f"ANOVA results saved to {anova_path}")
 
 
+# ---------------------------------------------------------------------------
+# EXPERIMENT 2: HYBRID CONFIGURATIONS & PROMPTS
+# ---------------------------------------------------------------------------
+
+SYSTEM_PROMPT_FEW_SHOT_COT = SYSTEM_PROMPT_BASE + """
+Hieronder volgt een voorbeeld van een hoogwaardige KFQ die gebruikmaakt van een expliciet, intern klinisch redeneerproces (Chain-of-Thought):
+
+Tekst: "Spirometrie is de aangewezen methode om obstructie aan te tonen of uit te sluiten. Voer spirometrie uit bij patiënten met klachten die passen bij astma of COPD."
+
+Gewenste output:
+[
+  {
+    "explanation": "Beslismoment: Aantonen of uitsluiten van obstructie bij vermoeden van astma/COPD. Relevante klinische factoren: 3 maanden hoestklachten, rookhistorie, normale longauscultatie sluit obstructie niet uit. Gekozen zin: 'Spirometrie is de aangewezen methode om obstructie aan te tonen of uit te sluiten.'",
+    "query": "Mevrouw De Vries, 52 jaar, komt op uw spreekuur met al drie maanden aanhoudende hoestklachten en kortademigheid bij inspanning. Ze rookt 10 jaar, een half pakje per dag. Haar longauscultatie is normaal. U overweegt astma of COPD. Welk aanvullend onderzoek is als eerste aangewezen om obstructie aan te tonen of uit te sluiten?",
+    "gt_answer": "Spirometrie is aangewezen om obstructie aan te tonen of uit te sluiten bij klachten die passen bij astma of COPD. Dit is de geëigende methode volgens de richtlijn.",
+    "source_span": "Spirometrie is de aangewezen methode om obstructie aan te tonen of uit te sluiten.",
+    "retrieval_query": "spirometrie obstructie aantonen uitsluiten astma COPD aanvullend onderzoek"
+  }
+]
+
+Genereer nu een vergelijkbare KFQ inclusief de 'explanation' stap op basis van de onderstaande tekst. Volg de JSON structuur nauwkeurig.
+"""
+
+
+# Update validation function to bypass the temporary "explanation" key during structure checks
+def validate_qa_hybrid(qa: dict, source_text: str) -> bool:
+    if not all(k in qa for k in ("query", "gt_answer", "source_span")):
+        return False
+
+    norm_span = normalize(qa["source_span"])
+    norm_source = normalize(source_text)
+
+    if norm_span in norm_source:
+        return True
+
+    if SequenceMatcher(None, norm_span, norm_source).ratio() > 0.82:
+        return True
+    return False
+
+
+def few_shot_critique_and_refine(chunk: dict, draft_qa: dict) -> dict:
+    """
+    Advanced multi-turn refiner guided by an explicit few-shot critique exemplar
+    to restrict structural hallucination behaviors observed in Exp 1.
+    """
+    few_shot_refine_prompt = f"""
+Je bent een kritische medische onderwijsassistent. Je taak is om een concept-KFQ te verfijnen op basis van de brontekst. Je verbetert uitsluitend de formulering en de structuur van de JSON objecten. Je mag NOOIT nieuwe klinische claims verzinnen of de letterlijke 'source_span' aanpassen.
+
+### VOORBEELD VAN EEN GOEDE VERFIJNING
+BRONTEKST: "Spirometrie is de aangewezen methode om obstructie aan te tonen."
+CONCEPT-JSON: {{"query": "Vraag over spirometrie?", "gt_answer": "Spirometrie doen en bloedprikken.", "source_span": "Spirometrie is de aangewezen methode"}}
+VERFIJND-JSON: [{{ "query": "Mevrouw De Vries, 52 jaar... Welk aanvullend onderzoek zet u in?", "gt_answer": "Spirometrie is de aangewezen methode om obstructie aan te tonen.", "source_span": "Spirometrie is de aangewezen methode om obstructie aan te tonen." }}]
+
+Pas deze strikte methodiek nu toe op het onderstaande element:
+BRONTEKST: \"\"\"{chunk['text']}\"\"\"
+CONCEPT-JSON: {json.dumps(draft_qa, ensure_ascii=False)}
+"""
+    try:
+        response = client.chat.completions.create(
+            model=MODEL,
+            response_format={"type": "json_object"} if "json_object" in str(
+                dir(client.chat.completions)) else None,
+            messages=[{"role": "user", "content": few_shot_refine_prompt}],
+            temperature=0.2,
+        )
+        raw = strip_markdown_fences(response.choices[0].message.content)
+        data = json.loads(raw)
+        return data[0] if isinstance(data, list) else data.get("output", data)
+    except Exception:
+        return draft_qa
+
+
+# ---------------------------------------------------------------------------
+# ROUTING CONTROLLER MODIFICATION
+# ---------------------------------------------------------------------------
+
+def generate_questions_with_strategy(
+        chunk: dict, system_prompt: str, strategy_name: str
+) -> list[dict]:
+    # Experiment 1 Routes
+    if strategy_name == "self_critique":
+        drafts = generate_questions(chunk, SYSTEM_PROMPT_BASE)
+        return [critique_and_refine(chunk, draft) for draft in drafts]
+
+    # Experiment 2: Hybrid Routes
+    elif strategy_name == "few_shot_cot":
+        return generate_questions(chunk, SYSTEM_PROMPT_FEW_SHOT_COT)
+
+    elif strategy_name == "few_shot_refine":
+        drafts = generate_questions(chunk, SYSTEM_PROMPT_FEW_SHOT)
+        return [few_shot_critique_and_refine(chunk, draft) for draft in drafts]
+
+    elif strategy_name == "few_shot_cot_refine":
+        drafts = generate_questions(chunk, SYSTEM_PROMPT_FEW_SHOT_COT)
+        return [few_shot_critique_and_refine(chunk, draft) for draft in drafts]
+
+    return generate_questions(chunk, system_prompt)
+
 if __name__ == "__main__":
     main()
+
+

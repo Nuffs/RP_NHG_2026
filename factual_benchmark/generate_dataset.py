@@ -8,6 +8,16 @@ client = OpenAI()
 RESULTS_DIR = "factual_benchmark/results"
 
 def generate_qa_pairs(scraped_chunks, prompt_config):
+    """
+    Generate QA pairs from scraped chunks using OpenAI API.
+    
+    Args:
+        scraped_chunks (list): List of chunk dictionaries with 'text', 'chunk_id', etc.
+        prompt_config (dict): Prompt configuration with 'model', 'system_prompt', 'prompt_template', 'name'
+    
+    Returns:
+        list: List of QA pair dictionaries generated from chunks
+    """
     qa_pairs = []
 
     for chunk in scraped_chunks:
@@ -23,17 +33,22 @@ def generate_qa_pairs(scraped_chunks, prompt_config):
             )
 
             content = json.loads(response.choices[0].message.content)
-            qa_pairs.append({
-                "chunk_id": chunk["chunk_id"],
-                "doc_id": chunk["doc_id"],
-                "section_path": chunk["section_path"],
-                "source_text": chunk["text"],
-                "question": content.get("question"),
-                "answer": content.get("answer"),
-                "prompt_technique": prompt_config["name"]
-            })
+
+            candidates = content.get("qa_pairs", [])
+
+            for candidate in candidates:
+                qa_pairs.append({
+                    "chunk_id": chunk["chunk_id"],
+                    "doc_id": chunk["doc_id"],
+                    "section_path": chunk["section_path"],
+                    "source_text": chunk["text"],
+                    "question": candidate.get("question"),
+                    "answer": candidate.get("answer"),
+                    "prompt_technique": prompt_config["name"]
+                })
+
         except Exception as e:
-            print(f"  ERROR generating QA pair for chunk {chunk['chunk_id']}: {e}")
+            print(f"Error generating QA pair for chunk {chunk['chunk_id']}: {e}")
     
     os.makedirs(RESULTS_DIR, exist_ok=True)
     output_path = os.path.join(RESULTS_DIR, f"qa_{prompt_config["name"]}.json")
@@ -41,7 +56,7 @@ def generate_qa_pairs(scraped_chunks, prompt_config):
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(qa_pairs, f, ensure_ascii=False, indent=2)
     
-    print(f"  Saved {len(qa_pairs)} Q&A pairs to {output_path}")
+    print(f"Saved {len(qa_pairs)} Q&A pairs to {output_path}")
 
     return qa_pairs
 
@@ -49,8 +64,8 @@ if __name__ == "__main__":
     with open("data/benchmark_chunks.jsonl", "r") as f:
         scraped_chunks = [json.loads(line) for line in f]
     
-    # just test zero-shot for now
-    with open(os.path.join("factual_benchmark/prompts", "zero_shot.json"), "r") as f:
+    # Use few shot prompt config for generating final dataset
+    with open(os.path.join("factual_benchmark/prompts", "few_shot.json"), "r") as f:
         prompt_config = json.load(f)
     
     qa_pairs = generate_qa_pairs(scraped_chunks, prompt_config)

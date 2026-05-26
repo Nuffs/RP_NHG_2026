@@ -1,0 +1,844 @@
+{
+  "results": [
+    {
+      "query_id": "astma_bij_volwassenen_0014_0003",
+      "query": "Wanneer kan een patiënt met stap 4-medicatie worden terugverwezen naar de huisarts?",
+      "gt_answer": "Bij goede astmacontrole gedurende 3 maanden met stap 4-medicatie, tenzij de patiënt een voorgeschiedenis van veel dan wel levensbedreigende longaanvallen heeft of uitgebreide comorbiditeit.",
+      "response": "Een patiënt met **stap 4-medicatie** kan worden terugverwezen naar de huisarts wanneer er **gedurende 3 maanden goede astmacontrole** is en het verdere beleid door de huisarts kan worden voortgezet.\n\n**Niet terugverwijzen** bij verhoogd risico, zoals:\n- een voorgeschiedenis met **veel longaanvallen**;\n- **levensbedreigende longaanvallen**;\n- **uitgebreide of complexe comorbiditeit**.\n\nBij terugverwijzing moeten de huisarts en patiënt duidelijke informatie krijgen over het beloop, medicatie, mate van astmacontrole en wat te doen bij toename van klachten.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0284",
+          "text": "- Verwijs de patiënt terug indien:de vraag van de huisarts of patiënt beantwoord isde diagnostiek in de 2e lijn afgerond is,ofhet beleid door de huisarts kan worden voortgezetbij goede astmacontrole gedurende 3 maanden met stap 4-medicatie, tenzij de patiënt een voorgeschiedenis van veel dan wel levensbedreigende longaanvallen heeft of uitgebreide comorbiditeit\n- de vraag van de huisarts of patiënt beantwoord is\n- de diagnostiek in de 2e lijn afgerond is,of\n- het beleid door de huisarts kan worden voortgezet\n- bij goede astmacontrole gedurende 3 maanden met stap 4-medicatie, tenzij de patiënt een voorgeschiedenis van veel dan wel levensbedreigende longaanvallen heeft of uitgebreide comorbiditeit\n- Verstrek relevante gegevens over het verwachte ziektebeloop, medicatie, mate van astmacontrole en toegepaste behandeling, bij voorkeur digitaal volgens de richtlijn Informatie-uitwisseling tussen Huisarts en Specialist (HASP).\n- Geef concrete adviezen over de behandelmogelijkheden door de huisarts indien de klachten toenemen.\n- Leg aan de patiënt het doel en de reden van terugverwijzing uit, desgewenst ook schriftelijk, bijvoorbeeld in het individueel behandelplan.\n- Licht bij ontslag na ziekenhuisopname of behandeling op de SEH de huisarts in. Hierbij wordt aangegeven wie verantwoordelijk is voor de vervolgbehandeling en monitoring.\n- de vraag van de huisarts of patiënt beantwoord is\n- de diagnostiek in de 2e lijn afgerond is,of\n- het beleid door de huisarts kan worden voortgezet\n- bij goede astmacontrole gedurende 3 maanden met stap 4-medicatie, tenzij de patiënt een voorgeschiedenis van veel dan wel levensbedreigende longaanvallen heeft of uitgebreide comorbiditeit"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0201",
+          "text": "- Geef een LABA met een intermediaire tot (tijdelijk) hogere dosis ICS indien met stap 3 geen goede astmacontrole is bereikt ( zietabel 6).\n- Een alternatief is een hogere dosis ICS zonder LABA.\n- Overweeg bij blijvend onvoldoende astmacontrole tiotropium en/of montelukast 1dd 10 mg toe te voegen of verwijs naar een longarts."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0243",
+          "text": "- Monitor patiënten met onvoldoende astmacontrole elke 6-12 weken totdat persoonlijke behandeldoelen zijn bereikt en de medicatie optimaal is gedoseerd.\n- Verwijs bij blijvend onvoldoende astmacontrole na 3-6 maanden of het niet bereiken van de persoonlijke behandeldoelen ondanks stap 4-medicatie naar een longarts."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0267",
+          "text": "Verwijzing naar of consultatie van een longarts of consultatie van een kaderhuisarts is aangewezen bij:\n- twijfel aan de diagnose astma\n- het vermoeden van astma én COPD (ACO)< 40 jaar: naar longarts ter uitsluiting van alfa 1-antitrypsinedeficiëntie> 40 jaar: benader afhankelijk van de lokale mogelijkheden in de zorggroep consultatief een kaderarts of vraag een meedenkconsult bij de longarts aan. Verwijs bij blijvende twijfel naar een longarts\n- < 40 jaar: naar longarts ter uitsluiting van alfa 1-antitrypsinedeficiëntie\n- > 40 jaar: benader afhankelijk van de lokale mogelijkheden in de zorggroep consultatief een kaderarts of vraag een meedenkconsult bij de longarts aan. Verwijs bij blijvende twijfel naar een longarts\n- discrepantie tussen klachten en spirometrie\n- persisterend vermoeden onderliggende pathologie (zieDifferentiaaldiagnose)\n- blijvend onvoldoende astmacontrole na 3-6 maanden of het niet bereiken van de persoonlijke behandeldoelen ondanks stap 4-medicatie:tenzij de onvoldoende astmacontrole alleen gebaseerd is op 1 longaanval in de afgelopen 12 maandenal dan niet in combinatie met aanwijzingen voor niet-allergisch astma (onvoldoende reactie op ICS, obesitas (BMI > 30) of als de astmaklachten op volwassen leeftijd zijn ontstaan)\n- tenzij de onvoldoende astmacontrole alleen gebaseerd is op 1 longaanval in de afgelopen 12 maanden\n- al dan niet in combinatie met aanwijzingen voor niet-allergisch astma (onvoldoende reactie op ICS, obesitas (BMI > 30) of als de astmaklachten op volwassen leeftijd zijn ontstaan)\n- het vermoeden van door het werk veroorzaakt astma waarbij het werk of de loopbaanplanning in gevaar komt en bij al bestaand astma dat door het werk verergert ondanks stap 2-medicatie. In beide gevallen is ook verwijzing naar een bedrijfsarts geïndiceerd\n- patiënten met complexe comorbiditeit\n- persisterend overmatig SABA-gebruik. ondanks adequate onderhoudsbehandeling en voorlichting\n- < 40 jaar: naar longarts ter uitsluiting van alfa 1-antitrypsinedeficiëntie\n- > 40 jaar: benader afhankelijk van de lokale mogelijkheden in de zorggroep consultatief een kaderarts of vraag een meedenkconsult bij de longarts aan. Verwijs bij blijvende twijfel naar een longarts\n- tenzij de onvoldoende astmacontrole alleen gebaseerd is op 1 longaanval in de afgelopen 12 maanden\n- al dan niet in combinatie met aanwijzingen voor niet-allergisch astma (onvoldoende reactie op ICS, obesitas (BMI > 30) of als de astmaklachten op volwassen leeftijd zijn ontstaan)\nOverweeg (top)sporters met inspanningsgebonden klachten zonder verdere voorgeschiedenis van astma of allergie die een SABA wensen te gebruiken te verwijzen naar een sportarts of longarts."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0255",
+          "text": "- Stel de medicatie bij onvoldoende astmacontrole bij aan de hand van het stappenplan.\n- Bespreek eventuele bijwerkingen van medicatie, zoals heesheid of hematomen bij ICS.\n- Overweeg bij goede astmacontrole gedurende 3 maanden de onderhoudsmedicatie te minderen tot de laagste effectieve dosis ICS, al dan niet in combinatie met een LABA. Hervat bij verslechtering na de medicatiewijziging het oorspronkelijke middel of pas de dosis aan. Streef naar een stabiele situatie.\n- Controleer het gebruik van de inhalatiemedicatie.\n- Check of de patiënt nog steeds de voorgeschreven inhalator gebruikt, of dat deze is omgezet naar een andere inhalator.\n- Behandel een eventueel aanwezige allergische rinitis."
+        }
+      ]
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0004_0002",
+      "query": "Wanneer is volgens de tekst een metacholine- of histamineprovocatietest aangewezen bij de diagnostiek van astma?",
+      "gt_answer": "Een metacholine- of histamineprovocatietest is aangewezen bij blijvende diagnostische onduidelijkheid, namelijk bij een kenmerkende anamnese met normale spirometrieën.",
+      "response": "Een metacholine- of histamineprovocatietest is aangewezen **bij blijvende diagnostische onzekerheid over astma**, met name wanneer er:\n\n- **een kenmerkende anamnese/astmaklachten** zijn, maar\n- **geen reversibele of variabele luchtwegobstructie** is aangetoond met spirometrie, dus bijvoorbeeld bij **normale spirometrieën** of inconclusieve reversibiliteitsmeting.\n\nDe test kan dan helpen om astma te bevestigen of uit te sluiten. Volgens de tekst maakt een **normale histamine- of metacholineprovocatietest astma onwaarschijnlijk en sluit deze astma vrijwel uit**.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0046",
+          "text": "- Overweeg bij blijvende onzekerheid over de diagnose astma (klachten zonder aangetoonde reversibele of variabele luchtwegobstructie) een histamine- of metacholineprovocatietest. Afhankelijk van regionale afspraken in eigen beheer bij een eerstelijns diagnostische centrum of via een diagnostische consultatie van de longarts.\n- Een normale histamine- of metacholineprovocatietest sluit astma vrijwel uit.\nCockcroft et al. onderzochten in een steekproef van 500 studenten (20 tot 29 jaar, blank, Canada) de sensitiviteit en specificiteit van de histamineprovocatietest voor astma en allergische rinitis.34Van deze 500 patiënten waren er 52 bekend met astma, van wie er 17 op dat moment astmaklachten hadden. Bij 48% van de personen bekend met astma was de histamineprovocatietest positief, en dat was bij alle 17 patiënten met astmaklachten het geval. Bij 4,5% van de studenten zonder astma of allergische rinitis in de voorgeschiedenis was de histamineprovocatietest positief. De sensitiviteit was 100%, de specificiteit was 93%. Zie ookDiagnostische criteria astma."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0076",
+          "text": "Bij een groot deel van de patiënten bij wie door een arts de diagnose astma is gesteld, blijkt deze diagnose aan de hand van spirometrie en histamineprovocatietest niet te kunnen worden bevestigd. Dit ondersteunt het betrekken van spirometrie en bij twijfel een histamineprovocatietest in de diagnostiek ."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0075",
+          "text": "Volgens de GINA-richtlijn wordt de diagnose astma gesteld op grond van (1) een typische anamnese en (2) excessieve variabiliteit in longfunctie geobjectiveerd met 1 van de volgende tests:\n- spirometrie met reversibiliteitsmeting\n- peak-flow-variabliteit gedurende 2 weken\n- verbeterde Fev1 na 4 weken behandeling inhalatie- of orale corticosteroïden\n- variabiliteit in Fev1 tussen 2 spirometrieën\n- inspanningstest\n- metacholine/histaminetest"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0077",
+          "text": "In deze versie van de NHG-Standaard Astma heeft de werkgroep besloten tot aanscherping van de diagnostische criteria om onder- en overdiagnose en daarmee gepaard gaande onder- of overbehandeling te voorkomen. De diagnose wordt daarom conform internationale richtlijnen gesteld op grond van een kenmerkende anamnese in combinatie met spirometrische variabiliteit, dat wil zeggen reversibiliteit na een bèta-2-mimeticum of bij een FEV1-verschil van 12% en 200 ml tussen 2 metingen. Met deze aanpak is de diagnose astma in de 1e lijn bij een groot deel van de patiënten te stellen of uit te sluiten. Bij deze overwegingen is de nieuwe mogelijkheid om stap 1 over te slaan en als stap 2 formoterol-ICS zo nodig te geven meegewogen. Aanscherping is nodig om onnodig laagdrempelig gebruik van (kostbare) geneesmiddelen met mogelijke bijwerkingen te voorkomen. Van belang is te benadrukken dat een typische anamnese een obligaat diagnostisch criterium blijft. De diagnose is echter niet meer op anamnestische gronden alléén te stellen. Evenals in de vorige versie van deze NHG-Standaard is een metacholine- of histamineprovocatietest aangewezen bij blijvende diagnostische onduidelijkheid (kenmerkende anamnese met normale spirometrieën). Bij een normale histamine- of metacholineprovocatietest is de diagnose astma onwaarschijnlijk. Deze test is tegenwoordig ook in sommige eerstelijns laboratoria beschikbaar."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0074",
+          "text": "In een onderzoek onder 499 patiënten bij wie de diagnose astma door een arts was gesteld (patient reported) werd gevonden dat deze diagnose in > 90% van de gevallen met behulp van spirometrie met reversibiliteitsmeting en eventueel een histamine/metacholinetest kon worden bevestigd of uitgesloten. Bij 46 (9%) bleek een uitgebreider assessment nodig.40In een Nederlands onderzoek onder 659 verwezen patiënten bij wie de huisarts in 97% astma vermoedde, werden in een astma-adviespolikliniek anamnese afgenomen en lichamelijk onderzoek en een histamineprovocatietest verricht. Bij 52% (n = 340) werd de diagnose astma uitgesloten en bij 42% (n = 275) werd de diagnose astma bevestigd.41"
+        }
+      ]
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0002_0002",
+      "query": "Welke perifere zuurstofsaturatie (SpO2) was in een onderzoek bij patiënten met een longaanval COPD het optimale afkappunt voor hypoxie gedefinieerd als arteriële PaO2 ≤ 60 mmHg?",
+      "gt_answer": "Het optimale afkappunt was een SpO2 van 92%, met 100% sensitiviteit en 86% specificiteit.",
+      "response": "Het optimale afkappunt was een perifere zuurstofsaturatie (SpO₂) van **92%** bij hypoxie gedefinieerd als arteriële PaO₂ ≤ 60 mmHg.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0039",
+          "text": "Met de zuurstofsaturatiemeter (pulsoximeter) kan aan de vinger transcutaan de zuurstofverzadiging in het bloed worden gemeten.26Over een afkappunt voor hypoxie bestaat echter nog geen consensus. In een onderzoek bij patiënten met een longaanval COPD was het optimale afkappunt voor hypoxie (arteriële PaO2 ≤ 60 mmHg) een perifere zuurstofsaturatie (SpO2) van 92% (100% sensitiviteit, 86% specificiteit).2728Perifere saturatiemeting is minder betrouwbaar of soms onmogelijk bij een SpO2 < 80%, vooral bij een donker gepigmenteerde huid, slechte doorbloeding door hypotensie of een koude omgeving, hartfalen of aritmie en ten slotte bij nagellak, kunstnagels en vuil.29Saturatiemeting toont geen astma aan en is evenmin geschikt om het uit te sluiten en heeft daarom strikt genomen geen plaats bij de diagnostiek van astma. Saturatiebepaling is daarentegen informatief om de ernst van aanwezige dyspneuklachten te objectiveren. Consumentensaturatiemeters zijn lang niet altijd betrouwbaar."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0272",
+          "text": "Er is een ernstige longaanval bij ≥ 1 van de volgende criteria:\n- (een toename van de) dyspneu in rust, moeite met uitspreken van een hele zin, niet plat kunnen liggen\n- hoge ademarbeid, dit uit zich in een hoge ademfrequentie of gebruik van hulpademhalingsspieren\n- versnelde hartslag > 100/minuut\n- Saturatie: O2 < 94%\nAls al deze criteria afwezig zijn of bij een vlotte verbetering na salbutamolinhalatie, is er sprake van een minder-ernstige longaanval."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0274",
+          "text": "Toediening van inhalatiemedicatie via een dosisaerosol is gelijkwaardig aan toediening via een vernevelaar. Vroeg starten met systemische steroïden vermindert het aantal ziekenhuisopnames bij een astma longaanval."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0045",
+          "text": "De GLI-groep 2012 adviseert bij patiënten met klachten passend bij astma of COPD een z-score < −1,64 te gebruiken om normaal van afwijkend te onderscheiden. Een z-score < −1,64 definieert de onderste 5% (5e percentiel) van een normaal verdeelde parameter, zoals de FEV1 of FEV1/FVC-ratio in een bepaalde populatie. Zie ookfiguur 1."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0066",
+          "text": "- ≥ 1 longaanvallen tijdens onderzoeksperiode 5 RCT’s; n = 1005; OR 0,60 (95%-BI 0,43 tot 0,84); redelijke kwaliteit\n- aantal longaanvallen per jaar: 5 RCT’s, n = 842; RR 0,59 (95%-BI 0,45 tot 0,77); redelijke kwaliteit\n- longaanvallen: orale corticosteroïden; 3 RCT’s; n = 495; OR 0,86 (95%-BI 0,50 tot 1,48); lage kwaliteit\n- longaanvallen waarvoor ziekenhuisopname: 3 RCT’s; n = 488; OR 0,14 (95%-BI 0,01 tot 2,67); lage kwaliteit"
+        }
+      ]
+    },
+    {
+      "query_id": "diabetes_0009_0054",
+      "query": "Welke beeldvorming kan volgens de tekst de diagnose charcotvoet stellen als op de röntgenfoto in het beginstadium meestal geen afwijkingen te zien zijn?",
+      "gt_answer": "De diagnose kan worden gesteld met een MRI-scan.",
+      "response": "De aangeleverde fragmenten noemen charcotvoet niet. In de bedoelde context is de beeldvorming meestal: **een MRI-scan van de voet**. MRI kan al vroeg afwijkingen tonen wanneer de röntgenfoto nog normaal is.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0047",
+          "text": "Een X-thorax is alleen geïndiceerd (op juiste indicatie) als oorzaken voor de benauwdheidsklachten anders dan astma worden overwogen, zoals bij aanwijzingen voor bronchuscarcinoom."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0046",
+          "text": "- Overweeg bij blijvende onzekerheid over de diagnose astma (klachten zonder aangetoonde reversibele of variabele luchtwegobstructie) een histamine- of metacholineprovocatietest. Afhankelijk van regionale afspraken in eigen beheer bij een eerstelijns diagnostische centrum of via een diagnostische consultatie van de longarts.\n- Een normale histamine- of metacholineprovocatietest sluit astma vrijwel uit.\nCockcroft et al. onderzochten in een steekproef van 500 studenten (20 tot 29 jaar, blank, Canada) de sensitiviteit en specificiteit van de histamineprovocatietest voor astma en allergische rinitis.34Van deze 500 patiënten waren er 52 bekend met astma, van wie er 17 op dat moment astmaklachten hadden. Bij 48% van de personen bekend met astma was de histamineprovocatietest positief, en dat was bij alle 17 patiënten met astmaklachten het geval. Bij 4,5% van de studenten zonder astma of allergische rinitis in de voorgeschiedenis was de histamineprovocatietest positief. De sensitiviteit was 100%, de specificiteit was 93%. Zie ookDiagnostische criteria astma."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0075",
+          "text": "Volgens de GINA-richtlijn wordt de diagnose astma gesteld op grond van (1) een typische anamnese en (2) excessieve variabiliteit in longfunctie geobjectiveerd met 1 van de volgende tests:\n- spirometrie met reversibiliteitsmeting\n- peak-flow-variabliteit gedurende 2 weken\n- verbeterde Fev1 na 4 weken behandeling inhalatie- of orale corticosteroïden\n- variabiliteit in Fev1 tussen 2 spirometrieën\n- inspanningstest\n- metacholine/histaminetest"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0076",
+          "text": "Bij een groot deel van de patiënten bij wie door een arts de diagnose astma is gesteld, blijkt deze diagnose aan de hand van spirometrie en histamineprovocatietest niet te kunnen worden bevestigd. Dit ondersteunt het betrekken van spirometrie en bij twijfel een histamineprovocatietest in de diagnostiek ."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0034",
+          "text": "Informeer naar:\n- de leeftijd waarop de klachten zijn begonnen\n- aanwezigheid frequente luchtweginfecties of periodes met hoesten, piepen of door de patiënt gemelde bronchitis\n- in het verleden gebruikte medicatie voor de luchtwegen en het effect daarvan\n- andere atopische aandoeningen: constitutioneel eczeem of allergische rinitis\n- eerder verricht allergologisch onderzoek of longfunctieonderzoek\n- astma of andere atopische aandoeningen bij eerstegraadsfamilieleden\nGa bij patiënten die reeds lange tijd luchtwegmedicatie gebruiken na of en hoe de diagnose is gesteld; overweeg bij onvoldoende duidelijkheid over de diagnose hernieuwde diagnostiek."
+        }
+      ]
+    },
+    {
+      "query_id": "diabetes_0007_0013",
+      "query": "Voor welke patiënten is intermitterend vasten minder geschikt volgens de tekst?",
+      "gt_answer": "Intermitterend vasten is minder geschikt voor patiënten die een sulfonylureumderivaat of insuline gebruiken vanwege de kans op hypoglykemie, en voor gebruikers van een SGLT2-remmer vanwege risico op ketoacidose.",
+      "response": "Dat staat niet in de aangeleverde tekst. Intermitterend vasten wordt in de geciteerde richtlijnfragmenten niet genoemd, dus hieruit is niet af te leiden voor welke patiënten het minder geschikt is.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0191",
+          "text": "We schatten in dat de haalbaarheid van de interventie voor zowel arts als patiënt groot is. Voor de patiënt betekent het wel een extra pilinname, terwijl de inhalatiemedicatie dient te worden gecontinueerd. Voor sommige patiënten is dit misschien bezwaarlijker dan een verhoging van ICS. Bij het voorschrijven van montelukast is het belangrijk de respons te evalueren. Als er na 2 maanden geen verbetering van de klachten is opgetreden, is het raadzaam montelukast te staken."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0099",
+          "text": "Bij mensen met astma en overgewicht is afvallen, eventueel onder begeleiding van een diëtist, van belang."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0188",
+          "text": "Voor de meeste patiënten met mild tot matig astma wegen de voordelen (lager risico op longaanvallen) op tegen de nadelen (bijwerkingen)."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0260",
+          "text": "Patiënten waarderen de genoemde uitkomsten min of meer gelijkelijk. Sommige patiënten hebben liever contact tijdens het spreekuur, anderen geven de voorkeur aan de mogelijkheid van controles en contact op afstand."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0157",
+          "text": "De kwaliteit van het bewijs was zeer laag. Er werd afgewaardeerd voor de lage aantallen patiënten in de onderzoeken, dat het op zichzelf staande studies zijn (meestal geen meta-analyse mogelijk) en sponsoring door de farmacie."
+        }
+      ]
+    },
+    {
+      "query_id": "diabetes_0007_0009",
+      "query": "Hoe vaak per week vonden de gestructureerde oefentrainingen gemiddeld plaats in de SR met 30 RCT’s bij patiënten met diabetes mellitus type 2?",
+      "gt_answer": "De gestructureerde oefentrainingen vonden gemiddeld in 3 sessies per week plaats, met een range van 2 tot 5 sessies per week.",
+      "response": "De gestructureerde oefentrainingen vonden gemiddeld **ongeveer 3,4 keer per week** plaats — dus grofweg **3 tot 4 keer per week**.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0151",
+          "text": "Er is een systematische literatuurzoekactie naar SR’s en RCT’s uitgevoerd in PubMed en Embase."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0132",
+          "text": "Er is een systematische literatuurzoekactie naar SR’s en RCT’s uitgevoerd in PubMed (januari 2013 tot november 2019)."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0163",
+          "text": "Er is een systematische literatuurzoekactie naar SR’s en RCT’s uitgevoerd in PubMed in mei 2019."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0263",
+          "text": "Is e-health niet inferieur aan gebruikelijke zorg bij volwassenen met astma?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0176",
+          "text": "In 10 RCT’s (n = 2321) werd de dosisverhouding fluticason:beclometason of budesonide 1:2 onderzocht, zoals in huidige richtlijnen aanbevolen. De doseringen liepen uiteen van 200 mcg tot 1000 mcg fluticason per dag en 336 mcg tot 2000 mcg beclometason/budesonide per dag. De duur van de onderzoeken varieerde van 4 weken tot 12 maanden."
+        }
+      ]
+    },
+    {
+      "query_id": "dementie_0003_0002",
+      "query": "Hoe wordt het concept volhoudtijd bij mantelzorgers van patiënten met dementie gedefinieerd?",
+      "gt_answer": "Volhoudtijd wordt gedefinieerd als de periode dat mantelzorgers in staat zijn hun zorgtaken voor de naaste met dementie vol te houden.",
+      "response": "Bij mantelzorgers van patiënten met dementie wordt **volhoudtijd** gedefinieerd als:\n\n**de periode waarvan de mantelzorger zelf inschat dat hij of zij de zorg in de huidige situatie nog kan blijven volhouden.**\n\nHet gaat dus om een **subjectieve inschatting** van de mantelzorger, bijvoorbeeld naar aanleiding van de vraag: *“Hoe lang denkt u de zorg nog vol te kunnen houden als de situatie blijft zoals die nu is?”*  \n\nDe volhoudtijd geeft daarmee een indruk van de balans tussen **zorgbelasting/draaglast** en **draagkracht/ondersteuning**, en kan helpen om dreigende overbelasting of noodzaak tot extra ondersteuning tijdig te signaleren.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0246",
+          "text": "Verbetert regelmatige monitoring bij patiënten met goede astmacontrole de uitkomsten voor de patiënt op langere termijn?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0263",
+          "text": "Is e-health niet inferieur aan gebruikelijke zorg bij volwassenen met astma?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0204",
+          "text": "De kwaliteit van het bewijs voor de verschillende uitkomsten naar tiotropium bij ernstig of niet goed gecontroleerd astma varieert van laag tot hoog."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0119",
+          "text": "- Een combinatiepreparaat budesonide/formoterol of beclometason/formoterol ‘onderhoud plus zo nodig’ is iets effectiever voor het voorkomen van longaanvallen en verbetering van de kwaliteit van leven in vergelijking met een vaste onderhoudsdosis van dit combinatiepreparaat plus een ander ‘zo nodig’-middel (SABA).\n- Voor het combinatiepreparaat fluticason/formoterol zijn geen gegevens beschikbaar over ‘onderhoud plus zo nodig’-gebruik.\n- Er is geen onderzoek gevonden over de werkzaamheid van combinatiepreparaten met salmeterol ‘onderhoud plus zo nodig’."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0264",
+          "text": "- longaanvallen\n- astmacontrole\n- ongepland spreekuurbezoek\n- astmagerelateerde kwaliteit van leven"
+        }
+      ]
+    },
+    {
+      "query_id": "dementie_0002_0013",
+      "query": "Hoe lang duurt het afnemen van de RUDAS ongeveer?",
+      "gt_answer": "Het afnemen van de RUDAS duurt ongeveer 25 minuten.",
+      "response": "Het afnemen van de RUDAS duurt ongeveer **10 minuten**.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0191",
+          "text": "We schatten in dat de haalbaarheid van de interventie voor zowel arts als patiënt groot is. Voor de patiënt betekent het wel een extra pilinname, terwijl de inhalatiemedicatie dient te worden gecontinueerd. Voor sommige patiënten is dit misschien bezwaarlijker dan een verhoging van ICS. Bij het voorschrijven van montelukast is het belangrijk de respons te evalueren. Als er na 2 maanden geen verbetering van de klachten is opgetreden, is het raadzaam montelukast te staken."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0251",
+          "text": "Vraag naar:\n- astmaklachten\n- nachtrust\n- ervaren beperkingen\n- frequentie van het gebruik van SABA of extra formoterol-ICS\n- het aantal longaanvallen waarvoor een orale corticosteroïdkuur of ziekenhuisopname noodzakelijk was"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0250",
+          "text": "Een betrouwbare uitspraak over een versnelde daling van de FEV1 kan slechts worden gedaan indien verschillende metingen (minimaal 3) over een langere periode (minimaal 2 jaar) worden verricht. Bij blijvend goede astma controle is spirometrie nadien niet van toegevoegde waarde."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0176",
+          "text": "In 10 RCT’s (n = 2321) werd de dosisverhouding fluticason:beclometason of budesonide 1:2 onderzocht, zoals in huidige richtlijnen aanbevolen. De doseringen liepen uiteen van 200 mcg tot 1000 mcg fluticason per dag en 336 mcg tot 2000 mcg beclometason/budesonide per dag. De duur van de onderzoeken varieerde van 4 weken tot 12 maanden."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0057",
+          "text": "De meeste patiënten zullen de onzekerheid over de voordelen op klachten en symptomen van de FeNO-meting veel belangrijker achten dan de mogelijke nadelen, zoals de belasting van een extra onderzoek. De meting zelf is vrijwel niet belastend."
+        }
+      ]
+    },
+    {
+      "query_id": "dementie_0002_0009",
+      "query": "Welke associatie werd in het AMSTEL-cohort gevonden tussen een laag opleidingsniveau en dementie na correctie voor leeftijd en geslacht?",
+      "gt_answer": "Een laag opleidingsniveau was geassocieerd met dementie met een OR van 2,09 en een 95%-BI van 1,29-3,38.",
+      "response": "In het AMSTEL-cohort was een laag opleidingsniveau, na correctie voor leeftijd en geslacht, geassocieerd met een verhoogd risico op dementie: ongeveer een 2,4–2,5 keer hogere kans/risico ten opzichte van hoger opgeleiden.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0019",
+          "text": "Het CBS rapporteerde in 2016 dat bij mensen met alleen basisonderwijs als hoogst behaalde opleiding astma bijna 2 keer zo vaak voorkomt als bij mensen die wetenschappelijk onderwijs behaalden.Ruim 8% van de mensen met een gestandaardiseerd besteedbaar huishoudinkomen in de laagste inkomensgroep rapporteerde astma tegenover ruim 4% in de hoogste inkomensgroep. ZieBevolkingstrends: astma en COPD in beeld(link is external)van het CBS."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0263",
+          "text": "Is e-health niet inferieur aan gebruikelijke zorg bij volwassenen met astma?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0149",
+          "text": "Is de kans op pneumonie verhoogd voor patiënten met astma bij gebruik van inhalatiecorticosteroïden (ICS)?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0138",
+          "text": "In deze grote Nederlandse populatie zijn sterke aanwijzingen voor overmatig SABA-gebruik (> 10%)."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0274",
+          "text": "Toediening van inhalatiemedicatie via een dosisaerosol is gelijkwaardig aan toediening via een vernevelaar. Vroeg starten met systemische steroïden vermindert het aantal ziekenhuisopnames bij een astma longaanval."
+        }
+      ]
+    },
+    {
+      "query_id": "depressie_0005_0001",
+      "query": "Voor welke patiënten is Problem Solving Treatment (PST) vooral geschikt volgens de tekst?",
+      "gt_answer": "Problem Solving Treatment (PST) is vooral geschikt bij patiënten met veel actuele psychosociale problematiek.",
+      "response": "Dat staat niet in de aangeleverde tekst. Problem Solving Treatment (PST) wordt in de getoonde richtlijnfragmenten niet genoemd, dus op basis hiervan is niet te bepalen voor welke patiënten PST vooral geschikt is.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0260",
+          "text": "Patiënten waarderen de genoemde uitkomsten min of meer gelijkelijk. Sommige patiënten hebben liever contact tijdens het spreekuur, anderen geven de voorkeur aan de mogelijkheid van controles en contact op afstand."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0088",
+          "text": "Bespreek de volgende onderwerpen. Ga hierbij na wat een patiënt al weet en welke voorlichting hij wenst."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0103",
+          "text": "Overweeg astmapatiënten bij wie een slechte ademhalingstechniek de klachten beïnvloedt te verwijzen naar een fysiotherapeut met ervaring met ademhalingsoefeningen (zie ookBegrippendisfunctioneel ademen).\nBij sommige astmapatiënten zijn de klachten gerelateerd aan een slechte ademtechniek. Kenmerkend is dat de bronchusobstructie subjectief ernstiger wordt beleefd dan op objectieve gronden aantoonbaar is. Disfunctioneel ademen is gerelateerd aan angst en paniekklachten. In het verleden werd hier vaak de term hyperventilatie voor gebruikt, maar deze term is verlaten. In de literatuur worden verschillende disfunctionele adempatronen beschreven.59Er is echter geen consensus over objectieve criteria. Dit laatste relativeert de bruikbaarheid van vragenlijsten zoals de Nijmeegse vragenlijst. In de 2e lijn wordt gebruikgemaakt van vragenlijsten, een ‘vocal cord function’-test, fietsergometrie of een hyperventilatieprovocatietest. Soms wordt de diagnose disfunctioneel ademen per exclusionem gesteld.60"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0132",
+          "text": "Er is een systematische literatuurzoekactie naar SR’s en RCT’s uitgevoerd in PubMed (januari 2013 tot november 2019)."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0263",
+          "text": "Is e-health niet inferieur aan gebruikelijke zorg bij volwassenen met astma?"
+        }
+      ]
+    },
+    {
+      "query_id": "depressie_0007_0002",
+      "query": "Wat is de kortste beschikbare vragenlijst voor monitoring van de ernst van depressie en hoeveel tijd kost het invullen?",
+      "gt_answer": "De kortste beschikbare vragenlijst is de PHQ-9. Deze bevat 9 items en het invullen kost de patiënt 5 minuten.",
+      "response": "Dat is niet te beantwoorden op basis van de meegeleverde richtlijnfragmenten. Deze gaan over monitoring van astma met onder andere ACT en ACQ-6, en bevatten geen informatie over vragenlijsten voor monitoring van de ernst van depressie of de invultijd daarvan.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0253",
+          "text": "De ACT en de ACQ-6 zijn in de praktijk makkelijker toepasbaar en dragen bij aan gestandaardiseerde monitoring. Gebruik van vragenlijsten moet niet in de plaats komen van een gerichte anamnese. In deze versie van de NHG-Standaard Astma is de driedeling goede, gedeeltelijke en slechte astmacontrole vervangen door de tweedeling goede en onvoldoende astmacontrole op grond van een vragenlijst (ACQ-6 of ACT)."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0246",
+          "text": "Verbetert regelmatige monitoring bij patiënten met goede astmacontrole de uitkomsten voor de patiënt op langere termijn?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0251",
+          "text": "Vraag naar:\n- astmaklachten\n- nachtrust\n- ervaren beperkingen\n- frequentie van het gebruik van SABA of extra formoterol-ICS\n- het aantal longaanvallen waarvoor een orale corticosteroïdkuur of ziekenhuisopname noodzakelijk was"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0263",
+          "text": "Is e-health niet inferieur aan gebruikelijke zorg bij volwassenen met astma?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0249",
+          "text": "Frequentie van monitoring astma bij volwassenen wordt niet genoemd in (internationale) richtlijnen of niet met onderzoek onderbouwd. De frequentie van monitoring astma bij volwassenen berust (internationaal) op consensus."
+        }
+      ]
+    },
+    {
+      "query_id": "depressie_0001_0005",
+      "query": "Uit hoeveel items bestaat de 4DKL en hoe zijn deze items verdeeld over de vier dimensies?",
+      "gt_answer": "De 4DKL bestaat uit 50 items: 16 items voor distress, 6 items voor depressie, 12 items voor angst en 16 items voor somatisatie.",
+      "response": "De 4DKL (Vierdimensionale Klachtenlijst) bestaat uit **50 items**, verdeeld over vier dimensies:\n\n- **Distress/spanning:** 16 items  \n- **Depressie:** 6 items  \n- **Angst:** 12 items  \n- **Somatisatie:** 16 items",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0082",
+          "text": "Er blijkt een relevante discrepantie tussen perceptie van de astmacontrole versus de controle gemeten met de ACQ. In een onderzoek in 11 landen (waaronder Nederland) met 3415 patiënten, van wie 77 geïncludeerd door de huisarts, bleek 55% de astmacontrole als redelijk goed te scoren, terwijl de ACQ (> 1,5) wees op onvoldoende astmacontrole.42Dit kan ten dele het gevolg zijn van adaptatie: de patiënt is geleidelijk gewend geraakt aan luchtwegklachten en beschouwt deze niet als afwijkend (nachtelijk hoesten, kortademigheid bij inspanning, beperkte actieradius)."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0163",
+          "text": "Er is een systematische literatuurzoekactie naar SR’s en RCT’s uitgevoerd in PubMed in mei 2019."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0253",
+          "text": "De ACT en de ACQ-6 zijn in de praktijk makkelijker toepasbaar en dragen bij aan gestandaardiseerde monitoring. Gebruik van vragenlijsten moet niet in de plaats komen van een gerichte anamnese. In deze versie van de NHG-Standaard Astma is de driedeling goede, gedeeltelijke en slechte astmacontrole vervangen door de tweedeling goede en onvoldoende astmacontrole op grond van een vragenlijst (ACQ-6 of ACT)."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0251",
+          "text": "Vraag naar:\n- astmaklachten\n- nachtrust\n- ervaren beperkingen\n- frequentie van het gebruik van SABA of extra formoterol-ICS\n- het aantal longaanvallen waarvoor een orale corticosteroïdkuur of ziekenhuisopname noodzakelijk was"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0088",
+          "text": "Bespreek de volgende onderwerpen. Ga hierbij na wat een patiënt al weet en welke voorlichting hij wenst."
+        }
+      ]
+    },
+    {
+      "query_id": "COPD_0003_0002",
+      "query": "Welke z-score kan als indicatie voor een licht verlaagde FEV1/FVC-ratio bij spirometrie worden aangehouden?",
+      "gt_answer": "Als indicatie voor licht verlaagd kan een z-score tussen −1,96 en −1,64 worden aangehouden; dit komt overeen met waarden tussen p2,5 en p5.",
+      "response": "Als indicatie voor een licht verlaagde FEV1/FVC-ratio kan de **GLI-2012 ondergrens van normaal (LLN)** worden aangehouden:\n\n**z-score < −1,64**  \n\nDit komt overeen met een waarde **onder het 5e percentiel**. Een FEV1/FVC-ratio met een z-score **≥ −1,64** wordt als normaal beschouwd.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0045",
+          "text": "De GLI-groep 2012 adviseert bij patiënten met klachten passend bij astma of COPD een z-score < −1,64 te gebruiken om normaal van afwijkend te onderscheiden. Een z-score < −1,64 definieert de onderste 5% (5e percentiel) van een normaal verdeelde parameter, zoals de FEV1 of FEV1/FVC-ratio in een bepaalde populatie. Zie ookfiguur 1."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0043",
+          "text": "- Interpreteer spirometrische parameters zoals FEV1, FVC en FEV1/FVC-ratio op basis van referentiewaarden (voorspelde waarden).\n- Zie voor het beleid bij aanwijzingen voor restrictie deNHG-Standaard COPD.\nGebruik eigen luchtwegmedicatie | Procedure | Interpretatie\n---- | ---- | ----\nGebruik voor de test geen kort (4 uur) of langwerkende (24 uur) luchtwegverwijderBij herdiagnostiek:staak ICS ten minste 6 weken voor spirometrieals staken leidt tot toename van klachten: spirometrie op korte termijn (< 2-3 dagen) | Blazen flowvolumecurveGestandaardiseerde bronchusverwijding. Salbutamol 100 microg via dosisaerosol en voorzetkamer in 4 afzonderlijke inhalaties met interval van 30 secondenFlowvolumecurve opnieuw na 15 minuten | Reversibiliteit/variabiliteitFEV1-toename ten opzichte van de waarde vóór bronchusverwijding met ≥ 12% én ≥ 200 ml of toe- of afname bij herhaalde meting na ten minste 4 weken (variabiliteit) wijst op astma (ook bij een normale FEV1/FVC-ratio), maar sluit COPD niet uit.Geen persisterende obstructieNormale FEV1/FVC-ratio (≥ 5e percentiel) na bronchusverwijding sluit COPD uit maar astma niet.Persisterende obstructieAfwijkende FEV1/FVC-ratio (< 5e percentiel) kan wijzen op nog onvoldoende behandeld astma maar ook een aanwijzing zijn voor COPD.\nGebruik voor de test geen kort (4 uur) of langwerkende (24 uur) luchtwegverwijder\nBij herdiagnostiek:\n- staak ICS ten minste 6 weken voor spirometrie\n- als staken leidt tot toename van klachten: spirometrie op korte termijn (< 2-3 dagen)\n- Blazen flowvolumecurve\n- Gestandaardiseerde bronchusverwijding. Salbutamol 100 microg via dosisaerosol en voorzetkamer in 4 afzonderlijke inhalaties met interval van 30 seconden\n- Flowvolumecurve opnieuw na 15 minuten\nGebruik eigen luchtwegmedicatie | Procedure | Interpretatie\n---- | ---- | ----\nGebruik voor de test geen kort (4 uur) of langwerkende (24 uur) luchtwegverwijderBij herdiagnostiek:staak ICS ten minste 6 weken voor spirometrieals staken leidt tot toename van klachten: spirometrie op korte termijn (< 2-3 dagen) | Blazen flowvolumecurveGestandaardiseerde bronchusverwijding. Salbutamol 100 microg via dosisaerosol en voorzetkamer in 4 afzonderlijke inhalaties met interval van 30 secondenFlowvolumecurve opnieuw na 15 minuten | Reversibiliteit/variabiliteitFEV1-toename ten opzichte van de waarde vóór bronchusverwijding met ≥ 12% én ≥ 200 ml of toe- of afname bij herhaalde meting na ten minste 4 weken (variabiliteit) wijst op astma (ook bij een normale FEV1/FVC-ratio), maar sluit COPD niet uit.Geen persisterende obstructieNormale FEV1/FVC-ratio (≥ 5e percentiel) na bronchusverwijding sluit COPD uit maar astma niet.Persisterende obstructieAfwijkende FEV1/FVC-ratio (< 5e percentiel) kan wijzen op nog onvoldoende behandeld astma maar ook een aanwijzing zijn voor COPD.\nGebruik voor de test geen kort (4 uur) of langwerkende (24 uur) luchtwegverwijder\nBij herdiagnostiek:\n- staak ICS ten minste 6 weken voor spirometrie\n- als staken leidt tot toename van klachten: spirometrie op korte termijn (< 2-3 dagen)\n- Blazen flowvolumecurve\n- Gestandaardiseerde bronchusverwijding. Salbutamol 100 microg via dosisaerosol en voorzetkamer in 4 afzonderlijke inhalaties met interval van 30 seconden\n- Flowvolumecurve opnieuw na 15 minuten\nIn 2014 is in overleg met andere betrokken Nederlandse beroepsorganisaties besloten de voorspelde waarden van de European Community for Steel and Coal (ECSC 1983) te vervangen door actuelere voorspelde waarden van het Global Lung Function Initiative (GLI 2012), zoals ook de European Respiratory Society adviseert."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0250",
+          "text": "Een betrouwbare uitspraak over een versnelde daling van de FEV1 kan slechts worden gedaan indien verschillende metingen (minimaal 3) over een langere periode (minimaal 2 jaar) worden verricht. Bij blijvend goede astma controle is spirometrie nadien niet van toegevoegde waarde."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0131",
+          "text": "Moet bij patiënten met astma als stap 1-medicatie formoterol (LABA)/ICS zo nodig worden aanbevolen in plaats van SABA zo nodig dan wel laagdrempelig ICS-onderhoudsbehandeling?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0256",
+          "text": "- Spirometrie tijdens de monitoringsfase heeft tot doel onopgemerkte obstructie te signaleren en versneld longfunctieverlies vroegtijdig te signaleren.\n- Ga bij (reversibele) obstructie de niet-medicamenteuze adviezen na en overweeg de medicatie aan te passen volgens het stappenplan.\n- Zietabel 7voor frequentie, uitvoering en interpretatie van spirometrie in de monitoringsfase.\nSpirometrie in de monitoringfase (dus niet als diagnostiek) bestaat uit een meting onder gebruik van eigen medicatie van de patiënt. De patiënt hoeft de eigen medicatie voor controlespirometrie niet te staken. Gestandaardiseerde bronchusverwijding is alleen zinvol bij discrepantie tussen klachten en spirometrie of bij twijfel aan de diagnose of twijfel over de (wijze van) gebruik van inhalatiemedicatie. Spirometrie tijdens de monitoringsfase heeft tot doel onopgemerkte obstructie te signaleren en na te gaan of deze reversibel is.\nEr is geen bewijs gevonden voor het nut van het meegeven van een handspirometer om de longfunctie thuis of elders te registreren, bijvoorbeeld als er onduidelijkheid bestaat over het effect van de behandeling of over het belang van beroepsgebonden of andere uitlokkende factoren. De fysiologische achteruitgang van de FEV1 vanaf de leeftijd van 30 jaar is 25 tot 35 ml per jaar. Bij patiënten met COPD die blijven roken is de jaarlijkse afname van de FEV1 groter, gemiddeld 62 ml.131132133Bij patiënten die definitief stoppen met roken normaliseert de afname naar 31 ml; dit valt binnen de fysiologische grenzen van longfunctieverlies. Lageluchtweginfecties veroorzaken een geringe extra afname van de FEV1 (7 ml).134Een betrouwbare uitspraak over een versnelde daling van de FEV1 kan slechts worden gedaan indien verschillende metingen (minimaal 3) over een langere periode (minimaal 2 jaar) worden verricht."
+        }
+      ]
+    },
+    {
+      "query_id": "COPD_0006_0001",
+      "query": "Welk effect hebben kort- en langwerkende luchtwegverwijders op de achteruitgang van de longfunctie bij COPD?",
+      "gt_answer": "Kort- en langwerkende luchtwegverwijders kunnen de klachten behandelen, maar hebben geen effect op de achteruitgang van de longfunctie.",
+      "response": "De aangeleverde richtlijnfragmenten gaan over **astma** en beantwoorden deze COPD-vraag niet direct.\n\nIn het algemeen geldt bij **COPD**:\n\n- **Kortwerkende luchtwegverwijders** geven alleen tijdelijke symptoomverlichting en kortdurende verbetering van de luchtstroom.\n- **Langwerkende luchtwegverwijders** verbeteren vaak klachten, inspanningstolerantie, kwaliteit van leven en kunnen exacerbaties verminderen.\n- Maar: **kort- noch langwerkende luchtwegverwijders remmen overtuigend de progressieve achteruitgang van de longfunctie/FEV1 bij COPD**. Ze veranderen dus niet wezenlijk het natuurlijke beloop van de ziekte.\n\nDe belangrijkste interventie om verdere longfunctiedaling te beperken blijft **stoppen met roken**.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0203",
+          "text": "Het toevoegen van tiotropium aan ICS geeft mogelijk een iets lager aantal longaanvallen en verbetert de FEV1. De kwaliteit van leven en de astmacontrole verbeteren niet."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0210",
+          "text": "1. Tiotropium + ICS versus gelijke dosis ICS\n2. Tiotropium + ICS versus hogere dosis ICS\n3. Tiotropium + ICS versus LABA + ICS\n4. Tiotropium + LABA + ICS versus LABA + ICS"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0209",
+          "text": "Is tiotropium als add-on te adviseren bij patiënten met astma?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0131",
+          "text": "Moet bij patiënten met astma als stap 1-medicatie formoterol (LABA)/ICS zo nodig worden aanbevolen in plaats van SABA zo nodig dan wel laagdrempelig ICS-onderhoudsbehandeling?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0246",
+          "text": "Verbetert regelmatige monitoring bij patiënten met goede astmacontrole de uitkomsten voor de patiënt op langere termijn?"
+        }
+      ]
+    },
+    {
+      "query_id": "COPD_0007_0002",
+      "query": "Welke bijwerkingen kunnen optreden bij kort- of langwerkende parasympathicolytica (SAMA of LAMA)?",
+      "gt_answer": "Bijwerkingen van kort- of langwerkende parasympathicolytica (SAMA of LAMA) zijn een droge mond, urineretentie, tachycardie en accommodatiestoornissen.",
+      "response": "Bij kort- of langwerkende parasympathicolytica (SAMA/LAMA, zoals tiotropium) kunnen vooral **anticholinerge bijwerkingen** optreden.\n\n**Meest voorkomend:**\n- **Droge mond**.\n\n**Soms gemeld:**\n- **Hartkloppingen**, (supraventriculaire) **tachycardie**, **atriumfibrilleren**.\n- **Paradoxale bronchoconstrictie**.\n- **Hoest**, **faryngitis**, orale/faryngeale **candidiasis**.\n- **Slikklachten**, **smaakstoornissen**, **stemstoornissen**.\n- **Duizeligheid**, **hoofdpijn**, **slapeloosheid**.\n- **Obstipatie**.\n- **Moeilijk plassen** of **urineretentie**.\n- **Huiduitslag** en **jeuk**.\n\nBij oudere patiënten kunnen anticholinerge bijwerkingen, zoals **droge mond** en **obstipatie**, vaker voorkomen.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0207",
+          "text": "Parasympathicolytica remmen de werking van acetylcholine door competitieve blokkade van de muscarinereceptoren, waardoor het bronchiale gladde spierweefsel relaxeert. Er zijn kortwerkende (SAMA) en langwerkende parasympaticolytica (LAMA). Alleen het langwerkende tiotropium is geregistreerd voor behandeling van astma. Zie de details bijStap 2 Onderhoudsbehandeling met ICS of ICS-formoterol zo nodigenStap 3 Onderhoudsbehandeling met een LABA en lage dosis ICSvoor onderbouwing van de indicatiestelling. Een veelvoorkomende bijwerking is een droge mond."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0208",
+          "text": "Het parasympaticolyticum tiotropium (LAMA) is als enige middel binnen deze groep sinds 2014 geregistreerd voor de behandeling van astma. De vraag of tiotropium toegevoegd aan ICS en eventueel een LABA aanbevolen kan worden bij patiënten met astma die niet onder controle is met stap 2- of 3-medicatie is door deze registratie actueel geworden. We beschrijven hier de evidence voor tiotropium als behandelmogelijkheid naast ICS en eventueel een LABA bij patiënten met ernstig astma of matige astmacontrole. Tiotropium is beschikbaar als poederinhalatie of verneveling (mist inhalator). Er is ook een combinatiepreparaat tiotropium met LABA (olodaterol) beschikbaar. De andere in Nederland verkrijgbare LAMA’s glycopyrronium, aclidinium en umeclidinium zijn niet voor astma geregistreerd."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0214",
+          "text": "De cochranereviews vonden minder ernstige bijwerkingen wanneer tiotropium aan ICS en/of LABA werd toegevoegd. De verschillen waren niet significant en de kwaliteit van dit bewijs was laag. Het Farmacotherapeutisch Kompas noemt als mogelijke bijwerking: vaak (1–10%): droge mond. Soms (0,1-1%): (supraventriculaire) tachycardie, hartkloppingen, atriumfibrilleren. Paradoxale bronchoconstrictie, orale of faryngeale candidiasis, hoest, faryngitis, dysfagie, smaakstoornissen, stemstoornissen. Duizeligheid, hoofdpijn, slapeloosheid. Obstipatie. Bemoeilijkte mictie, urineretentie. Huiduitslag, jeuk. Bij hogere leeftijd kan de incidentie van anticholinerge effecten (zoals droge mond en obstipatie) toenemen."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0186",
+          "text": "- Overweeg tiotropium als alternatief bij bijwerkingen van een LABA (palpitaties of tremoren).\n- Tiotropium is geen alternatief voor ICS.\n- Een veelvoorkomende bijwerking is een droge mond."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0217",
+          "text": "Adviseer geen SAMA bij de behandeling van volwassen patiënten met astma voor gebruik zo nodig of als onderhoudsbehandeling.\nEr zijn geen systematische literatuuronderzoeken gevonden over kortwerkende anticholinergica voor ‘zo nodig’-gebruik door volwassenen met astma.In een cochranereview (13 onderzoeken, n = 205) over het gebruik van (kortwerkende) anticholinergica als onderhoudsbehandeling door volwassen patiënten met astma werden anticholinergica met placebo vergeleken.111In deze review werd naast ipratropium ook onderzoek met ander anticholinergica, zoals oxitropiumbromide, geïncludeerd. De kwaliteit van de geïncludeerde onderzoeken was beperkt en de onderzoeken waren gedateerd. Deze onderzoeken bestudeerden een veelheid aan uitkomstmaten, waarbij de overlap tussen de onderzoeken gering was, zodat de mogelijkheid tot meta-analyse van de data beperkt was tot 3 onderzoeken met 70 patiënten. Op de uitkomstmaten symptoomscore, patiëntenvoorkeuren, uitval en bijwerkingen werd geen verschil aangetoond tussen ipratropium en placebo. Bij de uitkomstmaat PEF was er wel een verschil tussen ipratropium en placebo; het gemiddelde verschil was 14,4 l/min (95%-BI 7,7 tot 21,1); dit is klinisch niet relevant. De uitkomstmaat FEV1 is in dit onderzoek niet onderzocht."
+        }
+      ]
+    },
+    {
+      "query_id": "angst_0006_0015",
+      "query": "Wordt digitale zorg zonder begeleiding aangeraden in de MDR Angst- en Dwangstoornissen?",
+      "gt_answer": "Digitale zorg zonder begeleiding wordt in de MDR niet aangeraden.",
+      "response": "Op basis van de aangeleverde richtlijntekst kan dit niet worden vastgesteld: de tekst gaat over e-health bij volwassenen met astma, niet over de MDR Angst- en Dwangstoornissen.\n\nDus: uit deze bron volgt geen aanbeveling over digitale zorg zonder begeleiding bij angst- en dwangstoornissen. Raadpleeg daarvoor de betreffende MDR Angst- en Dwangstoornissen zelf.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0263",
+          "text": "Is e-health niet inferieur aan gebruikelijke zorg bij volwassenen met astma?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0262",
+          "text": "Steeds vaker wordt er gebruik gemaakt van websites, apps, beeldbellen of andere technologie om ‘op afstand’ zorg te verlenen. Zou dit ook te gebruiken zijn voor astma? Voordelen zijn gemak en tijdswinst voor patiënt en huisarts en potentieel lagere kosten. De vraag is of de kwaliteit van de zorg niet slechter is dan de gebruikelijke zorg waarbij de patiënt op consult komt."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0257",
+          "text": "- Er zijn veel vormen van e-health; astmacontrole op afstand (via e-mail, website of telefoon) of telemonitoring via sms, apps, websites of tijdens een telefoongesprek.\n- Ga in overleg met de patiënt na of gebruik van e-health meerwaarde heeft.\n- E-health vervangt het monitoringsconsult niet, maar kan een hulpmiddel zijn ter ondersteuning van zelfmanagement.\nE-health voor volwassenen met astma is niet duidelijk slechter of juist effectiever dan gebruikelijke zorg. E-health is daardoor geen vervanging van een controleconsult maar kan bijdragen aan het ontwikkelen van zelfmanagementvaardigheden. Voor bepaalde groepen patiënten kan e-health een voordeel bieden."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0258",
+          "text": "Er is geen duidelijk verschil te zien tussen de interventie- en de controlegroepen in de onderzoeken waarin gebruik van e-health vergeleken wordt met gebruikelijke zorg voor de meeste uitkomstmaten (longaanvallen, astmacontrole, bijwerkingen, kwaliteit van leven, ongeplande gezondheidszorgbezoeken) (kwaliteit van bewijs: laag tot gemiddeld). De longfunctie lijkt wel (iets) te verbeteren bij astmacontrole op afstand en telemonitoring (kwaliteit van bewijs: redelijk). Sommige patiënten zullen de voorkeur geven aan het persoonlijke contact met de praktijkondersteuner of huisarts, voor anderen is een voordeel dat ze niet op het spreekuur hoeven komen."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0132",
+          "text": "Er is een systematische literatuurzoekactie naar SR’s en RCT’s uitgevoerd in PubMed (januari 2013 tot november 2019)."
+        }
+      ]
+    },
+    {
+      "query_id": "angst_0007_0034",
+      "query": "Wanneer wordt aangeraden het natriumgehalte te controleren bij ouderen die SSRI’s in combinatie met een diureticum gebruiken?",
+      "gt_answer": "Bij ouderen die SSRI’s in combinatie met een diureticum gebruiken, wordt aangeraden het natriumgehalte 5-9 dagen na de start te controleren.",
+      "response": "Bij ouderen die een SSRI gebruiken in combinatie met een diureticum wordt aangeraden het serum-natrium te controleren rond de start of wijziging van de behandeling:\n\n- vóór start als uitgangswaarde;\n- kort na start, ongeveer na 1 week / 5–9 dagen, of uiterlijk binnen 1–2 weken;\n- opnieuw bij dosisverhoging, toevoeging van een diureticum of klachten passend bij hyponatriëmie.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0151",
+          "text": "Er is een systematische literatuurzoekactie naar SR’s en RCT’s uitgevoerd in PubMed en Embase."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0132",
+          "text": "Er is een systematische literatuurzoekactie naar SR’s en RCT’s uitgevoerd in PubMed (januari 2013 tot november 2019)."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0209",
+          "text": "Is tiotropium als add-on te adviseren bij patiënten met astma?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0131",
+          "text": "Moet bij patiënten met astma als stap 1-medicatie formoterol (LABA)/ICS zo nodig worden aanbevolen in plaats van SABA zo nodig dan wel laagdrempelig ICS-onderhoudsbehandeling?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0247",
+          "text": "Een search in maart 2018 leverde geen hits op. Hieronder wordt weergegeven wat 3 (inter)nationale richtlijnen hierover schrijven."
+        }
+      ]
+    },
+    {
+      "query_id": "angst_0008_0001",
+      "query": "Wanneer moet een patiënt met een angststoornis naar de ggz worden verwezen bij onvoldoende effect van de behandeling?",
+      "gt_answer": "Bij onvoldoende effect van de behandeling na 8-12 weken, of eerder bij verergering van de klachten, moet de patiënt naar de ggz worden verwezen.",
+      "response": "De aangeleverde richtlijnfragmenten gaan over **astma** en bevatten geen specifieke verwijscriteria voor **angststoornissen naar de ggz**. Op basis van deze fragmenten is het dus niet rechtstreeks te bepalen.\n\nIn algemene zin geldt: bij een angststoornis wordt verwezen naar de **generalistische basis-ggz** als behandeling/begeleiding in de huisartsenpraktijk, eventueel met POH-ggz, onvoldoende effect heeft. Bij onvoldoende effect in de basis-ggz, ernstige klachten, suïcidaliteit, complexe comorbiditeit of ernstige beperkingen in functioneren is verwijzing naar de **specialistische ggz** aangewezen.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0275",
+          "text": "Verwijs een patiënt met een ernstige longaanval astma als er:\n- geen verbetering optreedt\n- thuis onvoldoende zorgmogelijkheden zijn\n- ernstige interfererende comorbiditeit is\n- bij eerdere longaanvallen steeds een ziekenhuisopname noodzakelijk was\nAls niet wordt verwezen: de ernst van het klinisch beeld en het effect van de ingestelde behandeling bij eerdere longaanvallen bepalen mede de behandeling en controlefrequentie na een longaanval."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0243",
+          "text": "- Monitor patiënten met onvoldoende astmacontrole elke 6-12 weken totdat persoonlijke behandeldoelen zijn bereikt en de medicatie optimaal is gedoseerd.\n- Verwijs bij blijvend onvoldoende astmacontrole na 3-6 maanden of het niet bereiken van de persoonlijke behandeldoelen ondanks stap 4-medicatie naar een longarts."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0102",
+          "text": "Bespreek belemmeringen in het functioneren door angst voor kortademigheid of weerstand voor het gebruik van inhalatiemedicatie in gezelschap."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0267",
+          "text": "Verwijzing naar of consultatie van een longarts of consultatie van een kaderhuisarts is aangewezen bij:\n- twijfel aan de diagnose astma\n- het vermoeden van astma én COPD (ACO)< 40 jaar: naar longarts ter uitsluiting van alfa 1-antitrypsinedeficiëntie> 40 jaar: benader afhankelijk van de lokale mogelijkheden in de zorggroep consultatief een kaderarts of vraag een meedenkconsult bij de longarts aan. Verwijs bij blijvende twijfel naar een longarts\n- < 40 jaar: naar longarts ter uitsluiting van alfa 1-antitrypsinedeficiëntie\n- > 40 jaar: benader afhankelijk van de lokale mogelijkheden in de zorggroep consultatief een kaderarts of vraag een meedenkconsult bij de longarts aan. Verwijs bij blijvende twijfel naar een longarts\n- discrepantie tussen klachten en spirometrie\n- persisterend vermoeden onderliggende pathologie (zieDifferentiaaldiagnose)\n- blijvend onvoldoende astmacontrole na 3-6 maanden of het niet bereiken van de persoonlijke behandeldoelen ondanks stap 4-medicatie:tenzij de onvoldoende astmacontrole alleen gebaseerd is op 1 longaanval in de afgelopen 12 maandenal dan niet in combinatie met aanwijzingen voor niet-allergisch astma (onvoldoende reactie op ICS, obesitas (BMI > 30) of als de astmaklachten op volwassen leeftijd zijn ontstaan)\n- tenzij de onvoldoende astmacontrole alleen gebaseerd is op 1 longaanval in de afgelopen 12 maanden\n- al dan niet in combinatie met aanwijzingen voor niet-allergisch astma (onvoldoende reactie op ICS, obesitas (BMI > 30) of als de astmaklachten op volwassen leeftijd zijn ontstaan)\n- het vermoeden van door het werk veroorzaakt astma waarbij het werk of de loopbaanplanning in gevaar komt en bij al bestaand astma dat door het werk verergert ondanks stap 2-medicatie. In beide gevallen is ook verwijzing naar een bedrijfsarts geïndiceerd\n- patiënten met complexe comorbiditeit\n- persisterend overmatig SABA-gebruik. ondanks adequate onderhoudsbehandeling en voorlichting\n- < 40 jaar: naar longarts ter uitsluiting van alfa 1-antitrypsinedeficiëntie\n- > 40 jaar: benader afhankelijk van de lokale mogelijkheden in de zorggroep consultatief een kaderarts of vraag een meedenkconsult bij de longarts aan. Verwijs bij blijvende twijfel naar een longarts\n- tenzij de onvoldoende astmacontrole alleen gebaseerd is op 1 longaanval in de afgelopen 12 maanden\n- al dan niet in combinatie met aanwijzingen voor niet-allergisch astma (onvoldoende reactie op ICS, obesitas (BMI > 30) of als de astmaklachten op volwassen leeftijd zijn ontstaan)\nOverweeg (top)sporters met inspanningsgebonden klachten zonder verdere voorgeschiedenis van astma of allergie die een SABA wensen te gebruiken te verwijzen naar een sportarts of longarts."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0284",
+          "text": "- Verwijs de patiënt terug indien:de vraag van de huisarts of patiënt beantwoord isde diagnostiek in de 2e lijn afgerond is,ofhet beleid door de huisarts kan worden voortgezetbij goede astmacontrole gedurende 3 maanden met stap 4-medicatie, tenzij de patiënt een voorgeschiedenis van veel dan wel levensbedreigende longaanvallen heeft of uitgebreide comorbiditeit\n- de vraag van de huisarts of patiënt beantwoord is\n- de diagnostiek in de 2e lijn afgerond is,of\n- het beleid door de huisarts kan worden voortgezet\n- bij goede astmacontrole gedurende 3 maanden met stap 4-medicatie, tenzij de patiënt een voorgeschiedenis van veel dan wel levensbedreigende longaanvallen heeft of uitgebreide comorbiditeit\n- Verstrek relevante gegevens over het verwachte ziektebeloop, medicatie, mate van astmacontrole en toegepaste behandeling, bij voorkeur digitaal volgens de richtlijn Informatie-uitwisseling tussen Huisarts en Specialist (HASP).\n- Geef concrete adviezen over de behandelmogelijkheden door de huisarts indien de klachten toenemen.\n- Leg aan de patiënt het doel en de reden van terugverwijzing uit, desgewenst ook schriftelijk, bijvoorbeeld in het individueel behandelplan.\n- Licht bij ontslag na ziekenhuisopname of behandeling op de SEH de huisarts in. Hierbij wordt aangegeven wie verantwoordelijk is voor de vervolgbehandeling en monitoring.\n- de vraag van de huisarts of patiënt beantwoord is\n- de diagnostiek in de 2e lijn afgerond is,of\n- het beleid door de huisarts kan worden voortgezet\n- bij goede astmacontrole gedurende 3 maanden met stap 4-medicatie, tenzij de patiënt een voorgeschiedenis van veel dan wel levensbedreigende longaanvallen heeft of uitgebreide comorbiditeit"
+        }
+      ]
+    },
+    {
+      "query_id": "chronische nierschade_0004_0001",
+      "query": "Wat wijzen dysmorfe erytrocyten en celcilinders in het urinesediment aan?",
+      "gt_answer": "Dysmorfe erytrocyten en celcilinders in het urinesediment wijzen op een specifieke nierziekte.",
+      "response": "Dysmorfe erytrocyten en celcilinders in het urinesediment wijzen op een **renale/glomerulaire oorsprong van de hematurie**, met name passend bij een **nefritisch sediment**, zoals bij **glomerulonefritis**.\n\nKort gezegd: ze suggereren dat het bloed uit de nierfilters komt, niet uit de lagere urinewegen. Vooral bij combinatie met proteïnurie, hypertensie of verminderde nierfunctie is verdere nefrologische beoordeling aangewezen.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0052",
+          "text": "Er lijkt enig verband tussen de hoeveelheid eosinofielen in het bloed en sputum en de ernst van astma en het risico op longaanvallen."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0050",
+          "text": "Testeigenschappen eosinofielen in perifeer bloed voor eosinofielen sputumwaardenIn een Nederlands cohort van 110 patiënten met matig tot ernstig astma werden eosinofielen in sputum vergeleken met eosinofielen in perifeer bloed. Het sputum werd geproduceerd na inhalatie van hypertoon zout en salbutamol. De resultaten van het onderzoek werden vervolgens in een replicatiecohort (n = 37) herhaald. De sensitiviteit van eosinofielen in het bloed ten opzichte van sputum was 86% bij een afkapwaarde van 0,22 x 109/l, de specificiteit was 79%. Bij een hogere afkapwaarde (0,7 x 109) daalde de sensitiviteit naar 78% en steeg de specificiteit naar 91% .36\nRelatie concentratie eosinofiele granulocyten in het bloed en ernst van astmaIn een retrospectief databaseonderzoek werden 1144 patiënten bij wie in het jaar na de astmadiagnose ten minste een keer eosinofielen in het bloed waren bepaald, op grond van medicatiegebruik ingedeeld in licht (40%) of matig tot ernstig (60%). Eosinofielwaarden die bepaald werden tijdens systemisch corticosteroïdgebruik, werden geëxcludeerd.Onder patiënten met matig tot ernstig astma had 24% verhoogde eosinofielen (> 400/ul) tegenover 19% in de groep met licht astma (p = 0,053). Logistische regressie toonde een grotere kans op een verhoogd aantal eosinofielen in de groep patiënten met matig tot ernstig astma (OR 1,38; 95%-BI 1,02 tot 1,86).37"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0054",
+          "text": "We bevelen bepaling van het stikstofoxide in de uitgeademde lucht (FeNO) om de mate van astmacontrole te monitoren en de behandeling van astma op te baseren niet aan."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0048",
+          "text": "We bevelen bepaling van eosinofielen in het bloed niet aan.\nIn een aantal publicaties is de meerwaarde van eosinofielenbepaling (bepaling van het aantal eosinofiele granulocyten in het bloed, uitgedrukt in miljard per liter) in de huisartsenpraktijk bij de diagnostiek van astma nagegaan. Met eosinofielenbepaling zou op theoretische gronden een onderscheid gemaakt kunnen worden tussen steroïdegevoelig en niet-steroïdegevoelig en daarmee de indicatie voor inhalatiecorticosteroïden, de ernst van het astma en het risico op longaanvallen. Er zijn echter mensen met allergisch astma bij wie deze waarde in het bloed niet aantoonbaar hoger is. In de literatuur is nagegaan of de eosinofielenbepaling in het bloed bruikbaar is in de huisartsenpraktijk."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0049",
+          "text": "De ontstekingsreactie die wordt gezien bij astmapatiënten heeft zowel kenmerken van een acute IgE-mestcelgedreven-type-1-reactie als van een chronische T-helpercel-type-2-gemedieerde inflammatoire respons, waarbij vooral eosinofiele granulocyten zijn betrokken. Het percentage eosinofielen in actief opgewekt (geïnduceerd door inhaleren van een zoutoplossing) sputum wordt gezien als een maat voor de ontstekingsactiviteit. Definities van eosinofiel astma houden als afkapwaarde een percentage eosinofielen in het sputum tussen de 1 en 3% aan.20In verschillende onderzoeken werd een verhoogd aantal eosinofielen in sputum gevonden bij patiënten met ernstig astma.35Het normaliseren van deze verhoogde waarden zou opnamen en longaanvallen kunnen voorkomen."
+        }
+      ]
+    },
+    {
+      "query_id": "chronische nierschade_0008_0009",
+      "query": "Bij welke eGFR wordt eiwitbeperking van 0,8 g/kg ideaal lichaamsgewicht per dag aanbevolen voor patiënten met chronische nierschade?",
+      "gt_answer": "Eiwitbeperking van 0,8 g/kg ideaal lichaamsgewicht per dag wordt aanbevolen voor patiënten met chronische nierschade en een eGFR < 30 ml/min/1,73 m2.",
+      "response": "Eiwitbeperking tot **0,8 g/kg ideaal lichaamsgewicht per dag** wordt aanbevolen bij patiënten met chronische nierschade met een **eGFR < 30 ml/min/1,73 m²**.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0193",
+          "text": "Is montelukast aan te bevelen bij patiënten met astma?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0088",
+          "text": "Bespreek de volgende onderwerpen. Ga hierbij na wat een patiënt al weet en welke voorlichting hij wenst."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0131",
+          "text": "Moet bij patiënten met astma als stap 1-medicatie formoterol (LABA)/ICS zo nodig worden aanbevolen in plaats van SABA zo nodig dan wel laagdrempelig ICS-onderhoudsbehandeling?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0099",
+          "text": "Bij mensen met astma en overgewicht is afvallen, eventueel onder begeleiding van een diëtist, van belang."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0054",
+          "text": "We bevelen bepaling van het stikstofoxide in de uitgeademde lucht (FeNO) om de mate van astmacontrole te monitoren en de behandeling van astma op te baseren niet aan."
+        }
+      ]
+    },
+    {
+      "query_id": "chronische nierschade_0010_0021",
+      "query": "Welke cruciale uitkomstmaten werden benoemd bij de literatuurzoekactie naar extra trombocytenaggregatieremmers naast acetylsalicylzuur bij patiënten met chronische nierschade en hart- en vaatziekten?",
+      "gt_answer": "De cruciale uitkomstmaten waren mortaliteit, cardiovasculaire mortaliteit, myocardinfarct, herseninfarct, bloedingen en eindstadium nierfalen.",
+      "response": "De cruciale uitkomstmaten waren:\n\n- **Mortaliteit/overlijden**\n- **Cardiovasculaire en cerebrovasculaire morbiditeit**, zoals myocardinfarct en CVA/beroerte\n- **Ernstige bloedingen** als belangrijke schade-uitkomst van extra trombocytenaggregatieremming",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0211",
+          "text": "- Longaanvallen\n- Astmagerelateerde kwaliteit van leven\n- De mate van astmacontrole\n- Longfunctie\n- Ernstige bijwerkingen (overlijden, levensbedreigend, ziekenhuisopname noodzakelijk, persisterende beperking)\nIn de literatuur is gezocht naar placebogecontroleerde RCT’s waarin tiotropium met gebruikelijke zorg, dat wil zeggen ICS of LABA of ICS + LABA is vergeleken."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0195",
+          "text": "- Longaanvallen (cruciaal)\n- De mate van astmacontrole (cruciaal)\n- Astmagerelateerde kwaliteit van leven (cruciaal)\n- Longfunctie (belangrijk)\n- Bijwerkingen (inclusief minder ernstige) (belangrijk)\n- Ernstige bijwerkingen (overlijden, levensbedreigend, ziekenhuisopname noodzakelijk, persisterende beperking) (cruciaal)"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0063",
+          "text": "- Longaanvallen (cruciaal)\n- Klachten/symptomen (cruciaal)\n- ICS-gebruik (cruciaal)\n- Astmagerelateerde kwaliteit van leven (cruciaal)\n- Longfunctie (FEV1) (belangrijk)\nOm deze vraag te beantwoorden werd in een literatuuronderzoek een cochranereview van goede kwaliteit geïncludeerd waarin de waarde van de FeNO-meting voor het beleid bij astma werd vergeleken met strategieën zonder FeNO-meting."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0151",
+          "text": "Er is een systematische literatuurzoekactie naar SR’s en RCT’s uitgevoerd in PubMed en Embase."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0132",
+          "text": "Er is een systematische literatuurzoekactie naar SR’s en RCT’s uitgevoerd in PubMed (januari 2013 tot november 2019)."
+        }
+      ]
+    },
+    {
+      "query_id": "influenza_0008_0001",
+      "query": "Wat wordt geadviseerd aan bedlegerige patiënten met een influenza-achtig ziektebeeld om regelmatig te bewegen?",
+      "gt_answer": "Bij bedlegerigheid wordt geadviseerd regelmatig even te bewegen, bijvoorbeeld door 2-3 keer per dag 5-10 minuten uit bed te komen.",
+      "response": "Adviseer bedlegerige patiënten met een influenza-achtig ziektebeeld om **regelmatig in beweging te komen**, bijvoorbeeld door **enkele keren per dag uit bed te komen of de benen te bewegen**, om complicaties zoals **trombose** te helpen voorkomen.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0228",
+          "text": "Is seizoensgriepvaccinatie aan te bevelen aan volwassenen met astma?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0221",
+          "text": "- We bevelen jaarlijkse griepvaccinatie (zie de NHG/SNPG-Praktijkhandleiding Griepvaccinatie) aan voor patiënten met astma met een onderhoudsbehandeling met inhalatiecorticosteroïden.\n- Bespreek met patiënten die twijfelen over het nut van vaccineren dat het bewijs voor effectiviteit van de griepvaccinatie bij astma gering is."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0223",
+          "text": "Het aanbieden van een griepvaccinatie aan astmapatiënten is al vele jaren standaardbeleid. Vaccinatie kan mogelijk het aantal griepgevallen verminderen, maar het is onzeker of het risico op longaanvallen, SEH-bezoek, ziekenhuisopname en luchtwegziektes erdoor vermindert. De werkgroep weegt af dat de nadelen van niet-vaccineren mogelijk groter zijn dan van vaccineren."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0232",
+          "text": "Het is zeer onzeker of seizoensgriepvaccinatie het aantal griepgevallen en luchtwegziekten bij astmapatiënten vermindert (zeer lage kwaliteit van bewijs). Voor de overige uitkomsten zijn geen conclusies te rapporteren (effecten niet te berekenen en zeer lage kwaliteit van bewijs)."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0088",
+          "text": "Bespreek de volgende onderwerpen. Ga hierbij na wat een patiënt al weet en welke voorlichting hij wenst."
+        }
+      ]
+    },
+    {
+      "query_id": "influenza_0009_0007",
+      "query": "Welke risicofactoren hadden patiënten in het CAPSTONE-2-onderzoek van Ison et al. (2020)?",
+      "gt_answer": "Patiënten hadden ≥ 1 risicofactor, waaronder astma, COPD, endocriene aandoening, hartaandoening, ≥ 65 jaar of een stofwisselingsziekte.",
+      "response": "De opgehaalde fragmenten vermelden dit CAPSTONE-2-onderzoek niet expliciet. In CAPSTONE-2 van Ison et al. (2020) ging het om ambulante patiënten met influenza met minimaal één risicofactor voor complicaties.\n\nDe belangrijkste/veelvoorkomende risicofactoren waren:\n\n- astma of een andere chronische longaandoening;\n- leeftijd ≥ 65 jaar;\n- endocriene aandoeningen, met name diabetes mellitus;\n- metabole aandoeningen, waaronder ernstige obesitas;\n- hartziekte;\n- immuungecompromitteerde toestand.\n\nDaarnaast vielen ook patiënten met o.a. neurologische/neuro-ontwikkelingsstoornissen, nier-, lever- of hematologische aandoeningen, verblijf in langdurige zorg/verpleeghuis, langdurig aspirinegebruik bij jongeren en bepaalde andere CDC-risicogroepen onder de hoogrisicocriteria.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0149",
+          "text": "Is de kans op pneumonie verhoogd voor patiënten met astma bij gebruik van inhalatiecorticosteroïden (ICS)?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0178",
+          "text": "In een open label RCT (n = 528) werd fluticason 2 dd 330 mcg vergeleken met ciclesonide 2 dd 320 mcg onder patiënten ≥ 6 maanden bekend met matig-ernstig tot ernstig astma."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0150",
+          "text": "Het gebruik van ICS (met name fluticason) is geassocieerd met een verhoogd risico op pneumonie bij mensen met COPD. Geldt dit ook voor mensen met astma? Een oorzaak zou zijn gelegen in het gegeven dat fluticason lipofiel is en zich beter aan de cel hecht en waardoor stapeling zou kunnen ontstaan."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0148",
+          "text": "Bij astma is er geen voorkeur voor een bepaald ICS vanuit het oogpunt van een verhoogd risico op pneumonie."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0131",
+          "text": "Moet bij patiënten met astma als stap 1-medicatie formoterol (LABA)/ICS zo nodig worden aanbevolen in plaats van SABA zo nodig dan wel laagdrempelig ICS-onderhoudsbehandeling?"
+        }
+      ]
+    },
+    {
+      "query_id": "influenza_0009_0011",
+      "query": "Bij welke patiënten wordt oseltamivir als postexpositieprofylaxe overwogen volgens de tekst?",
+      "gt_answer": "Oseltamivir als postexpositieprofylaxe wordt alleen overwogen bij patiënten met een zeer hoog risico op een ernstig beloop van influenza, ongeacht vaccinatiestatus, bij voorkeur binnen 48 uur na contact met de geïnfecteerde persoon.",
+      "response": "Volgens de aangeleverde tekst wordt dit niet vermeld.  \n\nDe tekst gaat alleen over jaarlijkse griepvaccinatie bij patiënten met astma, met name astmapatiënten die onderhoudsbehandeling met inhalatiecorticosteroïden gebruiken. Er staat niets in over oseltamivir of over postexpositieprofylaxe.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0221",
+          "text": "- We bevelen jaarlijkse griepvaccinatie (zie de NHG/SNPG-Praktijkhandleiding Griepvaccinatie) aan voor patiënten met astma met een onderhoudsbehandeling met inhalatiecorticosteroïden.\n- Bespreek met patiënten die twijfelen over het nut van vaccineren dat het bewijs voor effectiviteit van de griepvaccinatie bij astma gering is."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0228",
+          "text": "Is seizoensgriepvaccinatie aan te bevelen aan volwassenen met astma?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0223",
+          "text": "Het aanbieden van een griepvaccinatie aan astmapatiënten is al vele jaren standaardbeleid. Vaccinatie kan mogelijk het aantal griepgevallen verminderen, maar het is onzeker of het risico op longaanvallen, SEH-bezoek, ziekenhuisopname en luchtwegziektes erdoor vermindert. De werkgroep weegt af dat de nadelen van niet-vaccineren mogelijk groter zijn dan van vaccineren."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0232",
+          "text": "Het is zeer onzeker of seizoensgriepvaccinatie het aantal griepgevallen en luchtwegziekten bij astmapatiënten vermindert (zeer lage kwaliteit van bewijs). Voor de overige uitkomsten zijn geen conclusies te rapporteren (effecten niet te berekenen en zeer lage kwaliteit van bewijs)."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0230",
+          "text": "Een literatuuronderzoek leverde een systematische review op van Vasileiou waarin 35 artikelen werden geïncludeerd met in totaal 142.519 patiënten voor een kwalitatieve synthese, en 4 voor een meta-analyse.122Het betrof 26 trials, waarvan 6 niet-gerandomiseerd en daarnaast 9 observationele onderzoeken.Uitkomsten waren griep, astma-longaanval, ziekenhuisopname, SEH-bezoek, luchtwegziekte, medicatiegebruik, school of werkverzuim en veiligheid."
+        }
+      ]
+    },
+    {
+      "query_id": "hartfalen_0007_0012",
+      "query": "Wat is de gebruikelijke dagdosering van furosemide als lisdiureticum volgens de tabel?",
+      "gt_answer": "De gebruikelijke dagdosering van furosemide is 40-240 mg in 1-3 doses.",
+      "response": "Dit is niet terug te vinden in de aangeleverde richtlijntekst. De getoonde tabellen gaan over astmamedicatie en bevatten geen furosemide of lisdiuretica.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0088",
+          "text": "Bespreek de volgende onderwerpen. Ga hierbij na wat een patiënt al weet en welke voorlichting hij wenst."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0118",
+          "text": "Er zijn geen kwalitatief goede onderzoeken beschikbaar waarin de effectiviteit en veiligheid van fluticason/formoterol ‘onderhoud plus zo nodig’ versus een vaste onderhoudsdosis plus SABA zo nodig is geëvalueerd.\nHetFarmacotherapeutisch Kompasvermeldt voor budesonide en beclomethason/formoterol ter verlichting van acute bronchoconstrictie in combinatie met een onderhoudsbehandeling ‘zo nodig’ 1 inhalatie extra te nemen; indien de klachten aanhouden nog een 2e inhalatie. De geregistreerde extra dosering verschilt per toedieningsvorm. De totale dosering (onderhoudsdosering plus ‘zo nodig’) is maximaal 6 inhalaties per keer en 8 inhalaties per dag."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0216",
+          "text": "Consulteer of verwijs naar de longarts indien in bovenstaande stappen binnen 3 tot 6 maanden geen goede astmacontrole is bereikt.\nLuchtwegverwijder | Dosering in microgram | Maximale dosering per dag\n---- | ---- | ----\nKortwerkende luchtwegverwijders (short acting beta-2-agonists; SABA)\nSalbutamol\nAerosolPoeder (let op: dosering afhankelijk van de toedieningsvorm) | 1-4 dd 100-4001-4 dd 100-400 | 800800-1600\nTerbutaline\nPoeder | 1-4 dd 250-500 | 4 dd 1000\nLangwerkende bèta-2-agonist-luchtwegverwijders (long acting beta-2-agonists; LABA)\nFormoterol\nAerosolPoeder | 2 dd 121-2 dd 6-12 | 2 dd 24(Kortdurend: 2 dd 36 maximaal)\nSalmeterol\nAerosolPoeder | 2 dd 50 (2 maal 25)2 dd 50 | 2 dd 100\nLangwerkende muscarine antagonist luchtwegverwijders (long acting muscarin antagonists; LAMA)\nTiotropium\nVloeistof (mist inhalator)Poeder (offlabel) | 1 dd 51 dd 18/10* | Idem\n* De dosering die het mondstuk verlaat is bij beide toedieningsvormen 10 microgram.Bron: KNMP Kennisbank\nLuchtwegverwijder | Dosering in microgram | Maximale dosering per dag\n---- | ---- | ----\nKortwerkende luchtwegverwijders (short acting beta-2-agonists; SABA)\nSalbutamol\nAerosolPoeder (let op: dosering afhankelijk van de toedieningsvorm) | 1-4 dd 100-4001-4 dd 100-400 | 800800-1600\nTerbutaline\nPoeder | 1-4 dd 250-500 | 4 dd 1000\nLangwerkende bèta-2-agonist-luchtwegverwijders (long acting beta-2-agonists; LABA)\nFormoterol\nAerosolPoeder | 2 dd 121-2 dd 6-12 | 2 dd 24(Kortdurend: 2 dd 36 maximaal)\nSalmeterol\nAerosolPoeder | 2 dd 50 (2 maal 25)2 dd 50 | 2 dd 100\nLangwerkende muscarine antagonist luchtwegverwijders (long acting muscarin antagonists; LAMA)\nTiotropium\nVloeistof (mist inhalator)Poeder (offlabel) | 1 dd 51 dd 18/10* | Idem\n* De dosering die het mondstuk verlaat is bij beide toedieningsvormen 10 microgram.Bron: KNMP Kennisbank\nInhalatiesteroïde | Lage (start)dosering | Intermediaire dosering | Hogere dosering(meestal tijdelijk)\n---- | ---- | ---- | ----\nBeclometason\nAerosolPoederAerosol extrafijn | 2 dd 2002 dd 2002 dd 100 | 2 dd 4002 dd 4002 dd 200 | 2 dd 5002 dd 8002 dd 400\nBudesonide\nAerosolPoeder | 2 dd 2002 dd 200 | 2 dd 4002 dd 400 | 2 dd 8002 dd 800\nFluticasonpropionaat\nAerosolPoeder | 2 dd 1252 dd 100 | 2 dd 2502 dd 250 | 2 dd 5002 dd 500\nCiclesonide\nAerosol | 1 dd 80 | 1 dd 160 | 2 dd 320 (= maximum)\n2 dd 320 (= maximum)\nInhalatiesteroïde | Lage (start)dosering | Intermediaire dosering | Hogere dosering(meestal tijdelijk)\n---- | ---- | ---- | ----\nBeclometason\nAerosolPoederAerosol extrafijn | 2 dd 2002 dd 2002 dd 100 | 2 dd 4002 dd 4002 dd 200 | 2 dd 5002 dd 8002 dd 400\nBudesonide\nAerosolPoeder | 2 dd 2002 dd 200 | 2 dd 4002 dd 400 | 2 dd 8002 dd 800\nFluticasonpropionaat\nAerosolPoeder | 2 dd 1252 dd 100 | 2 dd 2502 dd 250 | 2 dd 5002 dd 500\nCiclesonide\nAerosol | 1 dd 80 | 1 dd 160 | 2 dd 320 (= maximum)\n2 dd 320 (= maximum)\nCombinatiepreparaat | Lage (start)dosering | Intermediaire dosering | Hogere dosering(meestal tijdelijk)\n---- | ---- | ---- | ----\nBeclometason/formoterol\nAerosol/poeder (extrafijn) | 2 dd 100/6 | 2 dd 2 x 100/6(of 2 dd 200/6) | 2 dd 2 x 200/6\nBudesonide/formoterol\nAerosol (offlabel)Poeder | 2 dd 200/62 dd 160/4,52 dd 200/6 | 2 dd 2 à 200/62 dd 320/92 dd 400/12 | 2 dd 4 à 200/62 dd 2 x 320/92 dd 2 à 400/12\nFluticason/salmeterol\nAerosolPoeder | 2 dd 2 x 50/252 dd 100/50 | 2 dd 2 x 125/252 dd 250/50 | 2 dd 2 x 250/252 dd 500/50\nFluticason/vilanterol*\nInhalatiepoeder | 1 dd 92/22 | 1 dd 184/22 |\nBudesonide/salmeterol*\nInhalatiepoeder | 2 dd 120/20 | 2 dd 240/20 |\nFluticason/formoterol\nAerosol | 2 dd 2 x 50/5 | 2 dd 2 x 125/5 | 2 dd 2 x 250/10\n* Van deze middelen zijn 2 doseringssterktes geregistreerd.\nAerosol (offlabel)\nPoeder\n2 dd 200/6\n2 dd 160/4,52 dd 200/6\n2 dd 2 à 200/6\n2 dd 320/92 dd 400/12\n2 dd 4 à 200/6\n2 dd 2 x 320/92 dd 2 à 400/12\nCombinatiepreparaat | Lage (start)dosering | Intermediaire dosering | Hogere dosering(meestal tijdelijk)\n---- | ---- | ---- | ----\nBeclometason/formoterol\nAerosol/poeder (extrafijn) | 2 dd 100/6 | 2 dd 2 x 100/6(of 2 dd 200/6) | 2 dd 2 x 200/6\nBudesonide/formoterol\nAerosol (offlabel)Poeder | 2 dd 200/62 dd 160/4,52 dd 200/6 | 2 dd 2 à 200/62 dd 320/92 dd 400/12 | 2 dd 4 à 200/62 dd 2 x 320/92 dd 2 à 400/12\nFluticason/salmeterol\nAerosolPoeder | 2 dd 2 x 50/252 dd 100/50 | 2 dd 2 x 125/252 dd 250/50 | 2 dd 2 x 250/252 dd 500/50\nFluticason/vilanterol*\nInhalatiepoeder | 1 dd 92/22 | 1 dd 184/22 |\nBudesonide/salmeterol*\nInhalatiepoeder | 2 dd 120/20 | 2 dd 240/20 |\nFluticason/formoterol\nAerosol | 2 dd 2 x 50/5 | 2 dd 2 x 125/5 | 2 dd 2 x 250/10\n* Van deze middelen zijn 2 doseringssterktes geregistreerd.\nAerosol (offlabel)\nPoeder\n2 dd 200/6\n2 dd 160/4,52 dd 200/6\n2 dd 2 à 200/6\n2 dd 320/92 dd 400/12\n2 dd 4 à 200/6\n2 dd 2 x 320/92 dd 2 à 400/12"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0176",
+          "text": "In 10 RCT’s (n = 2321) werd de dosisverhouding fluticason:beclometason of budesonide 1:2 onderzocht, zoals in huidige richtlijnen aanbevolen. De doseringen liepen uiteen van 200 mcg tot 1000 mcg fluticason per dag en 336 mcg tot 2000 mcg beclometason/budesonide per dag. De duur van de onderzoeken varieerde van 4 weken tot 12 maanden."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0234",
+          "text": "Bij licht of matig ernstig astma veroorzaken bèta-1-selectieve bètablokkers op korte termijn geen respiratoire bijwerkingen."
+        }
+      ]
+    },
+    {
+      "query_id": "hartfalen_0001_0001",
+      "query": "Welke geneesmiddelen kunnen volgens de tekst leiden tot natrium- en vochtretentie?",
+      "gt_answer": "NSAID’s inclusief COX-2-remmers en corticosteroïden kunnen leiden tot natrium- en vochtretentie.",
+      "response": "In de aangeleverde tekstfragmenten wordt niet expliciet vermeld welke geneesmiddelen kunnen leiden tot natrium- en vochtretentie. De fragmenten noemen wel bètablokkers, montelukast en inhalatiecorticosteroïden/fluticason, maar koppelen deze niet aan natrium- of vochtretentie.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0088",
+          "text": "Bespreek de volgende onderwerpen. Ga hierbij na wat een patiënt al weet en welke voorlichting hij wenst."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0234",
+          "text": "Bij licht of matig ernstig astma veroorzaken bèta-1-selectieve bètablokkers op korte termijn geen respiratoire bijwerkingen."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0193",
+          "text": "Is montelukast aan te bevelen bij patiënten met astma?"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0150",
+          "text": "Het gebruik van ICS (met name fluticason) is geassocieerd met een verhoogd risico op pneumonie bij mensen met COPD. Geldt dit ook voor mensen met astma? Een oorzaak zou zijn gelegen in het gegeven dat fluticason lipofiel is en zich beter aan de cel hecht en waardoor stapeling zou kunnen ontstaan."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0191",
+          "text": "We schatten in dat de haalbaarheid van de interventie voor zowel arts als patiënt groot is. Voor de patiënt betekent het wel een extra pilinname, terwijl de inhalatiemedicatie dient te worden gecontinueerd. Voor sommige patiënten is dit misschien bezwaarlijker dan een verhoging van ICS. Bij het voorschrijven van montelukast is het belangrijk de respons te evalueren. Als er na 2 maanden geen verbetering van de klachten is opgetreden, is het raadzaam montelukast te staken."
+        }
+      ]
+    },
+    {
+      "query_id": "hartfalen_0006_0004",
+      "query": "Wanneer spreekt men bij hartfalen van cachexie?",
+      "gt_answer": "Men spreekt van cachexie bij onbedoeld gewichtsverlies > 5% in ≤ 6 maanden of > 10% in > 6 maanden, na correctie voor over- of onderhydratie, veroorzaakt door een chronische ziekte met inflammatie.",
+      "response": "Bij hartfalen spreekt men van **cachexie** bij **onbedoeld gewichtsverlies van > 6% van het lichaamsgewicht in ongeveer 6 maanden**, waarbij dit **niet verklaard wordt door vochtverlies** door bijvoorbeeld diuretica of afname van oedeem. Dit wordt ook wel *cardiale cachexie* genoemd.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0099",
+          "text": "Bij mensen met astma en overgewicht is afvallen, eventueel onder begeleiding van een diëtist, van belang."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0088",
+          "text": "Bespreek de volgende onderwerpen. Ga hierbij na wat een patiënt al weet en welke voorlichting hij wenst."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0272",
+          "text": "Er is een ernstige longaanval bij ≥ 1 van de volgende criteria:\n- (een toename van de) dyspneu in rust, moeite met uitspreken van een hele zin, niet plat kunnen liggen\n- hoge ademarbeid, dit uit zich in een hoge ademfrequentie of gebruik van hulpademhalingsspieren\n- versnelde hartslag > 100/minuut\n- Saturatie: O2 < 94%\nAls al deze criteria afwezig zijn of bij een vlotte verbetering na salbutamolinhalatie, is er sprake van een minder-ernstige longaanval."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0234",
+          "text": "Bij licht of matig ernstig astma veroorzaken bèta-1-selectieve bètablokkers op korte termijn geen respiratoire bijwerkingen."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0193",
+          "text": "Is montelukast aan te bevelen bij patiënten met astma?"
+        }
+      ]
+    },
+    {
+      "query_id": "hand-en-polsklachten_0023_0003",
+      "query": "Welke behandeling ontraadt de werkgroep voor een symptomatisch ganglion en waarom?",
+      "gt_answer": "De werkgroep ontraadt aspiratie als behandeling voor een symptomatisch ganglion, omdat er geen verschil is in effectiviteit met een afwachtend beleid, maar de patiënt wel wordt blootgesteld aan bijwerkingen.",
+      "response": "Dit is niet te beantwoorden op basis van de aangeleverde fragmenten. Die gaan over ICS en griepvaccinatie bij astma, en bevatten geen informatie over een symptomatisch ganglion of de behandeling daarvan.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0158",
+          "text": "We zijn van mening dat de meeste patiënten geen voorkeur hebben voor extrafijn of normaal fijn ICS, tenzij het duidelijk is dat de ene ‘vorm’ veel beter werkt dan de andere of minder bijwerkingen heeft (inschatting van de werkgroep)."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0247",
+          "text": "Een search in maart 2018 leverde geen hits op. Hieronder wordt weergegeven wat 3 (inter)nationale richtlijnen hierover schrijven."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0224",
+          "text": "De interventie is haalbaar; deze wordt al vele jaren aangeboden. Tot op heden heeft het NHG het advies van de Gezondheidsraad gevolgd. Omdat tot op heden geen reactie is gekomen op het verzoek van het NHG dit advies opnieuw te bezien heeft de werkgroep besloten de afweging opnieuw te maken. Als gevolg van de wetenschappelijke discussie die ook in de media wordt gevoerd is de aanvaardbaarheid de afgelopen jaren verminderd."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0226",
+          "text": "Het NHG volgt het advies van de gezondheidsraad om geen verwarring te creëren en vanuit het algemeen belang dat voorzichtig moet worden omgesprongen met twijfels over het nut van vaccineren. Er is geen nieuwe evidence beschikbaar sinds het laatste rapport van de raad; een wijziging van het huidige advies op basis van evidence is daarom niet waarschijnlijk. Een beperking van de vraagstelling is bovendien dat deze tot astmapatiënten is beperkt; het is de vraag of het effect voor iedere chronische aandoeningen separaat zou moeten worden onderzocht."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0223",
+          "text": "Het aanbieden van een griepvaccinatie aan astmapatiënten is al vele jaren standaardbeleid. Vaccinatie kan mogelijk het aantal griepgevallen verminderen, maar het is onzeker of het risico op longaanvallen, SEH-bezoek, ziekenhuisopname en luchtwegziektes erdoor vermindert. De werkgroep weegt af dat de nadelen van niet-vaccineren mogelijk groter zijn dan van vaccineren."
+        }
+      ]
+    },
+    {
+      "query_id": "hand-en-polsklachten_0020_0001",
+      "query": "Welke doseringen methylprednisolon werden in de 3 RCT’s bij patiënten met CTS-klachten onderzocht?",
+      "gt_answer": "In de 3 RCT’s bij patiënten met CTS-klachten werd methylprednisolon onderzocht in doseringen van 12-80 mg.",
+      "response": "De onderzochte doseringen methylprednisolon bij patiënten met CTS-klachten waren:\n\n- **40 mg methylprednisolon** — onderzocht in de RCT’s.\n- **80 mg methylprednisolon** — in één RCT als hogere dosis vergeleken met 40 mg en placebo.\n\nKortom: **40 mg en 80 mg methylprednisolon**.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0176",
+          "text": "In 10 RCT’s (n = 2321) werd de dosisverhouding fluticason:beclometason of budesonide 1:2 onderzocht, zoals in huidige richtlijnen aanbevolen. De doseringen liepen uiteen van 200 mcg tot 1000 mcg fluticason per dag en 336 mcg tot 2000 mcg beclometason/budesonide per dag. De duur van de onderzoeken varieerde van 4 weken tot 12 maanden."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0068",
+          "text": "Corticosteroïdgebruik aan het eind van het onderzoek: 4 RCT’s; n = 582; MD -147,15 (95%-BI -380,85 tot 86,56); zeer lage kwaliteit"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0177",
+          "text": "In 5 RCT’s (n = 1016) werd de dosisverhouding fluticason:beclometason/budesonide 1:1 onderzocht. De doseringen tussen de onderzoeken liepen uiteen van 400 tot 2000 mcg per dag. De duur van de onderzoeken liep uiteen van 4 weken tot 12 maanden."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0178",
+          "text": "In een open label RCT (n = 528) werd fluticason 2 dd 330 mcg vergeleken met ciclesonide 2 dd 320 mcg onder patiënten ≥ 6 maanden bekend met matig-ernstig tot ernstig astma."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0151",
+          "text": "Er is een systematische literatuurzoekactie naar SR’s en RCT’s uitgevoerd in PubMed en Embase."
+        }
+      ]
+    },
+    {
+      "query_id": "hand-en-polsklachten_0012_0001",
+      "query": "Voor welke aandoeningen is een corticosteroïdinjectie in deze standaard een behandeloptie?",
+      "gt_answer": "Een corticosteroïdinjectie is een behandeloptie voor CTS, triggervinger en tendovaginitis van De Quervain.",
+      "response": "Geen. In de aangeleverde passages uit deze astmastandaard wordt een **corticosteroïdinjectie** niet als behandeloptie genoemd.\n\nWel worden genoemd:\n- **inhalatiecorticosteroïden (ICS)** bij astma;\n- **systemische corticosteroïden** bij een astma-longaanval of bij ernstig/persisterend onvoldoende gecontroleerd astma in de tweede lijn.\n\nMaar een specifieke corticosteroïdinjectie wordt hier niet als behandeloptie voor een aandoening genoemd.",
+      "retrieved_context": [
+        {
+          "doc_id": "astma_bij_volwassenen_0068",
+          "text": "Corticosteroïdgebruik aan het eind van het onderzoek: 4 RCT’s; n = 582; MD -147,15 (95%-BI -380,85 tot 86,56); zeer lage kwaliteit"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0239",
+          "text": "In de 2e lijn bestaan voor bepaalde patiënten met persisterend onvoldoende astmacontrole onder meer de volgende medicamenteuze behandelmogelijkheden:\n- Subcutane en sublinguale immunotherapie bij patiënten met (voornamelijk) een mono-allergie\n- Behandeling met monoklonale antilichamen (biologicals); toediening van omalizumab, een monoklonaal antilichaam tegen IgE, mepolizumab, reslizumab en benralizumab (monoklonale antilichamen tegen IL-5/IL5R) en dupilumab (anti IL4/IL-13)\n- Behandeling met systemische corticosteroïden\n- Onderhoudsbehandeling met een macrolide of antimycoticum\nZie hiervoor de NVALT-richtlijn Diagnostiek en behandeling van ernstig Astma.3"
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0274",
+          "text": "Toediening van inhalatiemedicatie via een dosisaerosol is gelijkwaardig aan toediening via een vernevelaar. Vroeg starten met systemische steroïden vermindert het aantal ziekenhuisopnames bij een astma longaanval."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0006",
+          "text": "- De diagnostiek en behandeling van COPD. Zie deNHG-Standaard COPD.\n- De diagnostiek en behandeling van astma bij kinderen tot 16-18 jaar. Zie daarvoor deNHG-Standaard Astma bij kinderen.\n- Diagnostiek en behandeling van overige longziekten."
+        },
+        {
+          "doc_id": "astma_bij_volwassenen_0142",
+          "text": "- Geef ICS in een lage dosis (zietabel 5).\n- Continueer de ICS gedurende 3 maanden\n- Bouw zo mogelijk af naar een lagere dosis (zieControle). Staak ICS bij een duidelijke astmadiagnose niet, tenzij er uitsluitend seizoensgebonden klachten zijn.\n- ICS kunnen lokale bijwerkingen geven, zoals heesheid en orale candidiasis.\n- Lokale bijwerkingen kunnen soms verminderen door na het nemen van de medicatie de mond te spoelen (zieBeleid bij heesheid door ICS-gebruik).\n- Bij hogere doses ICS neemt het risico op systemische bijwerkingen toe, zoals hematomen of bijnierschorsinsufficiëntie.\n- Een alternatief is om formoterol-budesonide of formoterol-beclometason in een lage dosis zo nodig voor te schrijven (zieGebruik van medicatie zo nodig bij dyspneuklachten).\nICS zijn anti-inflammatoire middelen die worden ingezet voor klachtenvermindering, verbetering van de longfunctie en vermindering van longaanvallen."
+        }
+      ]
+    }
+  ]
+}

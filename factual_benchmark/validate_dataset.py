@@ -254,7 +254,7 @@ if __name__ == "__main__":
     with open("data/benchmark_chunks.jsonl", "r") as f:
         scraped_chunks = [json.loads(line) for line in f]
     
-    with open(os.path.join(RESULTS_DIR, "qa_few_shot.json"), "r") as f:
+    with open(os.path.join(RESULTS_DIR, "qa_final.json"), "r") as f:
         qa_pairs = json.load(f)
     
     results = evaluate_qa_pairs(scraped_chunks, qa_pairs)

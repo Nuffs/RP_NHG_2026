@@ -34,16 +34,39 @@ def generate_qa_pairs(scraped_chunks, prompt_config):
 
             content = json.loads(response.choices[0].message.content)
 
-            candidates = content.get("qa_pairs", [])
+            # Handle both response formats
+            candidates = []
+            
+            # Format 1: Direct question/answer keys
+            if "question" in content and "answer" in content:
+                candidates = [{"question": content["question"], "answer": content["answer"]}]
+            # Format 2: Nested qa_pairs array
+            elif "qa_pairs" in content:
+                candidates = content.get("qa_pairs", [])
+            else:
+                # Try to extract any dict-like structure with question/answer
+                print(f"Warning: Unexpected response format for chunk {chunk['chunk_id']}: {content}")
+                continue
+
+            # print content output for debugging
+            print(f"Received {len(candidates)} QA pair(s) for chunk {chunk['chunk_id']}")
 
             for candidate in candidates:
+                question = candidate.get("question", "").strip()
+                answer = candidate.get("answer", "").strip()
+                
+                # Skip empty candidates
+                if not question or not answer:
+                    print(f"Warning: Skipping empty question or answer for chunk {chunk['chunk_id']}")
+                    continue
+                
                 qa_pairs.append({
                     "chunk_id": chunk["chunk_id"],
                     "doc_id": chunk["doc_id"],
                     "section_path": chunk["section_path"],
                     "source_text": chunk["text"],
-                    "question": candidate.get("question"),
-                    "answer": candidate.get("answer"),
+                    "question": question,
+                    "answer": answer,
                     "prompt_technique": prompt_config["name"]
                 })
 
@@ -64,8 +87,8 @@ if __name__ == "__main__":
     with open("data/benchmark_chunks.jsonl", "r") as f:
         scraped_chunks = [json.loads(line) for line in f]
     
-    # Use few shot prompt config for generating final dataset
-    with open(os.path.join("factual_benchmark/prompts", "few_shot.json"), "r") as f:
+    # Use the combination of few-shot and chain of thought prompt config for generating final dataset
+    with open(os.path.join("factual_benchmark/prompts", "final_prompt.json"), "r") as f:
         prompt_config = json.load(f)
     
     qa_pairs = generate_qa_pairs(scraped_chunks, prompt_config)

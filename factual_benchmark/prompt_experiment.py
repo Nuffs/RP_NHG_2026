@@ -1,12 +1,12 @@
 from generate_dataset import generate_qa_pairs
-from validate_dataset import evaluate_qa_pairs
+from validate_dataset import evaluate_qa_pairs_grounding
 import json, os
 
 PROMPTS_DIR = "factual_benchmark/prompts"
 RESULTS_DIR = "factual_benchmark/results"
 
 def run_prompt_experiment():
-    with open("data/benchmark_chunks.jsonl", "r") as f:
+    with open("data/benchmark_prompt_experiment_chunks.jsonl", "r") as f:
         scraped_chunks = [json.loads(line) for line in f]
     
     prompt_files = [f for f in os.listdir(PROMPTS_DIR)]
@@ -23,7 +23,7 @@ def run_prompt_experiment():
         qa_pairs = generate_qa_pairs(scraped_chunks, prompt_config)
         
         # Evaluate QA pairs
-        results = evaluate_qa_pairs(scraped_chunks, qa_pairs)
+        results = evaluate_qa_pairs_grounding(scraped_chunks, qa_pairs)
         
         all_results.append({
             "prompt_name": prompt_config["name"],

@@ -120,6 +120,9 @@ def scrape_single_guideline(driver, url, doc_id):
         print(f"  WARNING: #volledige-tekst not found in parsed HTML for {url}")
         main_content = soup.find("div", class_="content--main") or soup
 
+    # verwijder alle details elementen, want die bevatten vaak extra info die we niet willen, en kunnen ook problemen geven bij het genereren van niet klinisch relevante vragen voor de benchmark
+    for details_el in main_content.find_all("details"):
+        details_el.decompose()
 
     h2_headings = main_content.find_all("h2")
     desired_h2 = [h for h in h2_headings 
@@ -259,4 +262,4 @@ def run_scraping():
 
 
 if __name__ == "__main__":
-    run_scraping
+    run_scraping()

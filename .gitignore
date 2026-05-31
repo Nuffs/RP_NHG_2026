@@ -136,3 +136,4 @@ Thumbs.db
 
 # Project specific
 data/
+/pipeline/qdrant_data/

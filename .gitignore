@@ -136,5 +136,4 @@ Thumbs.db
 
 # Project specific
 data/
-factual_benchmark/results/
-*.jsonl
+/pipeline/qdrant_data/

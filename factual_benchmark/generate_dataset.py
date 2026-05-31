@@ -8,6 +8,16 @@ client = OpenAI()
 RESULTS_DIR = "factual_benchmark/results"
 
 def generate_qa_pairs(scraped_chunks, prompt_config):
+    """
+    Generate QA pairs from scraped chunks using OpenAI API.
+    
+    Args:
+        scraped_chunks (list): List of chunk dictionaries with 'text', 'chunk_id', etc.
+        prompt_config (dict): Prompt configuration with 'model', 'system_prompt', 'prompt_template', 'name'
+    
+    Returns:
+        list: List of QA pair dictionaries generated from chunks
+    """
     qa_pairs = []
 
     for chunk in scraped_chunks:
@@ -23,17 +33,45 @@ def generate_qa_pairs(scraped_chunks, prompt_config):
             )
 
             content = json.loads(response.choices[0].message.content)
-            qa_pairs.append({
-                "chunk_id": chunk["chunk_id"],
-                "doc_id": chunk["doc_id"],
-                "section_path": chunk["section_path"],
-                "source_text": chunk["text"],
-                "question": content.get("question"),
-                "answer": content.get("answer"),
-                "prompt_technique": prompt_config["name"]
-            })
+
+            # Handle both response formats
+            candidates = []
+            
+            # Format 1: Direct question/answer keys
+            if "question" in content and "answer" in content:
+                candidates = [{"question": content["question"], "answer": content["answer"]}]
+            # Format 2: Nested qa_pairs array
+            elif "qa_pairs" in content:
+                candidates = content.get("qa_pairs", [])
+            else:
+                # Try to extract any dict-like structure with question/answer
+                print(f"Warning: Unexpected response format for chunk {chunk['chunk_id']}: {content}")
+                continue
+
+            # print content output for debugging
+            print(f"Received {len(candidates)} QA pair(s) for chunk {chunk['chunk_id']}")
+
+            for candidate in candidates:
+                question = candidate.get("question", "").strip()
+                answer = candidate.get("answer", "").strip()
+                
+                # Skip empty candidates
+                if not question or not answer:
+                    print(f"Warning: Skipping empty question or answer for chunk {chunk['chunk_id']}")
+                    continue
+                
+                qa_pairs.append({
+                    "chunk_id": chunk["chunk_id"],
+                    "doc_id": chunk["doc_id"],
+                    "section_path": chunk["section_path"],
+                    "source_text": chunk["text"],
+                    "question": question,
+                    "answer": answer,
+                    "prompt_technique": prompt_config["name"]
+                })
+
         except Exception as e:
-            print(f"  ERROR generating QA pair for chunk {chunk['chunk_id']}: {e}")
+            print(f"Error generating QA pair for chunk {chunk['chunk_id']}: {e}")
     
     os.makedirs(RESULTS_DIR, exist_ok=True)
     output_path = os.path.join(RESULTS_DIR, f"qa_{prompt_config["name"]}.json")
@@ -41,7 +79,7 @@ def generate_qa_pairs(scraped_chunks, prompt_config):
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(qa_pairs, f, ensure_ascii=False, indent=2)
     
-    print(f"  Saved {len(qa_pairs)} Q&A pairs to {output_path}")
+    print(f"Saved {len(qa_pairs)} Q&A pairs to {output_path}")
 
     return qa_pairs
 
@@ -49,8 +87,8 @@ if __name__ == "__main__":
     with open("data/benchmark_chunks.jsonl", "r") as f:
         scraped_chunks = [json.loads(line) for line in f]
     
-    # just test zero-shot for now
-    with open(os.path.join("factual_benchmark/prompts", "zero_shot.json"), "r") as f:
+    # Use the combination of few-shot and chain of thought prompt config for generating final dataset
+    with open(os.path.join("factual_benchmark/prompts", "final_prompt.json"), "r") as f:
         prompt_config = json.load(f)
     
     qa_pairs = generate_qa_pairs(scraped_chunks, prompt_config)

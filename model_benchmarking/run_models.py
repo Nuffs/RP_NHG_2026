@@ -42,7 +42,7 @@ from pipeline.query import embed_query, retrieve_top_chunks  # noqa: E402
 load_dotenv()
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
-INPUT_PATH      = Path("factual_benchmark/results/qa_few_shot.json")
+INPUT_PATH      = Path("factual_benchmark/results/qa_final_dataset.json")
 GUIDELINES_PATH = Path("pipeline/nhg_subset_guidelines.jsonl")
 EMBEDDINGS_PATH = Path("pipeline/embeddings.json")
 RESULTS_DIR     = Path("model_benchmarking/results")
@@ -153,7 +153,7 @@ def get_retrieved_context(
         cid = item["chunk_id"]
         chunk = chunk_lookup.get(cid)
         if chunk is None:
-            print(f"  ⚠ chunk_id {cid!r} not found in guidelines JSONL — skipping")
+            print(f"  \u26a0 chunk_id {cid!r} not found in guidelines JSONL \u2014 skipping")
             continue
         results.append({"doc_id": cid, "text": chunk["text"]})
     return results
@@ -177,7 +177,7 @@ def build_prompt(retrieved_context: list[dict], question: str) -> str:
 # ── Retry decorator factory ────────────────────────────────────────────────────
 
 def _retry():
-    """Exponential back-off: 2 s → 4 s → 8 s … up to 60 s, max 4 attempts."""
+    """Exponential back-off: 2 s -> 4 s -> 8 s ... up to 60 s, max 4 attempts."""
     return retry(
         retry=retry_if_exception_type(Exception),
         wait=wait_exponential(multiplier=1, min=2, max=60),
@@ -356,7 +356,11 @@ async def _dispatch(model_cfg: dict, clients: dict, prompt: str) -> dict:
 # ── Per-model runner ───────────────────────────────────────────────────────────
 
 async def run_model(
-    model_cfg: dict, items: list[dict], clients: dict
+    model_cfg: dict,
+    items: list[dict],
+    clients: dict,
+    metrics_path: "Path | None" = None,
+    answers_path: "Path | None" = None,
 ) -> tuple[list[dict], list[dict]]:
     """
     Process all QA items concurrently for one model.
@@ -364,28 +368,41 @@ async def run_model(
     Each item must already contain a "retrieved_context" key (pre-computed in
     main() so the retrieval cost is paid once, not once per model).
 
-    Returns:
-        ragchecker_results  – list in checking_inputs.json format
-        metrics_rows        – list for metrics.csv
-    """
-    sem  = asyncio.Semaphore(CONCURRENCY)
-    name = model_cfg["name"]
+    metrics_path  - if provided, each metrics row is appended immediately
+                    (file opened/closed per write so it's never locked).
+    answers_path  - if provided, the RAGChecker JSON is rewritten after every
+                    completed question (incremental safety).
 
-    async def _one(item: dict) -> dict:
+    Returns:
+        ragchecker_results  - list in checking_inputs.json format
+        metrics_rows        - list for metrics.csv
+    """
+    sem   = asyncio.Semaphore(CONCURRENCY)
+    name  = model_cfg["name"]
+    total = len(items)
+
+    async def _one_with_item(item: dict) -> tuple[dict, dict]:
+        """Returns (item, api_result); raises on unrecoverable error."""
         prompt = build_prompt(item["retrieved_context"], item["question"])
         async with sem:
-            return await _dispatch(model_cfg, clients, prompt)
+            result = await _dispatch(model_cfg, clients, prompt)
+        return item, result
 
-    tasks    = [_one(item) for item in items]
-    outcomes = await asyncio.gather(*tasks, return_exceptions=True)
+    tasks = [_one_with_item(item) for item in items]
 
     ragchecker_results: list[dict] = []
     metrics_rows: list[dict]       = []
+    completed = 0
 
-    for item, outcome in zip(items, outcomes):
-        if isinstance(outcome, Exception):
-            print(f"  ✗ [{name}] {item['chunk_id']}: {outcome}")
+    for coro in asyncio.as_completed(tasks):
+        try:
+            item, outcome = await coro
+        except Exception as exc:
+            completed += 1
+            print(f"  [FAIL] [{name}] ({completed}/{total}) error: {exc}")
             continue
+
+        completed += 1
 
         ragchecker_results.append(
             {
@@ -393,34 +410,45 @@ async def run_model(
                 "query": item["question"],
                 "gt_answer": item["answer"],
                 "response": outcome["answer"],
-                # ← actual retrieved chunks, not ground-truth source_text
                 "retrieved_context": item["retrieved_context"],
             }
         )
-        latency       = outcome["latency"]
-        input_tokens  = outcome["input_tokens"]
-        output_tokens = outcome["output_tokens"]
-        reasoning_tokens = outcome["reasoning_tokens"]
-        total_tokens  = input_tokens + output_tokens + reasoning_tokens
 
-        inference_speed_tps = (
-            output_tokens / latency if latency > 0 else 0.0
-        )
+        latency          = outcome["latency"]
+        input_tokens     = outcome["input_tokens"]
+        output_tokens    = outcome["output_tokens"]
+        reasoning_tokens = outcome["reasoning_tokens"]
+        total_tokens     = input_tokens + output_tokens + reasoning_tokens
+
+        inference_speed_tps = output_tokens / latency if latency > 0 else 0.0
         blended_price = PRICE_PER_1M.get(name, 0.0)
         cost_dollars  = total_tokens * (blended_price / 1_000_000)
 
-        metrics_rows.append(
-            {
-                "model_name": name,
-                "query_id": item["chunk_id"],
-                "latency_seconds": round(latency, 4),
-                "input_tokens": input_tokens,
-                "output_tokens": output_tokens,
-                "reasoning_tokens": reasoning_tokens,
-                "inference_speed_tps": round(inference_speed_tps, 2),
-                "cost_dollars": f"{cost_dollars:.5f}",
-            }
-        )
+        row = {
+            "model_name": name,
+            "query_id": item["chunk_id"],
+            "latency_seconds": round(latency, 4),
+            "input_tokens": input_tokens,
+            "output_tokens": output_tokens,
+            "reasoning_tokens": reasoning_tokens,
+            "inference_speed_tps": round(inference_speed_tps, 2),
+            "cost_dollars": f"{cost_dollars:.5f}",
+        }
+        metrics_rows.append(row)
+
+        # ── Incremental CSV append (open/close so the file is never locked) ──
+        if metrics_path is not None:
+            with open(metrics_path, "a", newline="", encoding="utf-8") as _f:
+                csv.DictWriter(_f, fieldnames=list(row.keys())).writerow(row)
+
+        # ── Incremental JSON rewrite ───────────────────────────────────────
+        if answers_path is not None:
+            with open(answers_path, "w", encoding="utf-8") as jf:
+                json.dump({"results": ragchecker_results}, jf,
+                          ensure_ascii=False, indent=2)
+
+        print(f"  [OK] [{name}] ({completed}/{total}) {item['chunk_id']} "
+              f"| {round(latency,1)}s | {output_tokens} tok")
 
     return ragchecker_results, metrics_rows
 
@@ -447,61 +475,70 @@ async def main() -> None:
     # ── 1. Load benchmark questions ────────────────────────────────────────────
     with open(INPUT_PATH, encoding="utf-8") as f:
         items: list[dict] = json.load(f)
-    # items = items[:3]  # TODO: remove limit before full run
-    print(f"Loaded {len(items)} QA items from {INPUT_PATH} (limited to {len(items)})")
+    print(f"Loaded {len(items)} QA items from {INPUT_PATH}")
+
+    # ── Optional filter: restrict to a single guideline topic ─────────────────
+    FILTER_TOPIC: str | None = "astma_bij_volwassenen"   # set None for full run
+    if FILTER_TOPIC:
+        items = [i for i in items if i["chunk_id"].startswith(FILTER_TOPIC)]
+        print(f"Filtered to '{FILTER_TOPIC}': {len(items)} items")
+    print()
 
     # ── 2. Load Leander's retrieval artefacts (once) ───────────────────────────
-    print("Loading retrieval index…")
+    print("Loading retrieval index...")
     chunk_lookup     = load_chunk_lookup(GUIDELINES_PATH)
     embedding_index  = load_embedding_index(EMBEDDINGS_PATH)
     print(f"  {len(chunk_lookup)} chunks | {len(embedding_index)} embeddings\n")
 
     # ── 3. Pre-compute retrieved context for every question ────────────────────
-    # Retrieval is shared across all 6 models — run it once here, not 6×.
-    print(f"Retrieving top-{TOP_K} chunks per question (Gemini embed)…")
+    # Retrieval is shared across all 6 models - run it once here, not 6x.
+    print(f"Retrieving top-{TOP_K} chunks per question (Gemini embed)...")
     for i, item in enumerate(items, 1):
         ctx = get_retrieved_context(
             item["question"], chunk_lookup, embedding_index, top_k=TOP_K
         )
         item["retrieved_context"] = ctx
-        print(f"  [{i:02d}/{len(items)}] {item['chunk_id']} → {len(ctx)} chunks retrieved")
+        print(f"  [{i:02d}/{len(items)}] {item['chunk_id']} -> {len(ctx)} chunks retrieved")
     print()
 
     # ── 4. Build LLM clients ───────────────────────────────────────────────────
-    clients     = build_clients()
-    all_metrics: list[dict] = []
+    clients = build_clients()
 
-    # ── 5. Run each model (generation step) ───────────────────────────────────
-    for model_cfg in MODELS:
-        print(f"─── {model_cfg['name']} ───")
-        ragchecker_results, metrics_rows = await run_model(model_cfg, items, clients)
-
-        safe_name = model_cfg["name"].replace("/", "-").replace(".", "")
-        out_path  = RESULTS_DIR / f"answers_{safe_name}.json"
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump({"results": ragchecker_results}, f, ensure_ascii=False, indent=2)
-        print(f"  ✓ {len(ragchecker_results)} results → {out_path}\n")
-
-        all_metrics.extend(metrics_rows)
-
-    # ── 6. Write metrics CSV ───────────────────────────────────────────────────
+    # ── 5. Open metrics CSV once (incremental writes happen inside run_model) ──
     metrics_path = RESULTS_DIR / "metrics.csv"
     fieldnames   = [
         "model_name", "query_id", "latency_seconds",
         "input_tokens", "output_tokens", "reasoning_tokens",
         "inference_speed_tps", "cost_dollars",
     ]
-    with open(metrics_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(all_metrics)
-    print(f"Metrics saved → {metrics_path}")
+    all_metrics: list[dict] = []
+
+    # Write header once; rows are appended incrementally inside run_model.
+    with open(metrics_path, "w", newline="", encoding="utf-8") as csv_f:
+        csv.DictWriter(csv_f, fieldnames=fieldnames).writeheader()
+
+    # ── 6. Run each model (generation step) ───────────────────────────────────
+    for model_cfg in MODELS:
+        name      = model_cfg["name"]
+        safe_name = name.replace("/", "-").replace(".", "")
+        out_path  = RESULTS_DIR / f"answers_{safe_name}.json"
+
+        print(f"--- {name} ---")
+        ragchecker_results, metrics_rows = await run_model(
+            model_cfg, items, clients,
+            metrics_path=metrics_path,
+            answers_path=out_path,
+        )
+        all_metrics.extend(metrics_rows)
+        print(f"  -> {len(ragchecker_results)} answers saved to {out_path}\n")
+
+    print(f"Metrics saved -> {metrics_path}  ({len(all_metrics)} rows total)")
 
     # ── 7. Export metrics to Excel ─────────────────────────────────────────────
     excel_path = RESULTS_DIR / "metrics.xlsx"
     df = pd.read_csv(metrics_path)
     df.to_excel(excel_path, index=False)
-    print(f"Excel saved  → {excel_path}")
+    print(f"Excel saved  -> {excel_path}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,244 @@
+{
+  "results": [
+    {
+      "query_id": "c467fbaa",
+      "query": "Mevrouw Jansen, 28 jaar, is 12 weken zwanger en komt op uw spreekuur met verergerende astmaklachten. Ze gebruikt momenteel salbutamol en fluticason, maar is bezorgd over de veiligheid van deze medicijnen voor haar ongeboren kind. U legt uit dat goede astmacontrole met medicamenteuze behandeling tijdens de zwangerschap veiliger is. Welk medicijn kan ze veilig blijven gebruiken tijdens haar zwangerschap?",
+      "gt_answer": "Salbutamol en fluticason kunnen in de gebruikelijke dosering zonder problemen worden gebruikt tijdens de zwangerschap.",
+      "source_span": "Salbutamol, terbutaline, salmeterol, formoterol, fluticason, beclometason en budesonide kunnen in de gebruikelijke dosering zonder problemen worden gebruikt.",
+      "retrieval_query": "astma medicatie zwangerschap salbutamol fluticason veiligheid",
+      "doc_id": "astma_bij_volwassenen",
+      "chunk_id": "astma_bij_volwassenen_0010",
+      "section_path": [
+        "Richtlijnen beleid",
+        "Zwangerschap en borstvoeding"
+      ],
+      "strategy": "few_shot",
+      "round_trip_probe": "miss",
+      "nli_faithfulness": 0.000676,
+      "nli_hallucination": 0.001589,
+      "nli_neutral": 0.997735,
+      "nli_scores": {
+        "guideline_to_answer": {
+          "entailment": 0.0009198777843266726,
+          "neutral": 0.9976845979690552,
+          "contradiction": 0.0013956001494079828
+        },
+        "answer_to_guideline": {
+          "entailment": 0.00043243891559541225,
+          "neutral": 0.9977855682373047,
+          "contradiction": 0.0017819531494751573
+        }
+      },
+      "llm_judge_details": {
+        "correctness": 5,
+        "guideline_adherence": 5,
+        "reasoning": 5,
+        "safety": 5,
+        "non_hallucination": 5
+      },
+      "llm_judge": 5.0
+    },
+    {
+      "query_id": "d90d658e",
+      "query": "Jongeman Thomas, 25 jaar, komt naar het spreekuur met klachten van terugkerende kortademigheid en piepende ademhaling die hij voornamelijk 's nachts en tijdens inspanning ervaart. Hij gebruikt af en toe salbutamol, maar merkt dat hij het steeds vaker nodig heeft, soms wel 3 keer per week. Hij rookt niet en heeft geen relevante medische voorgeschiedenis. Tijdens het onderzoek is zijn ademhaling regelmatig, maar bij de auscultatie hoor je een expiratoir piepen. Hij vraagt zich af wat hij het beste kan doen nu zijn klachten toenemen. Wat is de juiste vervolgstap in het medicamenteuze beleid voor deze patiënt?",
+      "gt_answer": "Bij deze jongeman is er sprake van onvoldoende astmacontrole door het frequente gebruik van salbutamol (> 2x/week). De juiste vervolgstap is om in samenspraak met de patiënt een volgende stap te overwegen, wat inhoudt dat een onderhoudsbehandeling met ICS of ICS-formoterol zo nodig geïndiceerd is.",
+      "source_span": "Ga bij onvoldoende astmacontrole in samenspraak met de patiënt een volgende stap.",
+      "retrieval_query": "medicamenteuze behandeling astma onvoldoende astmacontrole stappenplan",
+      "doc_id": "astma_bij_volwassenen",
+      "chunk_id": "astma_bij_volwassenen_0008",
+      "section_path": [
+        "Richtlijnen beleid",
+        "Stappenplan medicamenteuze behandeling astma"
+      ],
+      "strategy": "few_shot",
+      "round_trip_probe": "direct_span",
+      "nli_faithfulness": 0.00054,
+      "nli_hallucination": 0.005117,
+      "nli_neutral": 0.994343,
+      "nli_scores": {
+        "guideline_to_answer": {
+          "entailment": 0.0005575057002715766,
+          "neutral": 0.9976717829704285,
+          "contradiction": 0.0017706496873870492
+        },
+        "answer_to_guideline": {
+          "entailment": 0.0005224207998253405,
+          "neutral": 0.9910133481025696,
+          "contradiction": 0.00846429169178009
+        }
+      },
+      "llm_judge_details": {
+        "correctness": 5,
+        "guideline_adherence": 5,
+        "reasoning": 5,
+        "safety": 5,
+        "non_hallucination": 5
+      },
+      "llm_judge": 5.0
+    },
+    {
+      "query_id": "7be21ad7",
+      "query": "Meneer Jansen, 68 jaar, komt op uw spreekuur met toenemende kortademigheid bij inspanning en vochtretentie in de benen. Hij heeft een voorgeschiedenis van hypertensie en is recentelijk gediagnosticeerd met diabetes type 2. Bij lichamelijk onderzoek vindt u crepitaties bij auscultatie van de longen en een verhoogde bloeddruk van 160/95 mmHg. U vermoedt hartfalen en overweegt aanvullend onderzoek. Wat is de meest aangewezen vervolgstap bij de diagnose hartfalen?",
+      "gt_answer": "Bij een verhoogd (NT-pro)BNP en/of een afwijkend ecg is echocardiografie geïndiceerd. Dit is nodig om de diagnose hartfalen te bevestigen.",
+      "source_span": "Bij een verhoogd (NT-pro)BNP en/of een afwijkend ecg is echocardiografie geïndiceerd.",
+      "retrieval_query": "echocardiografie indicatie hartfalen NT-proBNP afwijkend ecg",
+      "doc_id": "hartfalen",
+      "chunk_id": "hartfalen_0004",
+      "section_path": [
+        "Richtlijnen diagnostiek",
+        "Evaluatie"
+      ],
+      "strategy": "few_shot",
+      "round_trip_probe": "direct_span",
+      "nli_faithfulness": 0.003022,
+      "nli_hallucination": 0.005277,
+      "nli_neutral": 0.991701,
+      "nli_scores": {
+        "guideline_to_answer": {
+          "entailment": 0.004670253489166498,
+          "neutral": 0.9899135828018188,
+          "contradiction": 0.005416165105998516
+        },
+        "answer_to_guideline": {
+          "entailment": 0.001374688115902245,
+          "neutral": 0.9934883117675781,
+          "contradiction": 0.0051370058208703995
+        }
+      },
+      "llm_judge_details": {
+        "correctness": 5,
+        "guideline_adherence": 5,
+        "reasoning": 4,
+        "safety": 5,
+        "non_hallucination": 5
+      },
+      "llm_judge": 4.8
+    },
+    {
+      "query_id": "22d5c093",
+      "query": "De heer Jansen, 65 jaar, komt op uw spreekuur met klachten van toenemende kortademigheid bij inspanning en een chronische hoest die al ongeveer een jaar aanhoudt. Hij rookt al 30 jaar een pakje sigaretten per dag en heeft een voorgeschiedenis van hypertonie. Bij lichamelijk onderzoek is er sprake van een verminderd ademgeruis. U overweegt COPD als mogelijke diagnose. Welk aanvullend onderzoek is het meest aangewezen om obstructie aan te tonen?",
+      "gt_answer": "Verricht diagnostische spirometrie bij patiënten met aanwijzingen voor COPD om obstructie aan te tonen.",
+      "source_span": "Verricht diagnostische spirometrie bij patiënten met aanwijzingen voor COPD.",
+      "retrieval_query": "spirometrie COPD obstructie aanvullende diagnostiek",
+      "doc_id": "COPD",
+      "chunk_id": "COPD_0003",
+      "section_path": [
+        "Richtlijnen diagnostiek",
+        "Aanvullend onderzoek"
+      ],
+      "strategy": "few_shot",
+      "round_trip_probe": "direct_span",
+      "nli_faithfulness": 0.002433,
+      "nli_hallucination": 0.000565,
+      "nli_neutral": 0.997002,
+      "nli_scores": {
+        "guideline_to_answer": {
+          "entailment": 0.0021817965898662806,
+          "neutral": 0.9972803592681885,
+          "contradiction": 0.0005378194618970156
+        },
+        "answer_to_guideline": {
+          "entailment": 0.002684595761820674,
+          "neutral": 0.9967233538627625,
+          "contradiction": 0.000592097407206893
+        }
+      },
+      "llm_judge_details": {
+        "correctness": 5,
+        "guideline_adherence": 5,
+        "reasoning": 5,
+        "safety": 5,
+        "non_hallucination": 5
+      },
+      "llm_judge": 5.0
+    },
+    {
+      "query_id": "0467040b",
+      "query": "De heer Jansen, 34 jaar, komt naar uw praktijk omdat hij al enkele maanden last heeft van aanhoudende angstgevoelens en paniekaanvallen, vooral bij sociale situaties. Hij heeft een kantoorbaan en meldt dat zijn angst hem belemmert in zijn werk en sociale leven. Hij gebruikt geen medicatie en heeft geen relevante medische voorgeschiedenis. Tijdens het consult geeft hij aan dat hij openstaat voor psychologische behandeling, maar liever geen medicatie wil gebruiken. Wat is het meest aangewezen beleid voor deze patiënt?",
+      "gt_answer": "(Cognitieve) gedragstherapeutische technieken zijn geïndiceerd bij patiënten met angststoornissen met lichte tot matige lijdensdruk en/of disfunctioneren én relatief korte ziekteduur.",
+      "source_span": "Overweeg (cognitieve) gedragstherapeutische technieken in de huisartsenpraktijk bij patiënten met angststoornissen met lichte tot matige lijdensdruk en/of disfunctioneren én relatief korte ziekteduur.",
+      "retrieval_query": "gedragstherapeutische technieken angststoornissen huisartsenpraktijk beleid",
+      "doc_id": "angst",
+      "chunk_id": "angst_0006",
+      "section_path": [
+        "Richtlijnen beleid",
+        "Niet-medicamenteuze behandeling"
+      ],
+      "strategy": "few_shot",
+      "round_trip_probe": "miss",
+      "nli_faithfulness": 0.000513,
+      "nli_hallucination": 0.001172,
+      "nli_neutral": 0.998315,
+      "nli_scores": {
+        "guideline_to_answer": {
+          "entailment": 0.0006360662519000471,
+          "neutral": 0.9981056451797485,
+          "contradiction": 0.0012582227354869246
+        },
+        "answer_to_guideline": {
+          "entailment": 0.00039055006345734,
+          "neutral": 0.9985242486000061,
+          "contradiction": 0.0010852152481675148
+        }
+      },
+      "llm_judge_details": {
+        "correctness": 5,
+        "guideline_adherence": 5,
+        "reasoning": 5,
+        "safety": 5,
+        "non_hallucination": 5
+      },
+      "llm_judge": 5.0
+    }
+  ],
+  "strategy_comparison": [
+    {
+      "strategy": "zero_shot",
+      "n_generated": 5,
+      "n_failed_chunks": 0,
+      "round_trip_hit_rate": 1.0,
+      "bertscore_recall_vs_source": 0.5825,
+      "nli_faithfulness": 0.0011,
+      "nli_hallucination": 0.0044,
+      "nli_neutral": 0.9945,
+      "llm_judge_score": 5.0,
+      "combined_score": 0.6073
+    },
+    {
+      "strategy": "few_shot",
+      "n_generated": 5,
+      "n_failed_chunks": 0,
+      "round_trip_hit_rate": 0.6,
+      "bertscore_recall_vs_source": 0.6028,
+      "nli_faithfulness": 0.0014,
+      "nli_hallucination": 0.0027,
+      "nli_neutral": 0.9958,
+      "llm_judge_score": 4.96,
+      "combined_score": 0.608
+    },
+    {
+      "strategy": "cot",
+      "n_generated": 5,
+      "n_failed_chunks": 0,
+      "round_trip_hit_rate": 0.8,
+      "bertscore_recall_vs_source": 0.5742,
+      "nli_faithfulness": 0.0011,
+      "nli_hallucination": 0.006,
+      "nli_neutral": 0.9929,
+      "llm_judge_score": 4.88,
+      "combined_score": 0.6
+    },
+    {
+      "strategy": "self_critique",
+      "n_generated": 5,
+      "n_failed_chunks": 0,
+      "round_trip_hit_rate": 0.8,
+      "bertscore_recall_vs_source": 0.5775,
+      "nli_faithfulness": 0.0013,
+      "nli_hallucination": 0.0113,
+      "nli_neutral": 0.9874,
+      "llm_judge_score": 4.88,
+      "combined_score": 0.5988
+    }
+  ]
+}

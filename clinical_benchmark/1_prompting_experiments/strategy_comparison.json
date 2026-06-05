@@ -1,0 +1,62 @@
+[
+  {
+    "strategy": "few_shot",
+    "n_generated": 28,
+    "n_failed_chunks": 2,
+    "round_trip_hit_rate": 0.0,
+    "bertscore_recall_vs_source": 0.5857,
+    "nli_faithfulness": 0.4118,
+    "nli_hallucination": 0.0158,
+    "nli_neutral": 0.5724,
+    "llm_judge_score": 4.6071,
+    "combined_score": 0.4401
+  },
+  {
+    "strategy": "cot",
+    "n_generated": 28,
+    "n_failed_chunks": 2,
+    "round_trip_hit_rate": 0.0,
+    "bertscore_recall_vs_source": 0.5847,
+    "nli_faithfulness": 0.4405,
+    "nli_hallucination": 0.0012,
+    "nli_neutral": 0.5583,
+    "llm_judge_score": 4.1857,
+    "combined_score": 0.4436
+  },
+  {
+    "strategy": "few_shot_cot",
+    "n_generated": 27,
+    "n_failed_chunks": 3,
+    "round_trip_hit_rate": 0.0,
+    "bertscore_recall_vs_source": 0.5887,
+    "nli_faithfulness": 0.5548,
+    "nli_hallucination": 0.0097,
+    "nli_neutral": 0.4355,
+    "llm_judge_score": 4.5926,
+    "combined_score": 0.508
+  },
+  {
+    "strategy": "few_shot_refine",
+    "n_generated": 25,
+    "n_failed_chunks": 5,
+    "round_trip_hit_rate": 0.0,
+    "bertscore_recall_vs_source": 0.5967,
+    "nli_faithfulness": 0.4754,
+    "nli_hallucination": 0.0032,
+    "nli_neutral": 0.5214,
+    "llm_judge_score": 4.544,
+    "combined_score": 0.4762
+  },
+  {
+    "strategy": "few_shot_cot_refine",
+    "n_generated": 29,
+    "n_failed_chunks": 1,
+    "round_trip_hit_rate": 0.0,
+    "bertscore_recall_vs_source": 0.5941,
+    "nli_faithfulness": 0.4092,
+    "nli_hallucination": 0.0664,
+    "nli_neutral": 0.5244,
+    "llm_judge_score": 4.3241,
+    "combined_score": 0.4087
+  }
+]

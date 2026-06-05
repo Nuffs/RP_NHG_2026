@@ -1,0 +1,111 @@
+chunk_id,strategy,score
+astma_bij_volwassenen_0005,cot,4.0
+astma_bij_volwassenen_0005,few_shot,4.6
+astma_bij_volwassenen_0005,few_shot_cot,4.8
+astma_bij_volwassenen_0005,few_shot_cot_refine,3.2
+astma_bij_volwassenen_0005,few_shot_refine,4.8
+astma_bij_volwassenen_0008,cot,4.8
+astma_bij_volwassenen_0008,few_shot,4.6
+astma_bij_volwassenen_0008,few_shot_cot,4.8
+astma_bij_volwassenen_0008,few_shot_cot_refine,4.8
+astma_bij_volwassenen_0008,few_shot_refine,4.8
+astma_bij_volwassenen_0010,cot,4.6
+astma_bij_volwassenen_0010,few_shot,4.8
+astma_bij_volwassenen_0010,few_shot_cot,4.8
+astma_bij_volwassenen_0010,few_shot_cot_refine,4.8
+astma_bij_volwassenen_0010,few_shot_refine,4.6
+chronische nierschade_0003,cot,4.6
+chronische nierschade_0003,few_shot,4.8
+chronische nierschade_0003,few_shot_cot,4.8
+chronische nierschade_0003,few_shot_cot_refine,4.8
+chronische nierschade_0003,few_shot_refine,4.8
+chronische nierschade_0012,cot,4.6
+chronische nierschade_0012,few_shot,4.8
+chronische nierschade_0012,few_shot_cot,4.8
+chronische nierschade_0012,few_shot_cot_refine,4.6
+chronische nierschade_0012,few_shot_refine,4.6
+dementie_0008,cot,4.8
+dementie_0008,few_shot,5.0
+dementie_0008,few_shot_cot,4.6
+dementie_0008,few_shot_cot_refine,4.8
+dementie_0008,few_shot_refine,4.8
+depressie_0001,cot,4.6
+depressie_0001,few_shot,5.0
+depressie_0001,few_shot_cot,4.2
+depressie_0001,few_shot_cot_refine,5.0
+depressie_0001,few_shot_refine,4.8
+diabetes_0001,cot,5.0
+diabetes_0001,few_shot,4.8
+diabetes_0001,few_shot_cot,5.0
+diabetes_0001,few_shot_cot_refine,4.8
+diabetes_0001,few_shot_refine,5.0
+diabetes_0004,cot,3.6
+diabetes_0004,few_shot,4.8
+diabetes_0004,few_shot_cot,4.8
+diabetes_0004,few_shot_cot_refine,5.0
+diabetes_0004,few_shot_refine,4.2
+diabetes_0006,cot,4.6
+diabetes_0006,few_shot,4.8
+diabetes_0006,few_shot_cot,4.8
+diabetes_0006,few_shot_cot_refine,4.4
+diabetes_0006,few_shot_refine,4.6
+diabetes_0007,cot,4.8
+diabetes_0007,few_shot,4.2
+diabetes_0007,few_shot_cot,4.6
+diabetes_0007,few_shot_cot_refine,4.4
+diabetes_0007,few_shot_refine,3.4
+diabetes_0008,cot,3.8
+diabetes_0008,few_shot,4.6
+diabetes_0008,few_shot_cot,4.6
+diabetes_0008,few_shot_cot_refine,4.6
+diabetes_0008,few_shot_refine,3.6
+hand-en-polsklachten_0003,cot,2.4
+hand-en-polsklachten_0003,few_shot,4.6
+hand-en-polsklachten_0003,few_shot_cot,3.8
+hand-en-polsklachten_0003,few_shot_cot_refine,4.6
+hand-en-polsklachten_0003,few_shot_refine,4.6
+hand-en-polsklachten_0004,cot,4.6
+hand-en-polsklachten_0004,few_shot,4.6
+hand-en-polsklachten_0004,few_shot_cot,4.6
+hand-en-polsklachten_0004,few_shot_cot_refine,4.6
+hand-en-polsklachten_0004,few_shot_refine,4.6
+hand-en-polsklachten_0007,cot,4.6
+hand-en-polsklachten_0007,few_shot,4.6
+hand-en-polsklachten_0007,few_shot_cot,3.8
+hand-en-polsklachten_0007,few_shot_cot_refine,4.6
+hand-en-polsklachten_0007,few_shot_refine,4.6
+hand-en-polsklachten_0009,cot,4.8
+hand-en-polsklachten_0009,few_shot,4.6
+hand-en-polsklachten_0009,few_shot_cot,4.8
+hand-en-polsklachten_0009,few_shot_cot_refine,4.8
+hand-en-polsklachten_0009,few_shot_refine,4.8
+hand-en-polsklachten_0012,cot,3.6
+hand-en-polsklachten_0012,few_shot,3.2
+hand-en-polsklachten_0012,few_shot_cot,4.6
+hand-en-polsklachten_0012,few_shot_cot_refine,3.6
+hand-en-polsklachten_0012,few_shot_refine,4.6
+hand-en-polsklachten_0027,cot,4.2
+hand-en-polsklachten_0027,few_shot,3.8
+hand-en-polsklachten_0027,few_shot_cot,4.0
+hand-en-polsklachten_0027,few_shot_cot_refine,2.4
+hand-en-polsklachten_0027,few_shot_refine,3.8
+hand-en-polsklachten_0028,cot,4.8
+hand-en-polsklachten_0028,few_shot,4.8
+hand-en-polsklachten_0028,few_shot_cot,4.8
+hand-en-polsklachten_0028,few_shot_cot_refine,4.6
+hand-en-polsklachten_0028,few_shot_refine,4.8
+hartfalen_0003,cot,4.6
+hartfalen_0003,few_shot,4.8
+hartfalen_0003,few_shot_cot,4.6
+hartfalen_0003,few_shot_cot_refine,4.8
+hartfalen_0003,few_shot_refine,4.8
+influenza_0010,cot,3.8
+influenza_0010,few_shot,4.8
+influenza_0010,few_shot_cot,4.0
+influenza_0010,few_shot_cot_refine,3.6
+influenza_0010,few_shot_refine,4.8
+influenza_0011,cot,4.6
+influenza_0011,few_shot,4.6
+influenza_0011,few_shot_cot,4.8
+influenza_0011,few_shot_cot_refine,4.8
+influenza_0011,few_shot_refine,4.8

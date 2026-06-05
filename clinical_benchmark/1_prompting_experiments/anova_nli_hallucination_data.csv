@@ -1,0 +1,111 @@
+chunk_id,strategy,score
+astma_bij_volwassenen_0005,cot,0.00013848151138518006
+astma_bij_volwassenen_0005,few_shot,0.0003656996923382394
+astma_bij_volwassenen_0005,few_shot_cot,0.001244635321199894
+astma_bij_volwassenen_0005,few_shot_cot_refine,0.0006098709418438375
+astma_bij_volwassenen_0005,few_shot_refine,0.0007434410508722067
+astma_bij_volwassenen_0008,cot,0.00019696472736541182
+astma_bij_volwassenen_0008,few_shot,0.0002354254393139854
+astma_bij_volwassenen_0008,few_shot_cot,0.0002730748674366623
+astma_bij_volwassenen_0008,few_shot_cot_refine,0.0002586731861811131
+astma_bij_volwassenen_0008,few_shot_refine,0.000212086430110503
+astma_bij_volwassenen_0010,cot,0.00012002162839053199
+astma_bij_volwassenen_0010,few_shot,0.00016778078861534595
+astma_bij_volwassenen_0010,few_shot_cot,0.00016778078861534595
+astma_bij_volwassenen_0010,few_shot_cot_refine,0.00016778078861534595
+astma_bij_volwassenen_0010,few_shot_refine,0.00016778078861534595
+chronische nierschade_0003,cot,0.0066396491311024874
+chronische nierschade_0003,few_shot,0.00033810012973845005
+chronische nierschade_0003,few_shot_cot,0.00033810012973845005
+chronische nierschade_0003,few_shot_cot_refine,0.00033810012973845005
+chronische nierschade_0003,few_shot_refine,0.00033810012973845005
+chronische nierschade_0012,cot,0.00043603373342193663
+chronische nierschade_0012,few_shot,0.0005921326810494065
+chronische nierschade_0012,few_shot_cot,0.00013639399548992515
+chronische nierschade_0012,few_shot_cot_refine,0.006557568442076445
+chronische nierschade_0012,few_shot_refine,0.00015735029592178762
+dementie_0008,cot,8.726679516257718e-05
+dementie_0008,few_shot,0.0002274713187944144
+dementie_0008,few_shot_cot,0.0001229618937941268
+dementie_0008,few_shot_cot_refine,0.00020931183826178312
+dementie_0008,few_shot_refine,0.0002661207690834999
+depressie_0001,cot,0.0002968616026919335
+depressie_0001,few_shot,0.0001915633911266923
+depressie_0001,few_shot_cot,0.00013134560867911205
+depressie_0001,few_shot_cot_refine,0.00011471191828604788
+depressie_0001,few_shot_refine,0.0002651151589816436
+diabetes_0001,cot,0.00029388596885837615
+diabetes_0001,few_shot,0.0004110133450012654
+diabetes_0001,few_shot_cot,0.0001668867189437151
+diabetes_0001,few_shot_cot_refine,0.0004110133450012654
+diabetes_0001,few_shot_refine,0.0004110133450012654
+diabetes_0004,cot,0.0023699470330029726
+diabetes_0004,few_shot,0.000604266591835767
+diabetes_0004,few_shot_cot,0.00010209524043602869
+diabetes_0004,few_shot_cot_refine,0.00020251410023774952
+diabetes_0004,few_shot_refine,0.0002990919747389853
+diabetes_0006,cot,0.00027715926989912987
+diabetes_0006,few_shot,0.00013425893121166155
+diabetes_0006,few_shot_cot,0.00017342495993943885
+diabetes_0006,few_shot_cot_refine,0.0011435593114583753
+diabetes_0006,few_shot_refine,0.00018923566676676273
+diabetes_0007,cot,0.0003072885447181761
+diabetes_0007,few_shot,0.00013318292621988803
+diabetes_0007,few_shot_cot,0.00010512683002161793
+diabetes_0007,few_shot_cot_refine,0.00013318292621988803
+diabetes_0007,few_shot_refine,0.00013138691429048777
+diabetes_0008,cot,0.00027175454306416214
+diabetes_0008,few_shot,0.4328531523933634
+diabetes_0008,few_shot_cot,0.00027175454306416214
+diabetes_0008,few_shot_cot_refine,0.20301270484924316
+diabetes_0008,few_shot_refine,0.00027175454306416214
+hand-en-polsklachten_0003,cot,0.000441085227066651
+hand-en-polsklachten_0003,few_shot,0.0001850187691161409
+hand-en-polsklachten_0003,few_shot_cot,0.00037158644408918917
+hand-en-polsklachten_0003,few_shot_cot_refine,0.41508498787879944
+hand-en-polsklachten_0003,few_shot_refine,0.00048336011241190135
+hand-en-polsklachten_0004,cot,0.009581996127963066
+hand-en-polsklachten_0004,few_shot,0.0003967497614212334
+hand-en-polsklachten_0004,few_shot_cot,0.001377479755319655
+hand-en-polsklachten_0004,few_shot_cot_refine,0.008722534403204918
+hand-en-polsklachten_0004,few_shot_refine,0.004979227669537067
+hand-en-polsklachten_0007,cot,0.003162502311170101
+hand-en-polsklachten_0007,few_shot,0.00027640332700684667
+hand-en-polsklachten_0007,few_shot_cot,0.00013090016727801412
+hand-en-polsklachten_0007,few_shot_cot_refine,0.0008287522941827774
+hand-en-polsklachten_0007,few_shot_refine,0.0002481010742485523
+hand-en-polsklachten_0009,cot,0.0006424301536753774
+hand-en-polsklachten_0009,few_shot,0.0010440058686072007
+hand-en-polsklachten_0009,few_shot_cot,0.25289997458457947
+hand-en-polsklachten_0009,few_shot_cot_refine,0.00026148054166696966
+hand-en-polsklachten_0009,few_shot_refine,0.0001373828054056503
+hand-en-polsklachten_0012,cot,0.00012621709902305156
+hand-en-polsklachten_0012,few_shot,0.0002291402342962101
+hand-en-polsklachten_0012,few_shot_cot,0.00013798671716358513
+hand-en-polsklachten_0012,few_shot_cot_refine,0.9646904170513153
+hand-en-polsklachten_0012,few_shot_refine,0.00013099648640491068
+hand-en-polsklachten_0027,cot,0.00026400675415061414
+hand-en-polsklachten_0027,few_shot,0.00044948732829652727
+hand-en-polsklachten_0027,few_shot_cot,0.00044948732829652727
+hand-en-polsklachten_0027,few_shot_cot_refine,0.0006829252233728766
+hand-en-polsklachten_0027,few_shot_refine,0.06395292561501265
+hand-en-polsklachten_0028,cot,0.001648477977141738
+hand-en-polsklachten_0028,few_shot,0.0012231969740241766
+hand-en-polsklachten_0028,few_shot_cot,0.0012231969740241766
+hand-en-polsklachten_0028,few_shot_cot_refine,0.0006736866780556738
+hand-en-polsklachten_0028,few_shot_refine,0.0015805860748514533
+hartfalen_0003,cot,0.0005787648842670023
+hartfalen_0003,few_shot,0.00038193945511011407
+hartfalen_0003,few_shot_cot,0.00026575420633889735
+hartfalen_0003,few_shot_cot_refine,0.0002646335924509913
+hartfalen_0003,few_shot_refine,0.0003427124393056147
+influenza_0010,cot,0.00020046037388965487
+influenza_0010,few_shot,0.00016620103269815445
+influenza_0010,few_shot_cot,0.00020046037388965487
+influenza_0010,few_shot_cot_refine,0.00020046037388965487
+influenza_0010,few_shot_refine,0.0005647803191095591
+influenza_0011,cot,0.0010621970286592841
+influenza_0011,few_shot,0.0002851238823495805
+influenza_0011,few_shot_cot,0.00026500358944758773
+influenza_0011,few_shot_cot_refine,0.00030601181788370013
+influenza_0011,few_shot_refine,0.0002713262365432456

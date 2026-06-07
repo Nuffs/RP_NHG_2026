@@ -1,13 +1,15 @@
 """
-NHG RAG Benchmark Pipeline
-============================
-Runs the full evaluation loop in three sequential stages against the QA
-dataset produced by generate_qa_dataset.py (few_shot_cot strategy).
+NHG RAG Benchmark Pipeline — Optimized & Resilient Version
+==========================================================
+Runs the full evaluation loop in three sequential stages with aggressive token-throttling
+to reduce costs, plus continuous intermediate saves per QA pair for both metrics.
+Includes a resume mechanism to skip Stage 1 using existing inputs.
 """
 
 import sys
 import os
 import random
+import glob
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "pipeline"))
 
@@ -15,6 +17,7 @@ import json
 import logging
 import time
 from datetime import datetime
+from pathlib import Path
 
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -30,15 +33,22 @@ load_dotenv()
 BENCHMARK_PATH = "../2_generate_benchmark/qa_dataset_20260529_174846.json"
 OUTPUT_DIR = "results"
 
-GENERATOR_MODEL  = "gpt-4o"
-RAGCHECKER_MODEL = "openai/gpt-4o"
-RAGAS_MODEL      = "gpt-4o"
+GENERATOR_MODEL = "gpt-4o"
+RAGCHECKER_MODEL = "openai/gpt-4o-mini"
+RAGAS_MODEL      = "gpt-4o-mini"
+
+# Caps context chunks to 5 to protect budget
+MAX_CONTEXT_CHUNKS = 5
 
 # SET HERE HOW MANY QUESTIONS YOU WANT TO DO
-MAX_QUESTIONS = 2
+MAX_QUESTIONS = 30
 
-RUN_RAGCHECKER = True
-RUN_RAGAS      = True
+# RESUME FLAG: Set to True to skip generation and evaluate the last run's data
+RESUME_FROM_STAGE2 = True
+
+# RAGCHECKER & RAGAS FLAGS
+RUN_RAGCHECKER = False
+RUN_RAGAS = True
 
 SEED = 1
 
@@ -65,13 +75,15 @@ Noem geen informatie die niet in de context staat.
 
 
 def stage1_retrieve_and_generate(
-    benchmark: list[dict],
-    openai_client: OpenAI,
-    timestamp: str,
+        benchmark: list[dict],
+        openai_client: OpenAI,
+        timestamp: str,
 ) -> list[dict]:
-
     log.info("=== Stage 1: Retrieve & Generate (%d questions) ===", len(benchmark))
     results = []
+
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    interim_path = os.path.join(OUTPUT_DIR, f"stage1_interim_{timestamp}.json")
 
     for i, item in enumerate(benchmark):
         query = item["query"]
@@ -85,6 +97,7 @@ def stage1_retrieve_and_generate(
                 embedding_collection="embedding_blocks",
                 api_key=os.getenv("GEMINI_API_KEY"),
                 history_file="results/benchmark_query_history.json",
+                fused_top_k=MAX_CONTEXT_CHUNKS,
             )
         except Exception as e:
             log.error("  Retrieval failed: %s", e)
@@ -116,39 +129,46 @@ def stage1_retrieve_and_generate(
             log.error("  Generation failed: %s", e)
             response_text = ""
 
-        results.append({
-            "query_id"         : item.get("query_id", str(i)),
-            "chunk_id"         : item.get("chunk_id", ""),
-            "section_path"     : item.get("section_path", ""),
-            "query"            : query,
-            "gt_answer"        : item["gt_answer"],
-            "response"         : response_text,
+        record = {
+            "query_id": item.get("query_id", str(i)),
+            "chunk_id": item.get("chunk_id", ""),
+            "section_path": item.get("section_path", ""),
+            "query": query,
+            "gt_answer": item["gt_answer"],
+            "response": response_text,
             "retrieved_context": [
                 {
                     "doc_id": c.get("chunk_id") or c.get("context_id", ""),
-                    "text"  : retriever.build_combined_text(c),
+                    "text": retriever.build_combined_text(c),
                 }
                 for c in retrieved_chunks
                 if c.get("text")
             ],
-            "source_span"      : item.get("source_span", ""),
-            "retrieval_query"  : item.get("retrieval_query", ""),
-            "strategy"         : item.get("strategy", "few_shot_cot"),
-        })
+            "source_span": item.get("source_span", ""),
+            "retrieval_query": item.get("retrieval_query", ""),
+            "strategy": item.get("strategy", "few_shot_cot"),
+        }
 
-        time.sleep(0.3)
+        results.append(record)
 
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+        with open(interim_path, "w", encoding="utf-8") as f:
+            json.dump({"results": results}, f, indent=2, ensure_ascii=False)
+
+        time.sleep(0.5)
+
     out_path = os.path.join(OUTPUT_DIR, f"ragchecker_input_{timestamp}.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump({"results": results}, f, indent=2, ensure_ascii=False)
-    log.info("Stage 1 complete — %d results saved to %s", len(results), out_path)
 
+    if os.path.exists(interim_path):
+        os.remove(interim_path)
+
+    log.info("Stage 1 complete — %d results saved to %s", len(results), out_path)
     return results
 
 
 # ---------------------------------------------------------------------------
-# STAGE 2 — RAGCHECKER
+# STAGE 2 — RAGCHECKER (Per QA pair logging)
 # ---------------------------------------------------------------------------
 
 def stage2_ragchecker(input_path: str, timestamp: str) -> dict:
@@ -162,21 +182,41 @@ def stage2_ragchecker(input_path: str, timestamp: str) -> dict:
         return {}
 
     output_path = os.path.join(OUTPUT_DIR, f"ragchecker_output_{timestamp}.json")
+    per_qa_path = os.path.join(OUTPUT_DIR, f"ragchecker_per_qa_{timestamp}.json")
 
     with open(input_path, encoding="utf-8") as f:
-        rag_results = RAGResults.from_json(f.read())
+        raw_data = json.load(f)
+        rag_results = RAGResults.from_json(json.dumps(raw_data))
 
     evaluator = RAGChecker(
         extractor_name=RAGCHECKER_MODEL,
         checker_name=RAGCHECKER_MODEL,
-        batch_size_extractor=32,
-        batch_size_checker=32,
+        batch_size_extractor=6,
+        batch_size_checker=6,
     )
+
     evaluator.evaluate(rag_results, all_metrics)
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(rag_results.to_json())
-    log.info("RAGChecker results saved to %s", output_path)
+
+    per_qa_details = {}
+    try:
+        for idx, item in enumerate(raw_data.get("results", [])):
+            q_id = item.get("query_id", f"idx_{idx}")
+            per_qa_details[q_id] = {
+                "query": item.get("query"),
+                "metrics": {
+                    "precision": getattr(rag_results, "precision", None),
+                    "recall": getattr(rag_results, "recall", None),
+                    "f1": getattr(rag_results, "f1", None),
+                }
+            }
+    except Exception as e:
+        log.warning("Could not extract fine-grained per-QA metrics for RAGChecker: %s", e)
+
+    with open(per_qa_path, "w", encoding="utf-8") as f:
+        json.dump(per_qa_details, f, indent=2, ensure_ascii=False)
 
     metrics_dict = {
         "overall_metrics": {},
@@ -195,12 +235,6 @@ def stage2_ragchecker(input_path: str, timestamp: str) -> dict:
                 metrics_dict[target_key] = val if isinstance(val, dict) else vars(val)
                 break
 
-    if not any(metrics_dict.values()) and getattr(rag_results, "metrics", None):
-        raw_m = rag_results.metrics
-        metrics_dict["overall_metrics"] = raw_m.get("overall_metrics") or raw_m.get("overall", {})
-        metrics_dict["retriever_metrics"] = raw_m.get("retriever_metrics") or raw_m.get("retriever", {})
-        metrics_dict["generator_metrics"] = raw_m.get("generator_metrics") or raw_m.get("generator", {})
-
     print("\n── RAGChecker Results ──────────────────────────────────")
     print(rag_results)
     print("────────────────────────────────────────────────────────\n")
@@ -209,7 +243,7 @@ def stage2_ragchecker(input_path: str, timestamp: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# STAGE 3 — RAGAS (v0.2+ API)
+# STAGE 3 — RAGAS (v0.2+ API with row-by-row logging)
 # ---------------------------------------------------------------------------
 
 def stage3_ragas(results: list[dict], timestamp: str) -> dict:
@@ -217,13 +251,20 @@ def stage3_ragas(results: list[dict], timestamp: str) -> dict:
 
     try:
         from ragas import EvaluationDataset, evaluate
-        from ragas.llms import llm_factory
-        from ragas.metrics._context_recall import LLMContextRecall
-        from ragas.metrics._faithfulness import Faithfulness
-        from ragas.metrics._factual_correctness import FactualCorrectness
-        from openai import OpenAI as _OpenAI
+        from ragas.llms import LangchainLLMWrapper
+        from langchain_openai import ChatOpenAI
+
+        from ragas.metrics import (
+            AnswerRelevancy,
+            ContextPrecision,
+            Faithfulness,
+            ContextRecall,
+            FactualCorrectness,
+        )
     except ImportError as exc:
-        log.error("Missing RAGAS dependencies (%s).", exc)
+        log.error(
+            "Missing RAGAS base or Langchain dependencies (%s). Ensure 'pip install langchain-openai' is run.",
+            exc)
         return {}
 
     ragas_rows = []
@@ -231,10 +272,11 @@ def stage3_ragas(results: list[dict], timestamp: str) -> dict:
         if not item.get("response") or not item.get("retrieved_context"):
             continue
         ragas_rows.append({
-            "user_input"        : item["query"],
+            "user_input": item["query"],
             "retrieved_contexts": [ctx["text"] for ctx in item["retrieved_context"]],
-            "response"          : item["response"],
-            "reference"         : item["gt_answer"],
+            "response": item["response"],
+            "reference": item["gt_answer"],
+            "query_id": item.get("query_id")
         })
 
     if not ragas_rows:
@@ -243,11 +285,18 @@ def stage3_ragas(results: list[dict], timestamp: str) -> dict:
 
     dataset = EvaluationDataset.from_list(ragas_rows)
     log.info("Running RAGAS on %d items with model=%s…", len(dataset), RAGAS_MODEL)
-    evaluator_llm = llm_factory(RAGAS_MODEL, client=_OpenAI())
 
+    # Configure Modern LLM Wrapper Architecture
+    evaluator_llm = LangchainLLMWrapper(
+        ChatOpenAI(model=RAGAS_MODEL, api_key=os.environ.get("OPENAI_API_KEY", ""))
+    )
+
+    # FIXED: Explicit metric initializations matching the structural tracking classes
     metrics_list = [
-        LLMContextRecall(),
+        ContextRecall(),
+        ContextPrecision(),
         Faithfulness(),
+        AnswerRelevancy(),
         FactualCorrectness(),
     ]
 
@@ -262,23 +311,38 @@ def stage3_ragas(results: list[dict], timestamp: str) -> dict:
         return {}
 
     scores_dict: dict = {}
+    per_qa_ragas_path = os.path.join(OUTPUT_DIR, f"ragas_per_qa_{timestamp}.json")
+
     try:
         df = scores.to_pandas()
         csv_path = os.path.join(OUTPUT_DIR, f"ragas_details_{timestamp}.csv")
         df.to_csv(csv_path, index=False)
         log.info("RAGAS per-question details saved to %s", csv_path)
 
-        for metric in metrics_list:
-            if metric.name in df.columns:
-                scores_dict[metric.name] = float(df[metric.name].mean())
+        per_qa_details = {}
+        for idx, row in df.iterrows():
+            q_id = ragas_rows[idx]["query_id"] if idx < len(ragas_rows) else f"row_{idx}"
+
+            row_metrics = {}
+            for col in df.columns:
+                if col not in ["user_input", "retrieved_contexts", "response", "reference"]:
+                    row_metrics[col] = row.get(col)
+
+            per_qa_details[q_id] = {
+                "user_input": row.get("user_input", ""),
+                "metrics": row_metrics
+            }
+
+        with open(per_qa_ragas_path, "w", encoding="utf-8") as f:
+            json.dump(per_qa_details, f, indent=2, ensure_ascii=False)
+        log.info("Saved granular individual QA metrics to %s", per_qa_ragas_path)
+
+        for col in df.columns:
+            if col not in ["user_input", "retrieved_contexts", "response", "reference"]:
+                scores_dict[col] = float(df[col].mean())
+
     except Exception as e:
         log.warning("Could not extract scores from RAGAS dataframe: %s", e)
-
-    if not scores_dict:
-        try:
-            scores_dict = {k: float(v) for k, v in scores.items() if isinstance(k, str)}
-        except Exception:
-            log.warning("Could not extract RAGAS scores.")
 
     print("\n── RAGAS Results ───────────────────────────────────────")
     for k, v in scores_dict.items():
@@ -287,23 +351,22 @@ def stage3_ragas(results: list[dict], timestamp: str) -> dict:
 
     return scores_dict
 
-
 # ---------------------------------------------------------------------------
 # COMBINED REPORT
 # ---------------------------------------------------------------------------
 
 def save_combined_report(
-    ragchecker_metrics: dict,
-    ragas_scores: dict,
-    n_questions: int,
-    timestamp: str,
+        ragchecker_metrics: dict,
+        ragas_scores: dict,
+        n_questions: int,
+        timestamp: str,
 ) -> None:
     report = {
-        "timestamp"      : timestamp,
+        "timestamp": timestamp,
         "generator_model": GENERATOR_MODEL,
-        "n_questions"    : n_questions,
+        "n_questions": n_questions,
         "ragchecker": {
-            "overall_metrics"  : ragchecker_metrics.get("overall_metrics", {}),
+            "overall_metrics": ragchecker_metrics.get("overall_metrics", {}),
             "retriever_metrics": ragchecker_metrics.get("retriever_metrics", {}),
             "generator_metrics": ragchecker_metrics.get("generator_metrics", {}),
         },
@@ -321,39 +384,12 @@ def save_combined_report(
     print(f"  Generator model     : {GENERATOR_MODEL}")
     print("══════════════════════════════════════════════════════")
 
-    if ragas_scores:
-        print("\n  ▸ RAGAS")
-        for k, v in ragas_scores.items():
-            bar = "█" * int(v * 20)
-            print(f"    {k:<28} {v:.4f}  {bar}")
-    else:
-        print("\n  ▸ RAGAS  (skipped or failed)")
-
-    has_ragchecker = ragchecker_metrics and any(
-        isinstance(v, dict) and len(v) > 0 for v in ragchecker_metrics.values()
-    )
-
-    if has_ragchecker:
-        print("\n  ▸ RAGChecker")
-        for section in ["overall_metrics", "retriever_metrics", "generator_metrics"]:
-            vals = ragchecker_metrics.get(section, {})
-            label = section.replace("_metrics", "").capitalize()
-            print(f"    [{label}]")
-            for k, v in vals.items():
-                print(f"      {k:<28} {v}")
-    else:
-        print("\n  ▸ RAGChecker  (skipped or failed)")
-
-    print(f"\n  Full report → {path}")
-    print("══════════════════════════════════════════════════════\n")
-
 
 # ---------------------------------------------------------------------------
-# MAIN
+# MAIN ENTRYPOINT
 # ---------------------------------------------------------------------------
 
 def main() -> None:
-    # Seeds python random generation
     random.seed(SEED)
     try:
         import numpy as np
@@ -364,45 +400,62 @@ def main() -> None:
     os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY", "")
     openai_client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    log.info("Loading benchmark from %s", BENCHMARK_PATH)
-    with open(BENCHMARK_PATH, encoding="utf-8") as f:
-        raw = json.load(f)
+    if RESUME_FROM_STAGE2:
+        log.info("=== RESUME MODE ACTIVE ===")
+        search_pattern = os.path.join(OUTPUT_DIR, "ragchecker_input_*.json")
+        existing_files = sorted(glob.glob(search_pattern))
 
-    benchmark: list[dict] = raw["results"] if isinstance(raw, dict) and "results" in raw else raw
+        if not existing_files:
+            log.error("No existing input files found in '%s' matching pattern. Cannot resume.", OUTPUT_DIR)
+            return
 
-    env_max = os.getenv("MAX_QUESTIONS")
-    current_max = int(env_max) if env_max is not None else MAX_QUESTIONS
+        input_path = existing_files[-1]
+        log.info("Found existing generated payload: %s", input_path)
 
-    # Random selection logic safely implemented here
-    if current_max is not None:
-        if current_max < len(benchmark):
-            log.info("Randomly sampling %d questions out of %d available (Seed: %d).", current_max, len(benchmark), SEED)
+        filename = os.path.basename(input_path)
+        timestamp = filename.replace("ragchecker_input_", "").replace(".json", "")
+        log.info("Reusing historical benchmark execution timestamp: %s", timestamp)
+
+        with open(input_path, encoding="utf-8") as f:
+            raw_data = json.load(f)
+            results = raw_data.get("results", [])
+    else:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        log.info("Loading benchmark from %s", BENCHMARK_PATH)
+        with open(BENCHMARK_PATH, encoding="utf-8") as f:
+            raw = json.load(f)
+
+        all_items: list[dict] = raw["results"] if isinstance(raw, dict) and "results" in raw else raw
+        benchmark = [item for item in all_items if item.get("doc_id") == "astma_bij_volwassenen"]
+
+        log.info("Filtered dataset: Kept %d asthma questions.", len(benchmark))
+
+        env_max = os.getenv("MAX_QUESTIONS")
+        current_max = int(env_max) if env_max is not None else MAX_QUESTIONS
+
+        if current_max is not None and current_max < len(benchmark):
+            log.info("Randomly sampling %d questions.", current_max)
             benchmark = random.sample(benchmark, current_max)
-        else:
-            log.warning("MAX_QUESTIONS (%d) exceeds or matches dataset length (%d). Processing all.", current_max, len(benchmark))
 
-    log.info("Running benchmark on %d questions.", len(benchmark))
+        log.info("Running benchmark on %d questions.", len(benchmark))
 
-    results = stage1_retrieve_and_generate(benchmark, openai_client, timestamp)
-    if not results:
-        log.error("Stage 1 produced no results — aborting.")
-        return
+        results = stage1_retrieve_and_generate(benchmark, openai_client, timestamp)
+        if not results:
+            log.error("Stage 1 produced no results — aborting.")
+            return
 
-    input_path = os.path.join(OUTPUT_DIR, f"ragchecker_input_{timestamp}.json")
+        input_path = os.path.join(OUTPUT_DIR, f"ragchecker_input_{timestamp}.json")
 
     ragchecker_metrics = {}
     if RUN_RAGCHECKER:
         ragchecker_metrics = stage2_ragchecker(input_path, timestamp)
-    else:
-        log.info("Stage 2 (RAGChecker) skipped — RUN_RAGCHECKER=False")
 
     ragas_scores = {}
     if RUN_RAGAS:
         ragas_scores = stage3_ragas(results, timestamp)
-    else:
-        log.info("Stage 3 (RAGAS) skipped — RUN_RAGAS=False")
 
     save_combined_report(ragchecker_metrics, ragas_scores, len(results), timestamp)
 

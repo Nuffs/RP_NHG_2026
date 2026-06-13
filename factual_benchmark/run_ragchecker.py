@@ -1,20 +1,3 @@
-"""
-run_ragchecker
----------------
-
-Small runner that invokes the installed `ragchecker` package against a
-prepared input file. This module avoids importing a local file named
-`ragchecker.py` by relying on the installed package. It reads
-`factual_benchmark/results/ragchecker_input.json`, evaluates the results,
-and writes out `factual_benchmark/results/ragchecker_metrics.json`.
-
-Usage:
-    python factual_benchmark/run_ragchecker.py
-
-Note: this file is a convenience wrapper and assumes the `ragchecker`
-package is available in the Python environment.
-"""
-
 import json
 from ragchecker import RAGResults, RAGChecker
 from ragchecker.metrics import all_metrics

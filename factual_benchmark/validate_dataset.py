@@ -1,22 +1,3 @@
-"""
-validate_dataset
------------------
-
-Evaluation utilities for QA pairs. This module contains three main
-functions:
-
-- evaluate_qa_pairs_grounding: compares generated answers to the source
-  text (grounding) using BERTScore.
-- evaluate_qa_pairs_roundtrip: asks the model the same question again
-  using only the source context and compares the original and roundtrip
-  answers.
-- evaluate_qa_pairs: combines grounding and roundtrip scores and
-  computes overall statistics.
-
-The functions are defensive and print warnings for missing source
-chunks. They expect Dutch-language text (`lang='nl'`) for BERTScore.
-"""
-
 from bert_score import score as bert_score
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -28,19 +9,14 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY_GPT5"))
 
 RESULTS_DIR = "factual_benchmark/results"
 
-
 def evaluate_qa_pairs_grounding(scraped_chunks, qa_pairs):
     """
     Evaluate QA pairs using grounding (source text fidelity) with BERTScore.
-
-    Summary (Javadoc-style):
-    - Purpose: compute BERTScore metrics between generated answers and the
-      corresponding source chunk texts to measure faithfulness.
-    - Inputs: scraped_chunks (list of {'chunk_id','text',...}), qa_pairs
-      (list of {'chunk_id','question','answer',...}).
-    - Output: list of per-pair dicts with keys: 'chunk_id','question','answer',
-      'source_text','precision','recall','f1'.
-
+    
+    Measures how well the generated answers are grounded in the source text by comparing
+    each answer against its corresponding chunk using BERTScore.
+    Higher scores indicate answers that are semantically aligned with the source material.
+    
     Args:
         scraped_chunks (list): Source chunk dicts.
         qa_pairs (list): Generated QA pair dicts.
@@ -91,12 +67,6 @@ def get_roundtrip_answer(question, context):
     Obtain a roundtrip answer from the LLM using only the provided source
     context.
 
-    This function calls the configured OpenAI client and returns the raw
-    text response. The function is intentionally narrow: it instructs the
-    model to answer factually and without added explanation so the
-    resulting text can be compared with the original generated answer
-    using BERTScore.
-
     Args:
         question (str): The question to ask the model.
         context (str): The source text to be provided as context.
@@ -104,17 +74,14 @@ def get_roundtrip_answer(question, context):
     Returns:
         str: The model-produced answer (stripped).
     """
-
-    # Use a conservative, widely-available chat model by default.
+    
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-5.5",
         messages=[
-            {
-                "role": "user",
-                "content": f"""Beantwoord de volgende vraag uitsluitend op basis van de gegeven tekst. Geef een direct en feitelijk antwoord zonder uitleg of context toe te voegen. Tekst: {context} Vraag: {question}""",
-            }
-        ],
-        response_format={"type": "text"},
+        {
+            "role": "user",
+            "content": f"""Beantwoord de volgende vraag uitsluitend op basis van de gegeven tekst. Geef een direct en feitelijk antwoord zonder uitleg of context toe te voegen. Tekst: {context} Vraag: {question}"""
+        }]
     )
 
     return response.choices[0].message.content.strip()

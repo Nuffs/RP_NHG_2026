@@ -1,3 +1,22 @@
+"""
+validate_dataset
+-----------------
+
+Evaluation utilities for QA pairs. This module contains three main
+functions:
+
+- evaluate_qa_pairs_grounding: compares generated answers to the source
+  text (grounding) using BERTScore.
+- evaluate_qa_pairs_roundtrip: asks the model the same question again
+  using only the source context and compares the original and roundtrip
+  answers.
+- evaluate_qa_pairs: combines grounding and roundtrip scores and
+  computes overall statistics.
+
+The functions are defensive and print warnings for missing source
+chunks. They expect Dutch-language text (`lang='nl'`) for BERTScore.
+"""
+
 from bert_score import score as bert_score
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -5,42 +24,32 @@ import json
 import os
 
 load_dotenv()
-client = OpenAI()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY_GPT5"))
 
 RESULTS_DIR = "factual_benchmark/results"
+
 
 def evaluate_qa_pairs_grounding(scraped_chunks, qa_pairs):
     """
     Evaluate QA pairs using grounding (source text fidelity) with BERTScore.
-    
-    Measures how well the generated answers are grounded in the source text by comparing
-    each answer against its corresponding chunk using BERTScore.
-    Higher scores indicate answers that are semantically aligned with the source material.
-    
+
+    Summary (Javadoc-style):
+    - Purpose: compute BERTScore metrics between generated answers and the
+      corresponding source chunk texts to measure faithfulness.
+    - Inputs: scraped_chunks (list of {'chunk_id','text',...}), qa_pairs
+      (list of {'chunk_id','question','answer',...}).
+    - Output: list of per-pair dicts with keys: 'chunk_id','question','answer',
+      'source_text','precision','recall','f1'.
+
     Args:
-        scraped_chunks (list): List of source chunk dictionaries with keys:
-            - 'chunk_id' (str): Unique chunk identifier
-            - 'text' (str): Source text content
-        qa_pairs (list): List of QA pair dictionaries with keys:
-            - 'chunk_id' (str): Reference to source chunk
-            - 'question' (str): Generated question
-            - 'answer' (str): Generated answer
-    
+        scraped_chunks (list): Source chunk dicts.
+        qa_pairs (list): Generated QA pair dicts.
+
     Returns:
-        list: List of per-pair evaluation scores with keys:
-            - 'chunk_id' (str): Chunk identifier
-            - 'question' (str): The question
-            - 'answer' (str): The generated answer
-            - 'source_text' (str): The source text
-            - 'precision' (float): BERTScore precision (0-1)
-            - 'recall' (float): BERTScore recall (0-1)
-            - 'f1' (float): BERTScore F1 score (0-1)
-    
-    Raises:
-        KeyError: If required keys are missing from inputs
+        list: Per-pair BERTScore metrics.
     """
     chunk_lookup = {chunk["chunk_id"]: chunk["text"] for chunk in scraped_chunks}
-    
+
     # source chunks
     source_chunks = []
     # generated answers
@@ -51,16 +60,16 @@ def evaluate_qa_pairs_grounding(scraped_chunks, qa_pairs):
         context = chunk_lookup.get(qa["chunk_id"], "NO_SOURCE_FOUND")
         if context == "NO_SOURCE_FOUND":
             print(f"No source chunk found for chunk_id {qa['chunk_id']}")
-            continue  
+            continue
         hypotheses.append(qa["answer"])
         source_chunks.append(context)
         valid_pairs.append({**qa, "source_text": context})
-    
+
     P, R, F1 = bert_score(
         hypotheses,
         source_chunks,
         lang="nl",
-        verbose=True
+        verbose=True,
     )
 
     per_pair_scores = []
@@ -72,30 +81,40 @@ def evaluate_qa_pairs_grounding(scraped_chunks, qa_pairs):
             "source_text": qa["source_text"],
             "precision": P[i].item(),
             "recall": R[i].item(),
-            "f1": F1[i].item()
+            "f1": F1[i].item(),
         })
 
     return per_pair_scores
 
 def get_roundtrip_answer(question, context):
     """
-    Get the model's answer to a question given the source context.
-    
+    Obtain a roundtrip answer from the LLM using only the provided source
+    context.
+
+    This function calls the configured OpenAI client and returns the raw
+    text response. The function is intentionally narrow: it instructs the
+    model to answer factually and without added explanation so the
+    resulting text can be compared with the original generated answer
+    using BERTScore.
+
     Args:
-        question (str): The question to answer
-        context (str): The source context/chunk to answer from
-    
+        question (str): The question to ask the model.
+        context (str): The source text to be provided as context.
+
     Returns:
-        str: The model's answer to the question
+        str: The model-produced answer (stripped).
     """
-    
+
+    # Use a conservative, widely-available chat model by default.
     response = client.chat.completions.create(
-        model="gpt-5.5",
+        model="gpt-3.5-turbo",
         messages=[
-        {
-            "role": "user",
-            "content": f"""Beantwoord de volgende vraag uitsluitend op basis van de gegeven tekst. Geef een direct en feitelijk antwoord zonder uitleg of context toe te voegen. Tekst: {context} Vraag: {question}"""
-        }]
+            {
+                "role": "user",
+                "content": f"""Beantwoord de volgende vraag uitsluitend op basis van de gegeven tekst. Geef een direct en feitelijk antwoord zonder uitleg of context toe te voegen. Tekst: {context} Vraag: {question}""",
+            }
+        ],
+        response_format={"type": "text"},
     )
 
     return response.choices[0].message.content.strip()

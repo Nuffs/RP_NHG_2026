@@ -1,3 +1,13 @@
+"""
+select_chunks
+-------------
+
+Utilities for chunking raw guidelines into sentence-level chunks and
+sampling subsets per guideline. The module exposes helpers used during
+data preparation: `chunck_text_on_sentences`, `chunk_document`, and
+sampling functions.
+"""
+
 import json
 import random
 import spacy

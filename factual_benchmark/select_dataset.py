@@ -1,17 +1,3 @@
-"""
-select_dataset
---------------
-
-Utilities for selecting the best QA pair per source chunk from an
-evaluation output. The main routine `select_best_qa_pairs` groups
-evaluated QA candidates by their `chunk_id` and returns the highest
-scoring candidate per chunk.
-
-Typical input is `factual_benchmark/results/evaluation_scores.json` which
-may contain an object with a `per_pair` key or a plain list of
-evaluated pair dictionaries.
-"""
-
 import json
 import os
 
@@ -20,11 +6,7 @@ RESULTS_DIR = "factual_benchmark/results"
 
 def select_best_qa_pairs(evaluated_pairs):
     """
-    Select the best QA pair for each chunk based on combined score.
-
-    Javadoc-style summary:
-    - Inputs: list of evaluated QA pair dicts (see module docstring for fields)
-    - Output: list of best QA pair dicts, one per `chunk_id`.
+    Select the best QA pair for each chunk based on combined score of grounding and round trip evaluation.
 
     Args:
         evaluated_pairs (list): Evaluated QA pair dictionaries. Each dict is

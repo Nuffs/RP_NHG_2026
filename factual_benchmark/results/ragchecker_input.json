@@ -571,7 +571,7 @@
           "text": "Bij duotherapie met LABA + ICS lijken er iets minder lichte longaanvallen op te treden dan bij LABA monotherapie. Bij ≥ 2 longaanvallen per jaar kan toevoeging van een ICS geïndiceerd zijn, omdat hiermee het aantal longaanvallen lijkt te verminderen. Indien gekozen wordt voor duotherapie moeten het effect en de mogelijke bijwerkingen geëvalueerd worden. In het kader van deze evaluatie wordt aangeraden om bij duotherapie in eerste instantie losse monopreparaten te gebruiken. Bij tevredenheid en een blijvende indicatie voor duotherapie kan in een later stadium een combinatiepreparaat overwogen worden ter bevordering van de therapietrouw."
         },
         {
-          "doc_id": "1",
+          "doc_id": "1",            
           "text": "- Medicamenteuze behandeling van COPD is symptomatisch en als zodanig een aanvulling op de niet-medicamenteuze behandeling.\n- Bespreek de verwachtingen van de patiënt en stel deze zo nodig bij:inhalatiemedicatie heeft geen effect op de geleidelijke afname van de longfunctie (FEV1)inhalatiemedicatie dient ter vermindering van klachten, beperkingen en longaanvallen, de medicatie kan achterwege blijven bij weinig klachten of beperkingenbij ≥ 2 longaanvallen per jaar kan een onderhoudsbehandeling met inhalatiecorticosteroïden het risico op een longaanval verkleinen\n- inhalatiemedicatie heeft geen effect op de geleidelijke afname van de longfunctie (FEV1)\n- inhalatiemedicatie dient ter vermindering van klachten, beperkingen en longaanvallen, de medicatie kan achterwege blijven bij weinig klachten of beperkingen\n- bij ≥ 2 longaanvallen per jaar kan een onderhoudsbehandeling met inhalatiecorticosteroïden het risico op een longaanval verkleinen\n- Extra aandacht verdienen (medicamenteuze) preventie en behandeling van comorbiditeit.\n- inhalatiemedicatie heeft geen effect op de geleidelijke afname van de longfunctie (FEV1)\n- inhalatiemedicatie dient ter vermindering van klachten, beperkingen en longaanvallen, de medicatie kan achterwege blijven bij weinig klachten of beperkingen\n- bij ≥ 2 longaanvallen per jaar kan een onderhoudsbehandeling met inhalatiecorticosteroïden het risico op een longaanval verkleinen"
         },
         {
@@ -955,7 +955,7 @@
     {
       "query_id": "chronische nierschade_0015_0001",
       "query": "Welke risicoschatting is gekoppeld aan de stadiëring van chronische nierschade op basis van eGFR en albumine-creatinineratio?",
-      "gt_answer": "Aan de stadiëring van chronische nierschade is de risicoschatting van cardiovasculaire schade, progressie van nierschade en mortaliteit gekoppeld.",
+      "gt_answer": "Aan de stadiëriNng van chronische nierschade is de risicoschatting van cardiovasculaire schade, progressie van nierschade en mortaliteit gekoppeld.",
       "response": "Geen antwoord gevonden in de context.",
       "retrieved_context": [
         {
@@ -1010,7 +1010,7 @@
     },
     {
       "query_id": "influenza_0001_0001",
-      "query": "Waarvoor dienen de actuele weekcijfers van het NIVEL bij influenza?",
+      "query": "Waarvoor dienen Yde actuele weekcijfers van het NIVEL bij influenza?",
       "gt_answer": "De actuele weekcijfers van het NIVEL dienen om te weten of er sprake is van een influenza-epidemie.",
       "response": "De actuele weekcijfers van het NIVEL worden geraadpleegd om te weten of er sprake is van een influenza-epidemie.",
       "retrieved_context": [

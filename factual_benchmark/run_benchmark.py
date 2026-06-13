@@ -1,17 +1,3 @@
-"""
-run_benchmark
--------------
-
-Driver script for running a small benchmark experiment. It samples a
-subset of QA pairs from `results/qa_final_dataset.json`, retrieves
-evidence via the pipeline's combined retriever, generates answers with
-an LLM using only the retrieved context, and writes the structured
-results to `results/benchmark_results.json`.
-
-This script is a lightweight runner used during development and requires
-the pipeline package and an OpenAI API key to be available.
-"""
-
 import os
 import json
 import time
@@ -92,11 +78,9 @@ def generate_answer(question, context):
 
     response = client.chat.completions.create(
         model=LLM_MODEL,
-        messages=[
-            {"role": "system", "content": "Je bent een medisch informatiesysteem dat vragen beantwoordt op basis van gegeven context."},
-            {"role": "user", "content": prompt},
-        ],
-        response_format={"type": "text"},
+        messages=[{"role": "system", "content": "Je bent een medisch informatiesysteem dat vragen beantwoordt op basis van gegeven context."},
+                {"role": "user", "content": prompt}],
+        response_format={"type": "text"}
     )
 
     return response.choices[0].message.content.strip()
@@ -127,10 +111,10 @@ def run_benchmark():
     Execute the benchmark runner end-to-end for a sampled subset.
 
     Steps:
-      - sample QA pairs
-      - retrieve context via pipeline.run_combined
-      - generate answers with the LLM
-      - save structured results to OUTPUT_FILE
+    - sample QA pairs
+    - retrieve context via pipeline.run_combined
+    - generate answers with the LLM
+    - save structured results to OUTPUT_FILE
     """
     benchmark = sample_per_guideline(load_benchmark_data(BENCHMARK_FILE), n=5)
     print(f"Loaded {len(benchmark)} Q&A pairs from benchmark file.")

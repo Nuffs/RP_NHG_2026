@@ -1,17 +1,3 @@
-"""
-generate_dataset
------------------
-
-Utilities for generating QA pairs from scraped text chunks using an LLM.
-The function `generate_qa_pairs` calls the configured model, parses the
-JSON response (which may be in multiple supported formats), and collects
-non-empty question/answer candidates into a list that is persisted under
-`factual_benchmark/results`.
-
-The code is defensive: it skips malformed LLM outputs and prints a
-warning so the user can inspect problematic responses.
-"""
-
 from dotenv import load_dotenv
 import json, os
 from openai import OpenAI
@@ -25,10 +11,6 @@ RESULTS_DIR = "factual_benchmark/results"
 def generate_qa_pairs(scraped_chunks, prompt_config):
     """
     Generate QA pairs from scraped chunks using the OpenAI API.
-
-    Javadoc-style summary:
-    - Inputs: `scraped_chunks` (list of chunk dicts), `prompt_config` (dict)
-    - Outputs: list of QA pair dicts and a saved JSON file under results/
 
     Args:
         scraped_chunks (list): List of chunk dictionaries with keys such as

@@ -3,7 +3,7 @@ import json, os
 from openai import OpenAI
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY_GPT5"))
+client = OpenAI()
 
 RESULTS_DIR = "factual_benchmark/results"
 

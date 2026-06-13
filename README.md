@@ -1,167 +1,101 @@
-# RP_NHG_2026 - Benchmarking RAG for NHG-Guidelines
+# RP_NHG_2026 — RAG & Benchmarking for NHG Guidelines
 
-This project constructs and evaluates a RAG-based Q/A system for the NHG-guidelines.
+A thesis research project exploring Retrieval-Augmented Generation (RAG) on Dutch medical guidelines (NHG).
 
-## Table of Contents
+---
 
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
-- [Project Components](#project-components)
-- [Output Files](#output-files)
+## Project structure
 
-## Features
-
-## Project Structure
-
-## Setup Instructions
-
-### 1. Prerequisites
-
-- **Python 3.13+** (recommended)
-- **Git** (for cloning the repository)
-- **Chrome/Chromium** browser (required for Selenium web scraping)
-- **Virtual Environment** (highly recommended)
-
-### 2. Clone Repository
-
-```bash
-git clone <repository-url>
-cd RP_NHG_2026
+```
+scraping/           — NHG guideline scrapers (Selenium + BeautifulSoup)
+pipeline/           — RAG retrieval pipeline (vector, BM25, combined RRF)
+factual_benchmark/  — Factual QA benchmark for the RAG pipeline
+clinical_QA/        — Clinical QA benchmark for the RAG pipeline
+data/               — Scraped NHG guidelines (JSONL)
+ragchecker/         — RAGChecker evaluation framework
 ```
 
-### 3. Create Virtual Environment
+Each module is self-contained and can be run independently. Intermediate outputs are checkpointed as JSON/JSONL files.
 
-**On macOS/Linux:**
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
+---
 
-**On Windows:**
+## Setup
+
 ```bash
 python -m venv .venv
-.venv\Scripts\activate
-```
-
-### 4. Install Dependencies
-
-```bash
-pip install --upgrade pip
+source .venv/bin/activate
 pip install -r requirements.txt
+python -m spacy download nl_core_news_sm
 ```
 
+Create a `.env` file at the repo root:
 
-## Usage
+```
+OPENAI_API_KEY=sk-...
+QDRANT_URL=http://localhost:6333
+```
 
-### Run All Guidelines Scraper
+---
 
-Scrapes all NHG guidelines from the sitemap:
+## Running the modules
 
+**Scraping**
 ```bash
-cd scraping/all
-python main.py
+python scraping/main.py
 ```
 
-**Output**: `data/nhg_all_guidelines.jsonl`
-
-### Run 10 Guidelines Scraper
-
-Scrapes a specific subset of 10 NHG guidelines:
-
+**Retrieval pipeline**
 ```bash
-cd scraping/10_guidelines
-python main.py
+python pipeline/new_query_vector.py      # vector retrieval
+python pipeline/new_query_traditional.py # BM25 retrieval
+python pipeline/new_query_combined.py    # RRF fusion
 ```
 
-**Output**: `data/nhg_subset_guidelines.jsonl`
-
-### Run Specific Guideline Scraper (Example: Astma)
-
+**Factual benchmark** (run in order, each step checkpoints to `factual_benchmark/results/`)
 ```bash
-cd scraping/astma
-python main.py
+python factual_benchmark/select_chunks.py
+python factual_benchmark/generate_dataset.py
+python factual_benchmark/validate_dataset.py
+python factual_benchmark/run_benchmark.py
+python factual_benchmark/convert_to_ragchecker.py
+python factual_benchmark/run_ragchecker.py
 ```
 
-**Output**: `data/nhg_astma.jsonl`
+Final factual qa benchmark dataset: `factual_benchmark/results/qa_final_dataset.json`
 
 
-## Project Components
+---
 
-### Scrapers
+## Data format
 
-#### `scraping/all/main.py`
-
-#### `scraping/10_guidelines/main.py`
-
-#### `scraping/astma/main.py`
-
-### Benchmark
-
-## RAGCHECKER
-
-https://github.com/amazon-science/RAGChecker/blob/main/tutorial/ragchecker_tutorial_en.md
-
-To be able to use the ragchecker first download: 
-pip install ragchecker
-python -m spacy download en_core_web_sm
-
-## Output Files
-
-All scraped data is saved to the `data/` folder as JSONL files.
-
-### JSONL Format
-
-Each line is a JSON object with the following structure:
+Scraped guidelines are stored as JSONL in `data/`. Each line:
 
 ```json
 {
-  "doc_id": "acne",
-  "doc_title": "Acne",
-  "url": "https://richtlijnen.nhg.org/standaarden/acne",
-  "chunk_id": "acne_0001",
-  "section_path": ["Richtlijnen diagnostiek", "Anamnese"],
-  "text": "Vraag naar: duur en lokalisatie; ...",
+  "doc_id": "astma_bij_volwassenen",
+  "doc_title": "Astma bij volwassenen",
+  "url": "https://richtlijnen.nhg.org/standaarden/astma-bij-volwassenen",
+  "chunk_id": "astma_bij_volwassenen_0001",
+  "section_path": ["Diagnostiek", "Anamnese"],
+  "text": "Vraag naar ...",
   "tokens": 245
 }
 ```
 
-### Field Descriptions
-
-| Field | Description |
-|-------|-------------|
-| `doc_id` | Unique identifier for the guideline (derived from URL slug) |
-| `doc_title` | Full title of the guideline |
-| `url` | URL of the guideline page |
-| `chunk_id` | Unique identifier for this chunk within the document |
-| `section_path` | Array of heading hierarchy (h2, h3, etc.) |
-| `text` | Cleaned content text for this section |
-| `tokens` | Word count of the text |
+---
 
 ## Dependencies
 
-The project uses the following main dependencies:
+Key packages: `selenium`, `beautifulsoup4`, `spacy`, `transformers`, `BERTScore`, `ragchecker`, `qdrant-client`, `openai`. See `requirements.txt` for the full pinned list.
 
-- **beautifulsoup4** (4.14.3) - HTML/XML parsing
-- **lxml** (6.1.0) - Fast XML/HTML parser
-- **selenium** (4.43.0) - Web browser automation
-- **webdriver-manager** (4.0.2) - Automatic ChromeDriver management
-- **requests** (2.33.1) - HTTP library
-- **spacy** (3.8.14) - NLP library with Dutch support
-- **python-dotenv** (1.2.2) - Environment variable management
+---
 
-## Troubleshooting
+## RAGChecker
 
-### ChromeDriver Issues
+This project uses [RAGChecker](https://github.com/amazon-science/RAGChecker) for fine-grained RAG evaluation. See the [tutorial](https://github.com/amazon-science/RAGChecker/blob/main/tutorial/ragchecker_tutorial_en.md) for usage details.
 
-If Selenium can't find Chrome:
-1. Ensure Chrome/Chromium is installed
-2. `webdriver-manager` should auto-download the correct ChromeDriver
-3. On Linux: Install Chromium: `sudo apt-get install chromium-browser`
-
-## Contributers
-
-## License
-
-## Contact
+Additional setup required:
+```bash
+pip install ragchecker
+python -m spacy download en_core_web_sm
+```

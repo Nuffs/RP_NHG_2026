@@ -1,6 +1,7 @@
 # RP_NHG_2026 — RAG & Benchmarking for NHG Guidelines
 
 A thesis research project exploring Retrieval-Augmented Generation (RAG) on Dutch medical guidelines (NHG).
+This work is part of the Research Project course 2025/2026 at TU Delft. 
 
 ---
 

@@ -50,6 +50,8 @@ if __name__ == "__main__":
         evaluated_pairs = evaluation_data if isinstance(evaluation_data, list) else [evaluation_data]
     
     best_pairs = select_best_qa_pairs(evaluated_pairs)
+
+    print(f"Selected {len(best_pairs)} best QA pairs, one per chunk.")
     
     output_path = os.path.join(RESULTS_DIR, "qa_final_dataset.json")
     with open(output_path, "w", encoding="utf-8") as f:

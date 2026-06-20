@@ -1,0 +1,1791 @@
+{
+  "source_file": "C:\\Users\\napaw\\RP\\RP_NHG_2026\\failure_analysis\\results\\gpt-55_failure_analysis_clinical.json",
+  "total_queries": 198,
+  "queries_with_no_errors": 75,
+  "queries_with_errors": 123,
+  "queries_with_multiple_errors": 70,
+  "error_types": {
+    "E3_context_mismatch": {
+      "description": "Context Mismatch — chunk boundaries break semantic relationships needed for the answer",
+      "metric_key": "relation_recall",
+      "threshold": 0.8,
+      "direction": "below",
+      "count": 29,
+      "percentage": 14.65,
+      "query_ids": [
+        "63d4ebcb",
+        "3d3ef213",
+        "950c5bfa",
+        "ae0f75b7",
+        "c1898acd",
+        "0d769419",
+        "875fe605",
+        "fb99be4b",
+        "40d6daea",
+        "ae0001a8",
+        "b7f58cf2",
+        "1ec7c876",
+        "cb347263",
+        "a4905a6b",
+        "7872d4af",
+        "0388f75a",
+        "f69c847f",
+        "a2656135",
+        "8b461f4f",
+        "e1056361",
+        "060baab8",
+        "bc2dc8a4",
+        "67c6de0b",
+        "d3ed3a3e",
+        "a4c14c42",
+        "0ee54053",
+        "7d153c4f",
+        "0799ea04",
+        "9b3c0e6b"
+      ]
+    },
+    "E4_missed_retrieval": {
+      "description": "Missed Retrieval — relevant information not found in retrieved context",
+      "metric_key": "context_recall",
+      "threshold": 0.8,
+      "direction": "below",
+      "count": 61,
+      "percentage": 30.81,
+      "query_ids": [
+        "3bda86f2",
+        "63d4ebcb",
+        "20241acd",
+        "098ffb4a",
+        "3d3ef213",
+        "caff826d",
+        "950c5bfa",
+        "0290f131",
+        "cd5af29b",
+        "fb99be4b",
+        "09710fd9",
+        "b6b8d196",
+        "2d0aad1f",
+        "cb347263",
+        "e33b6173",
+        "8fe309c8",
+        "78c1b535",
+        "158f96a9",
+        "6908c047",
+        "f69c847f",
+        "4242da9f",
+        "dade75aa",
+        "b068643b",
+        "c780106c",
+        "930c1e07",
+        "51c52429",
+        "4aea86ff",
+        "a2656135",
+        "4ccc9a12",
+        "aa2c9c88",
+        "38df2a02",
+        "cdd4a01d",
+        "8b461f4f",
+        "401ce811",
+        "4ab72142",
+        "1b693ef1",
+        "d708fae5",
+        "c4533825",
+        "4c729340",
+        "552f0a54",
+        "4113cc0d",
+        "eb7f73d1",
+        "c0fe3d61",
+        "bc2dc8a4",
+        "67c6de0b",
+        "15f6d2e0",
+        "b2bd81db",
+        "d3ed3a3e",
+        "2a1d1c4f",
+        "a4c14c42",
+        "0ee54053",
+        "95b6fc41",
+        "07334ff6",
+        "8e5c476d",
+        "43cb91e4",
+        "8d856f4e",
+        "8099cb48",
+        "0bcea948",
+        "8c6f88fe",
+        "91505631",
+        "383c5bac"
+      ]
+    },
+    "E5E6_low_precision": {
+      "description": "Low Context Precision — too many irrelevant chunks retrieved",
+      "metric_key": "ranked_precision",
+      "threshold": 0.3,
+      "direction": "below",
+      "count": 39,
+      "percentage": 19.7,
+      "query_ids": [
+        "3bda86f2",
+        "3d3ef213",
+        "caff826d",
+        "0290f131",
+        "c1898acd",
+        "09710fd9",
+        "b6b8d196",
+        "2d0aad1f",
+        "8fe309c8",
+        "6908c047",
+        "f69c847f",
+        "dade75aa",
+        "b068643b",
+        "c780106c",
+        "930c1e07",
+        "51c52429",
+        "8855208e",
+        "4aea86ff",
+        "4ccc9a12",
+        "aa2c9c88",
+        "38df2a02",
+        "1abb4245",
+        "8b461f4f",
+        "e1056361",
+        "1b693ef1",
+        "d708fae5",
+        "c4533825",
+        "4c729340",
+        "eb7f73d1",
+        "b2bd81db",
+        "d3ed3a3e",
+        "8e5c476d",
+        "43cb91e4",
+        "77fa76ed",
+        "8099cb48",
+        "0bcea948",
+        "8c6f88fe",
+        "b6e81b27",
+        "383c5bac"
+      ]
+    },
+    "E9_hallucination": {
+      "description": "Fabricated Content / Hallucination — response contains claims not in context or question",
+      "metric_key": "faithfulness",
+      "threshold": 0.8,
+      "direction": "below",
+      "count": 58,
+      "percentage": 29.29,
+      "query_ids": [
+        "3bda86f2",
+        "63d4ebcb",
+        "20241acd",
+        "3d3ef213",
+        "caff826d",
+        "950c5bfa",
+        "0290f131",
+        "c24332e6",
+        "09710fd9",
+        "b6b8d196",
+        "2d0aad1f",
+        "1ec7c876",
+        "23ce0f59",
+        "8fe309c8",
+        "7a55ed27",
+        "ac94c9ae",
+        "4913279e",
+        "4eccf8b0",
+        "11916502",
+        "6908c047",
+        "0388f75a",
+        "0b2e20cb",
+        "f69c847f",
+        "0ac64149",
+        "dade75aa",
+        "b068643b",
+        "c780106c",
+        "930c1e07",
+        "51c52429",
+        "57cb4b4d",
+        "4ccc9a12",
+        "e4d6be1f",
+        "aa2c9c88",
+        "cdd4a01d",
+        "b482b35e",
+        "8b461f4f",
+        "1b693ef1",
+        "d708fae5",
+        "c4533825",
+        "4c729340",
+        "552f0a54",
+        "4113cc0d",
+        "343f0bb1",
+        "eb7f73d1",
+        "d2628eef",
+        "b2bd81db",
+        "d3ed3a3e",
+        "2a1d1c4f",
+        "a4c14c42",
+        "0ee54053",
+        "376a681b",
+        "dfbb4872",
+        "8e5c476d",
+        "43cb91e4",
+        "8099cb48",
+        "e4aefe9a",
+        "2df177a8",
+        "383c5bac"
+      ]
+    },
+    "E10_incomplete_answer": {
+      "description": "Incomplete Answer — response omits important information from the ground truth",
+      "metric_key": "answer_recall",
+      "threshold": 0.8,
+      "direction": "below",
+      "count": 26,
+      "percentage": 13.13,
+      "query_ids": [
+        "dd9cbc5c",
+        "098ffb4a",
+        "caff826d",
+        "ae0f75b7",
+        "0d769419",
+        "b7f58cf2",
+        "cb347263",
+        "26c7ce23",
+        "e6a0e1c7",
+        "78c1b535",
+        "158f96a9",
+        "c780106c",
+        "a2656135",
+        "0641e6e5",
+        "44e0a545",
+        "4ab72142",
+        "1b693ef1",
+        "15f6d2e0",
+        "b2bd81db",
+        "d3ed3a3e",
+        "eb5ee053",
+        "8c6f88fe",
+        "ea65db45",
+        "b6e81b27",
+        "0bd5271f",
+        "383c5bac"
+      ]
+    },
+    "E11_misinterpretation": {
+      "description": "Misinterpretation — response distorts or misrepresents information",
+      "metric_key": "misinterpretation_rate",
+      "threshold": 0.2,
+      "direction": "above",
+      "count": 28,
+      "percentage": 14.14,
+      "query_ids": [
+        "20241acd",
+        "09710fd9",
+        "cb347263",
+        "25bd56b9",
+        "e33b6173",
+        "f70574bf",
+        "f9b85327",
+        "a0a6a9b1",
+        "e4d6be1f",
+        "b482b35e",
+        "1abb4245",
+        "fcbd5e0d",
+        "1b693ef1",
+        "2335fd98",
+        "552f0a54",
+        "4113cc0d",
+        "a747bc19",
+        "87b815e3",
+        "343f0bb1",
+        "d2628eef",
+        "b2bd81db",
+        "2a1d1c4f",
+        "a4c14c42",
+        "0bcea948",
+        "2df177a8",
+        "b2b30436",
+        "9b3c0e6b",
+        "c5f2913c"
+      ]
+    },
+    "overchunking": {
+      "description": "Overchunking — too many consecutive chunks retrieved (chunks should have been merged)",
+      "metric_key": "consecutive_chunk_ratio",
+      "threshold": 0.9,
+      "direction": "above",
+      "count": 0,
+      "percentage": 0.0,
+      "query_ids": []
+    },
+    "underchunking": {
+      "description": "Underchunking — low concept overlap between golden chunk and GT answer (chunk too large or irrelevant content)",
+      "metric_key": "concept_iou",
+      "threshold": 0.1,
+      "direction": "below",
+      "count": 8,
+      "percentage": 4.04,
+      "query_ids": [
+        "63560c3a",
+        "67f73762",
+        "877cc019",
+        "3d3ef213",
+        "f69c847f",
+        "b068643b",
+        "8b461f4f",
+        "101bdce9"
+      ]
+    },
+    "abstention_failure": {
+      "description": "Abstention Failure — model answered despite insufficient retrieved context",
+      "metric_key": "abstention_score",
+      "threshold": 0.5,
+      "direction": "below",
+      "count": 40,
+      "percentage": 20.2,
+      "query_ids": [
+        "3bda86f2",
+        "20241acd",
+        "3d3ef213",
+        "caff826d",
+        "950c5bfa",
+        "0290f131",
+        "875fe605",
+        "09710fd9",
+        "b6b8d196",
+        "2d0aad1f",
+        "8fe309c8",
+        "158f96a9",
+        "6908c047",
+        "f69c847f",
+        "dade75aa",
+        "b068643b",
+        "c780106c",
+        "930c1e07",
+        "51c52429",
+        "4aea86ff",
+        "aa2c9c88",
+        "38df2a02",
+        "3f11830b",
+        "8b461f4f",
+        "83a8c94a",
+        "1b693ef1",
+        "d708fae5",
+        "c4533825",
+        "4c729340",
+        "4113cc0d",
+        "eb7f73d1",
+        "b2bd81db",
+        "d3ed3a3e",
+        "2a1d1c4f",
+        "a4c14c42",
+        "7d153c4f",
+        "43cb91e4",
+        "0bcea948",
+        "8c6f88fe",
+        "383c5bac"
+      ]
+    }
+  },
+  "per_query": [
+    {
+      "query_id": "dd9cbc5c",
+      "error_types": [
+        "E10_incomplete_answer"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "3bda86f2",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "63560c3a",
+      "error_types": [
+        "underchunking"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "63d4ebcb",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval",
+        "E9_hallucination"
+      ],
+      "error_count": 3
+    },
+    {
+      "query_id": "67f73762",
+      "error_types": [
+        "underchunking"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "20241acd",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E9_hallucination",
+        "E11_misinterpretation",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "9ee9de9d",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "877cc019",
+      "error_types": [
+        "underchunking"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "098ffb4a",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E10_incomplete_answer"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "4aa6a8ff",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "3d3ef213",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "underchunking",
+        "abstention_failure"
+      ],
+      "error_count": 6
+    },
+    {
+      "query_id": "84e15b72",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "caff826d",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "E10_incomplete_answer",
+        "abstention_failure"
+      ],
+      "error_count": 5
+    },
+    {
+      "query_id": "950c5bfa",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "0290f131",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "55dfe898",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "632e9c57",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "ae0f75b7",
+      "error_types": [
+        "E3_context_mismatch",
+        "E10_incomplete_answer"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "c24332e6",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "cd5af29b",
+      "error_types": [
+        "E4_missed_retrieval"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "c1898acd",
+      "error_types": [
+        "E3_context_mismatch",
+        "E5E6_low_precision"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "0d769419",
+      "error_types": [
+        "E3_context_mismatch",
+        "E10_incomplete_answer"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "875fe605",
+      "error_types": [
+        "E3_context_mismatch",
+        "abstention_failure"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "b5c1618d",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "fb99be4b",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "09710fd9",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "E11_misinterpretation",
+        "abstention_failure"
+      ],
+      "error_count": 5
+    },
+    {
+      "query_id": "40d6daea",
+      "error_types": [
+        "E3_context_mismatch"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "b6b8d196",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "2d0aad1f",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "ae0001a8",
+      "error_types": [
+        "E3_context_mismatch"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "b7f58cf2",
+      "error_types": [
+        "E3_context_mismatch",
+        "E10_incomplete_answer"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "1ec7c876",
+      "error_types": [
+        "E3_context_mismatch",
+        "E9_hallucination"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "773a6531",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "eb7fa484",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "cb347263",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval",
+        "E10_incomplete_answer",
+        "E11_misinterpretation"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "a4905a6b",
+      "error_types": [
+        "E3_context_mismatch"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "b95b62f2",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "accae3ba",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "25bd56b9",
+      "error_types": [
+        "E11_misinterpretation"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "23ce0f59",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "3cbf9ccb",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "e33b6173",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E11_misinterpretation"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "9ba97f38",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "4def0aac",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "8fe309c8",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "7a55ed27",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "947e7f2e",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "1175e7f2",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "b2e7594b",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "3e81d5a9",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "8b5e4588",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "26c7ce23",
+      "error_types": [
+        "E10_incomplete_answer"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "e6a0e1c7",
+      "error_types": [
+        "E10_incomplete_answer"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "ac94c9ae",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "4913279e",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "617418c5",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "f70574bf",
+      "error_types": [
+        "E11_misinterpretation"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "78c1b535",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E10_incomplete_answer"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "239e8d46",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "65aa0fc8",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "7872d4af",
+      "error_types": [
+        "E3_context_mismatch"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "7414baae",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "13ac3823",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "b6853644",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "b9b4bc11",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "f9b85327",
+      "error_types": [
+        "E11_misinterpretation"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "158f96a9",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E10_incomplete_answer",
+        "abstention_failure"
+      ],
+      "error_count": 3
+    },
+    {
+      "query_id": "4eccf8b0",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "11916502",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "11d04754",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "6908c047",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "0388f75a",
+      "error_types": [
+        "E3_context_mismatch",
+        "E9_hallucination"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "c4c0748f",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "0b2e20cb",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "a0a6a9b1",
+      "error_types": [
+        "E11_misinterpretation"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "f69c847f",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "underchunking",
+        "abstention_failure"
+      ],
+      "error_count": 6
+    },
+    {
+      "query_id": "4242da9f",
+      "error_types": [
+        "E4_missed_retrieval"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "e183935a",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "0ac64149",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "e8466ecc",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "dade75aa",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "b068643b",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "underchunking",
+        "abstention_failure"
+      ],
+      "error_count": 5
+    },
+    {
+      "query_id": "c780106c",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "E10_incomplete_answer",
+        "abstention_failure"
+      ],
+      "error_count": 5
+    },
+    {
+      "query_id": "930c1e07",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "9877ae46",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "51c52429",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "85a2782d",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "8855208e",
+      "error_types": [
+        "E5E6_low_precision"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "57cb4b4d",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "d5728205",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "4aea86ff",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "abstention_failure"
+      ],
+      "error_count": 3
+    },
+    {
+      "query_id": "a2656135",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval",
+        "E10_incomplete_answer"
+      ],
+      "error_count": 3
+    },
+    {
+      "query_id": "4ccc9a12",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination"
+      ],
+      "error_count": 3
+    },
+    {
+      "query_id": "fd9d1d3e",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "85cde98f",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "4dacf62f",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "e4d6be1f",
+      "error_types": [
+        "E9_hallucination",
+        "E11_misinterpretation"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "aa2c9c88",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "38df2a02",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "abstention_failure"
+      ],
+      "error_count": 3
+    },
+    {
+      "query_id": "b576d4ae",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "77e5a3eb",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "3f11830b",
+      "error_types": [
+        "abstention_failure"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "cdd4a01d",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E9_hallucination"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "f2cbc529",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "525e0145",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "b482b35e",
+      "error_types": [
+        "E9_hallucination",
+        "E11_misinterpretation"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "d5292fe3",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "0596b753",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "1abb4245",
+      "error_types": [
+        "E5E6_low_precision",
+        "E11_misinterpretation"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "87e83714",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "0641e6e5",
+      "error_types": [
+        "E10_incomplete_answer"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "b2138576",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "8b461f4f",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "underchunking",
+        "abstention_failure"
+      ],
+      "error_count": 6
+    },
+    {
+      "query_id": "fcbd5e0d",
+      "error_types": [
+        "E11_misinterpretation"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "16da4c93",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "c6160c00",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "e1056361",
+      "error_types": [
+        "E3_context_mismatch",
+        "E5E6_low_precision"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "44e0a545",
+      "error_types": [
+        "E10_incomplete_answer"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "401ce811",
+      "error_types": [
+        "E4_missed_retrieval"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "0f13df4d",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "1c67df25",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "4ab72142",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E10_incomplete_answer"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "83a8c94a",
+      "error_types": [
+        "abstention_failure"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "1b693ef1",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "E10_incomplete_answer",
+        "E11_misinterpretation",
+        "abstention_failure"
+      ],
+      "error_count": 6
+    },
+    {
+      "query_id": "d708fae5",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "2335fd98",
+      "error_types": [
+        "E11_misinterpretation"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "c4533825",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "4c729340",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "d55c3c65",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "552f0a54",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E9_hallucination",
+        "E11_misinterpretation"
+      ],
+      "error_count": 3
+    },
+    {
+      "query_id": "7e5feb6a",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "101bdce9",
+      "error_types": [
+        "underchunking"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "abe17e24",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "4113cc0d",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E9_hallucination",
+        "E11_misinterpretation",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "2d9424b5",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "a747bc19",
+      "error_types": [
+        "E11_misinterpretation"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "aad983fe",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "87b815e3",
+      "error_types": [
+        "E11_misinterpretation"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "343f0bb1",
+      "error_types": [
+        "E9_hallucination",
+        "E11_misinterpretation"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "eb7f73d1",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "060baab8",
+      "error_types": [
+        "E3_context_mismatch"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "c0fe3d61",
+      "error_types": [
+        "E4_missed_retrieval"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "93ec35a2",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "bc2dc8a4",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "67c6de0b",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "30bb02f6",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "d2628eef",
+      "error_types": [
+        "E9_hallucination",
+        "E11_misinterpretation"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "15f6d2e0",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E10_incomplete_answer"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "b2bd81db",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "E10_incomplete_answer",
+        "E11_misinterpretation",
+        "abstention_failure"
+      ],
+      "error_count": 6
+    },
+    {
+      "query_id": "b23e25ea",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "d3ed3a3e",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "E10_incomplete_answer",
+        "abstention_failure"
+      ],
+      "error_count": 6
+    },
+    {
+      "query_id": "cd538c35",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "4ecbf37a",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "3a4f20ad",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "2a1d1c4f",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E9_hallucination",
+        "E11_misinterpretation",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "a4c14c42",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval",
+        "E9_hallucination",
+        "E11_misinterpretation",
+        "abstention_failure"
+      ],
+      "error_count": 5
+    },
+    {
+      "query_id": "0ee54053",
+      "error_types": [
+        "E3_context_mismatch",
+        "E4_missed_retrieval",
+        "E9_hallucination"
+      ],
+      "error_count": 3
+    },
+    {
+      "query_id": "376a681b",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "1caa5527",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "954837b8",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "13901c73",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "95b6fc41",
+      "error_types": [
+        "E4_missed_retrieval"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "5519eda5",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "07334ff6",
+      "error_types": [
+        "E4_missed_retrieval"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "dfbb4872",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "7d153c4f",
+      "error_types": [
+        "E3_context_mismatch",
+        "abstention_failure"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "8e5c476d",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination"
+      ],
+      "error_count": 3
+    },
+    {
+      "query_id": "43cb91e4",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "d45870d3",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "77fa76ed",
+      "error_types": [
+        "E5E6_low_precision"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "8d856f4e",
+      "error_types": [
+        "E4_missed_retrieval"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "8099cb48",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination"
+      ],
+      "error_count": 3
+    },
+    {
+      "query_id": "fbf79128",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "eb5ee053",
+      "error_types": [
+        "E10_incomplete_answer"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "e4aefe9a",
+      "error_types": [
+        "E9_hallucination"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "0bcea948",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E11_misinterpretation",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "809a64cb",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "2df177a8",
+      "error_types": [
+        "E9_hallucination",
+        "E11_misinterpretation"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "8c6f88fe",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E10_incomplete_answer",
+        "abstention_failure"
+      ],
+      "error_count": 4
+    },
+    {
+      "query_id": "43434440",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "ea65db45",
+      "error_types": [
+        "E10_incomplete_answer"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "a7b42c6f",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "9d934fe5",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "91505631",
+      "error_types": [
+        "E4_missed_retrieval"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "0799ea04",
+      "error_types": [
+        "E3_context_mismatch"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "b2b30436",
+      "error_types": [
+        "E11_misinterpretation"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "14876b80",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "b6e81b27",
+      "error_types": [
+        "E5E6_low_precision",
+        "E10_incomplete_answer"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "54078445",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "b491a185",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "df29f8be",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "d52e0c76",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "9b3c0e6b",
+      "error_types": [
+        "E3_context_mismatch",
+        "E11_misinterpretation"
+      ],
+      "error_count": 2
+    },
+    {
+      "query_id": "f23879fc",
+      "error_types": [],
+      "error_count": 0
+    },
+    {
+      "query_id": "0bd5271f",
+      "error_types": [
+        "E10_incomplete_answer"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "383c5bac",
+      "error_types": [
+        "E4_missed_retrieval",
+        "E5E6_low_precision",
+        "E9_hallucination",
+        "E10_incomplete_answer",
+        "abstention_failure"
+      ],
+      "error_count": 5
+    },
+    {
+      "query_id": "c5f2913c",
+      "error_types": [
+        "E11_misinterpretation"
+      ],
+      "error_count": 1
+    },
+    {
+      "query_id": "6f8e9889",
+      "error_types": [],
+      "error_count": 0
+    }
+  ]
+}

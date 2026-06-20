@@ -1,0 +1,1149 @@
+[
+    {
+        "query_id": "dd9cbc5c",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0108"
+        ]
+    },
+    {
+        "query_id": "3bda86f2",
+        "golden_chunk_ids": [
+            "depressie_0052"
+        ]
+    },
+    {
+        "query_id": "63560c3a",
+        "golden_chunk_ids": [
+            "COPD_0269"
+        ]
+    },
+    {
+        "query_id": "63d4ebcb",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0069"
+        ]
+    },
+    {
+        "query_id": "67f73762",
+        "golden_chunk_ids": [
+            "COPD_0269"
+        ]
+    },
+    {
+        "query_id": "20241acd",
+        "golden_chunk_ids": [
+            "hartfalen_0243"
+        ]
+    },
+    {
+        "query_id": "9ee9de9d",
+        "golden_chunk_ids": [
+            "depressie_0053"
+        ]
+    },
+    {
+        "query_id": "877cc019",
+        "golden_chunk_ids": [
+            "COPD_0269"
+        ]
+    },
+    {
+        "query_id": "098ffb4a",
+        "golden_chunk_ids": [
+            "chronische nierschade_0084"
+        ]
+    },
+    {
+        "query_id": "4aa6a8ff",
+        "golden_chunk_ids": [
+            "hartfalen_0085"
+        ]
+    },
+    {
+        "query_id": "3d3ef213",
+        "golden_chunk_ids": [
+            "depressie_0004"
+        ]
+    },
+    {
+        "query_id": "84e15b72",
+        "golden_chunk_ids": [
+            "hartfalen_0241"
+        ]
+    },
+    {
+        "query_id": "caff826d",
+        "golden_chunk_ids": [
+            "chronische nierschade_0084"
+        ]
+    },
+    {
+        "query_id": "950c5bfa",
+        "golden_chunk_ids": [
+            "angst_0269"
+        ]
+    },
+    {
+        "query_id": "0290f131",
+        "golden_chunk_ids": [
+            "hartfalen_0241"
+        ]
+    },
+    {
+        "query_id": "55dfe898",
+        "golden_chunk_ids": ["angst_0272"]
+    },
+    {
+        "query_id": "632e9c57",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0098"
+        ]
+    },
+    {
+        "query_id": "ae0f75b7",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0095"
+        ]
+    },
+    {
+        "query_id": "c24332e6",
+        "golden_chunk_ids": [
+            "angst_0053"
+        ]
+    },
+    {
+        "query_id": "cd5af29b",
+        "golden_chunk_ids": [
+            "angst_0052"
+        ]
+    },
+    {
+        "query_id": "c1898acd",
+        "golden_chunk_ids": [
+            "angst_0051"
+        ]
+    },
+    {
+        "query_id": "0d769419",
+        "golden_chunk_ids": ["depressie_0055"]
+    },
+    {
+        "query_id": "875fe605",
+        "golden_chunk_ids": ["hand-en-polsklachten_0318"]
+    },
+    {
+        "query_id": "b5c1618d",
+        "golden_chunk_ids": [
+            "diabetes_0047"
+        ]
+    },
+    {
+        "query_id": "fb99be4b",
+        "golden_chunk_ids": ["depressie_0077"]
+    },
+    {
+        "query_id": "09710fd9",
+        "golden_chunk_ids": [
+            "diabetes_0047"
+        ]
+    },
+    {
+        "query_id": "40d6daea",
+        "golden_chunk_ids": ["depressie_0079"]
+    },
+    {
+        "query_id": "b6b8d196",
+        "golden_chunk_ids": [
+            "COPD_0264"
+        ]
+    },
+    {
+        "query_id": "2d0aad1f",
+        "golden_chunk_ids": [
+            "diabetes_0047"
+        ]
+    },
+    {
+        "query_id": "ae0001a8",
+        "golden_chunk_ids": [
+            "depressie_0043"
+        ]
+    },
+    {
+        "query_id": "b7f58cf2",
+        "golden_chunk_ids": ["depressie_0043"]
+    },
+    {
+        "query_id": "1ec7c876",
+        "golden_chunk_ids": ["depressie_0043"]
+    },
+    {
+        "query_id": "773a6531",
+        "golden_chunk_ids": [
+            "diabetes_0323"
+        ]
+    },
+    {
+        "query_id": "eb7fa484",
+        "golden_chunk_ids": [
+            "dementie_0158"
+        ]
+    },
+    {
+        "query_id": "cb347263",
+        "golden_chunk_ids": [
+            "diabetes_0050"
+        ]
+    },
+    {
+        "query_id": "a4905a6b",
+        "golden_chunk_ids": [
+            "dementie_0171"
+        ]
+    },
+    {
+        "query_id": "b95b62f2",
+        "golden_chunk_ids": [
+            "diabetes_0325"
+        ]
+    },
+    {
+        "query_id": "accae3ba",
+        "golden_chunk_ids": [
+            "angst_0065"
+        ]
+    },
+    {
+        "query_id": "25bd56b9",
+        "golden_chunk_ids": ["chronische nierschade_0031"]
+    },
+    {
+        "query_id": "23ce0f59",
+        "golden_chunk_ids": [
+            "angst_0059"
+        ]
+    },
+    {
+        "query_id": "3cbf9ccb",
+        "golden_chunk_ids": ["chronische nierschade_0033"]
+    },
+    {
+        "query_id": "e33b6173",
+        "golden_chunk_ids": ["angst_0066"]
+    },
+    {
+        "query_id": "9ba97f38",
+        "golden_chunk_ids": [
+            "hartfalen_0062"
+        ]
+    },
+    {
+        "query_id": "4def0aac",
+        "golden_chunk_ids": [
+            "dementie_0153"
+        ]
+    },
+    {
+        "query_id": "8fe309c8",
+        "golden_chunk_ids": [
+            "COPD_0230"
+        ]
+    },
+    {
+        "query_id": "7a55ed27",
+        "golden_chunk_ids": [
+            "hartfalen_0062"
+        ]
+    },
+    {
+        "query_id": "947e7f2e",
+        "golden_chunk_ids": [
+            "chronische nierschade_0032"
+        ]
+    },
+    {
+        "query_id": "1175e7f2",
+        "golden_chunk_ids": [
+            "angst_0066"
+        ]
+    },
+    {
+        "query_id": "b2e7594b",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0274"
+        ]
+    },
+    {
+        "query_id": "3e81d5a9",
+        "golden_chunk_ids": [
+            "hartfalen_0068"
+        ]
+    },
+    {
+        "query_id": "8b5e4588",
+        "golden_chunk_ids": [
+            "COPD_0067"
+        ]
+    },
+    {
+        "query_id": "26c7ce23",
+        "golden_chunk_ids": [
+            "COPD_0072"
+        ]
+    },
+    {
+        "query_id": "e6a0e1c7",
+        "golden_chunk_ids": [
+            "angst_0121"
+        ]
+    },
+    {
+        "query_id": "ac94c9ae",
+        "golden_chunk_ids": [
+            "COPD_0065"
+        ]
+    },
+    {
+        "query_id": "4913279e",
+        "golden_chunk_ids": [
+            "angst_0223"
+        ]
+    },
+    {
+        "query_id": "617418c5",
+        "golden_chunk_ids": [
+            "angst_0102"
+        ]
+    },
+    {
+        "query_id": "f70574bf",
+        "golden_chunk_ids": [
+            "influenza_0041"
+        ]
+    },
+    {
+        "query_id": "78c1b535",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0197"
+        ]
+    },
+    {
+        "query_id": "239e8d46",
+        "golden_chunk_ids": [
+            "influenza_0042"
+        ]
+    },
+    {
+        "query_id": "65aa0fc8",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0188"
+        ]
+    },
+    {
+        "query_id": "7872d4af",
+        "golden_chunk_ids": ["influenza_0043"]
+    },
+    {
+        "query_id": "7414baae",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0194"
+        ]
+    },
+    {
+        "query_id": "13ac3823",
+        "golden_chunk_ids": [
+            "depressie_0192"
+        ]
+    },
+    {
+        "query_id": "b6853644",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0195"
+        ]
+    },
+    {
+        "query_id": "b9b4bc11",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0198"
+        ]
+    },
+    {
+        "query_id": "f9b85327",
+        "golden_chunk_ids": [
+            "depressie_0208"
+        ]
+    },
+    {
+        "query_id": "158f96a9",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0194"
+        ]
+    },
+    {
+        "query_id": "4eccf8b0",
+        "golden_chunk_ids": [
+            "hartfalen_0029",
+            "hartfalen_0254",
+            "hartfalen_0028",
+            "hartfalen_0017"
+        ]
+    },
+    {
+        "query_id": "11916502",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0037"
+        ]
+    },
+    {
+        "query_id": "11d04754",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0037"
+        ]
+    },
+    {
+        "query_id": "6908c047",
+        "golden_chunk_ids": [
+            "hartfalen_0030"
+        ]
+    },
+    {
+        "query_id": "0388f75a",
+        "golden_chunk_ids": [
+            "hartfalen_0030"
+        ]
+    },
+    {
+        "query_id": "c4c0748f",
+        "golden_chunk_ids": [
+            "angst_0259"
+        ]
+    },
+    {
+        "query_id": "0b2e20cb",
+        "golden_chunk_ids": [
+            "angst_0258"
+        ]
+    },
+    {
+        "query_id": "a0a6a9b1",
+        "golden_chunk_ids": [
+            "angst_0261"
+        ]
+    },
+    {
+        "query_id": "f69c847f",
+        "golden_chunk_ids": ["depressie_0049"]
+    },
+    {
+        "query_id": "4242da9f",
+        "golden_chunk_ids": [
+            "dementie_0107"
+        ]
+    },
+    {
+        "query_id": "e183935a",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0196"
+        ]
+    },
+    {
+        "query_id": "0ac64149",
+        "golden_chunk_ids": [
+            "dementie_0078"
+        ]
+    },
+    {
+        "query_id": "e8466ecc",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0040"
+        ]
+    },
+    {
+        "query_id": "dade75aa",
+        "golden_chunk_ids": [
+            "COPD_0317"
+        ]
+    },
+    {
+        "query_id": "b068643b",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0040"
+        ]
+    },
+    {
+        "query_id": "c780106c",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0191"
+        ]
+    },
+    {
+        "query_id": "930c1e07",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0040"
+        ]
+    },
+    {
+        "query_id": "9877ae46",
+        "golden_chunk_ids": [
+            "diabetes_0305"
+        ]
+    },
+    {
+        "query_id": "51c52429",
+        "golden_chunk_ids": [
+            "COPD_0318"
+        ]
+    },
+    {
+        "query_id": "85a2782d",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0132"
+        ]
+    },
+    {
+        "query_id": "8855208e",
+        "golden_chunk_ids": [
+            "dementie_0140"
+        ]
+    },
+    {
+        "query_id": "57cb4b4d",
+        "golden_chunk_ids": [
+            "dementie_0246"
+        ]
+    },
+    {
+        "query_id": "d5728205",
+        "golden_chunk_ids": ["astma_bij_volwassenen_0284"]
+    },
+    {
+        "query_id": "4aea86ff",
+        "golden_chunk_ids": [
+            "dementie_0142"
+        ]
+    },
+    {
+        "query_id": "a2656135",
+        "golden_chunk_ids": [
+            "chronische nierschade_0052"
+        ]
+    },
+    {
+        "query_id": "4ccc9a12",
+        "golden_chunk_ids": [
+            "angst_0061"
+        ]
+    },
+    {
+        "query_id": "fd9d1d3e",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0115"
+        ]
+    },
+    {
+        "query_id": "85cde98f",
+        "golden_chunk_ids": [
+            "dementie_0130"
+        ]
+    },
+    {
+        "query_id": "4dacf62f",
+        "golden_chunk_ids": ["dementie_0131"]
+    },
+    {
+        "query_id": "e4d6be1f",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0273",
+            "hand-en-polsklachten_0340",
+            "hand-en-polsklachten_0349",
+            "hand-en-polsklachten_0133",
+            "hand-en-polsklachten_0329"
+        ]
+    },
+    {
+        "query_id": "aa2c9c88",
+        "golden_chunk_ids": [
+            "angst_0064"
+        ]
+    },
+    {
+        "query_id": "38df2a02",
+        "golden_chunk_ids": [
+            "dementie_0138"
+        ]
+    },
+    {
+        "query_id": "b576d4ae",
+        "golden_chunk_ids": [
+            "dementie_0068"
+        ]
+    },
+    {
+        "query_id": "77e5a3eb",
+        "golden_chunk_ids": ["influenza_0036"]
+    },
+    {
+        "query_id": "3f11830b",
+        "golden_chunk_ids": [
+            "diabetes_0126"
+        ]
+    },
+    {
+        "query_id": "cdd4a01d",
+        "golden_chunk_ids": [
+            "influenza_0036"
+        ]
+    },
+    {
+        "query_id": "f2cbc529",
+        "golden_chunk_ids": [
+            "diabetes_0046"
+        ]
+    },
+    {
+        "query_id": "525e0145",
+        "golden_chunk_ids": [
+            "diabetes_0128"
+        ]
+    },
+    {
+        "query_id": "b482b35e",
+        "golden_chunk_ids": [
+            "dementie_0070"
+        ]
+    },
+    {
+        "query_id": "d5292fe3",
+        "golden_chunk_ids": [
+            "hartfalen_0251"
+        ]
+    },
+    {
+        "query_id": "0596b753",
+        "golden_chunk_ids": [
+            "angst_0215",
+            "depressie_0139"
+        ]
+    },
+    {
+        "query_id": "1abb4245",
+        "golden_chunk_ids": [
+            "influenza_0037"
+        ]
+    },
+    {
+        "query_id": "87e83714",
+        "golden_chunk_ids": [
+            "diabetes_0065"
+        ]
+    },
+    {
+        "query_id": "0641e6e5",
+        "golden_chunk_ids": ["depressie_0028"]
+    },
+    {
+        "query_id": "b2138576",
+        "golden_chunk_ids": [
+            "hartfalen_0245"
+        ]
+    },
+    {
+        "query_id": "8b461f4f",
+        "golden_chunk_ids": ["hartfalen_0022"]
+    },
+    {
+        "query_id": "fcbd5e0d",
+        "golden_chunk_ids": ["depressie_0030"]
+    },
+    {
+        "query_id": "16da4c93",
+        "golden_chunk_ids": ["diabetes_0065"]
+    },
+    {
+        "query_id": "c6160c00",
+        "golden_chunk_ids": ["hartfalen_0025"]
+    },
+    {
+        "query_id": "e1056361",
+        "golden_chunk_ids": [
+            "depressie_0038"
+        ]
+    },
+    {
+        "query_id": "44e0a545",
+        "golden_chunk_ids": [
+            "depressie_0162"
+        ]
+    },
+    {
+        "query_id": "401ce811",
+        "golden_chunk_ids": [
+            "diabetes_0078"
+        ]
+    },
+    {
+        "query_id": "0f13df4d",
+        "golden_chunk_ids": ["hand-en-polsklachten_0351"]
+    },
+    {
+        "query_id": "1c67df25",
+        "golden_chunk_ids": ["depressie_0187"]
+    },
+    {
+        "query_id": "4ab72142",
+        "golden_chunk_ids": [
+            "diabetes_0080"
+        ]
+    },
+    {
+        "query_id": "83a8c94a",
+        "golden_chunk_ids": [
+            "chronische nierschade_0046"
+        ]
+    },
+    {
+        "query_id": "1b693ef1",
+        "golden_chunk_ids": ["diabetes_0065"]
+    },
+    {
+        "query_id": "d708fae5",
+        "golden_chunk_ids": [
+            "dementie_0206"
+        ]
+    },
+    {
+        "query_id": "2335fd98",
+        "golden_chunk_ids": [
+            "chronische nierschade_0030"
+        ]
+    },
+    {
+        "query_id": "c4533825",
+        "golden_chunk_ids": [
+            "dementie_0206"
+        ]
+    },
+    {
+        "query_id": "4c729340",
+        "golden_chunk_ids": ["chronische nierschade_0046"]
+    },
+    {
+        "query_id": "d55c3c65",
+        "golden_chunk_ids": [
+            "chronische nierschade_0030"
+        ]
+    },
+    {
+        "query_id": "552f0a54",
+        "golden_chunk_ids": [
+            "chronische nierschade_0046"
+        ]
+    },
+    {
+        "query_id": "7e5feb6a",
+        "golden_chunk_ids": [
+            "dementie_0181"
+        ]
+    },
+    {
+        "query_id": "101bdce9",
+        "golden_chunk_ids": [
+            "diabetes_0303",
+            "chronische nierschade_0074",
+            "hartfalen_0237"
+        ]
+    },
+    {
+        "query_id": "abe17e24",
+        "golden_chunk_ids": [
+            "dementie_0181"
+        ]
+    },
+    {
+        "query_id": "4113cc0d",
+        "golden_chunk_ids": [
+            "dementie_0186"
+        ]
+    },
+    {
+        "query_id": "2d9424b5",
+        "golden_chunk_ids": [
+            "influenza_0040"
+        ]
+    },
+    {
+        "query_id": "a747bc19",
+        "golden_chunk_ids": [
+            "hartfalen_0219"
+        ]
+    },
+    {
+        "query_id": "aad983fe",
+        "golden_chunk_ids": [
+            "chronische nierschade_0132"
+        ]
+    },
+    {
+        "query_id": "87b815e3",
+        "golden_chunk_ids": [
+            "influenza_0040"
+        ]
+    },
+    {
+        "query_id": "343f0bb1",
+        "golden_chunk_ids": [
+            "influenza_0050"
+        ]
+    },
+    {
+        "query_id": "eb7f73d1",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0033"
+        ]
+    },
+    {
+        "query_id": "060baab8",
+        "golden_chunk_ids": [
+            "influenza_0040"
+        ]
+    },
+    {
+        "query_id": "c0fe3d61",
+        "golden_chunk_ids": [
+            "chronische nierschade_0133"
+        ]
+    },
+    {
+        "query_id": "93ec35a2",
+        "golden_chunk_ids": [
+            "diabetes_0303",
+            "chronische nierschade_0074",
+            "hartfalen_0237"
+        ]
+    },
+    {
+        "query_id": "bc2dc8a4",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0033"
+        ]
+    },
+    {
+        "query_id": "67c6de0b",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0109"
+        ]
+    },
+    {
+        "query_id": "30bb02f6",
+        "golden_chunk_ids": [
+            "hartfalen_0104"
+        ]
+    },
+    {
+        "query_id": "d2628eef",
+        "golden_chunk_ids": [
+            "hartfalen_0110"
+        ]
+    },
+    {
+        "query_id": "15f6d2e0",
+        "golden_chunk_ids": [
+            "influenza_0047"
+        ]
+    },
+    {
+        "query_id": "b2bd81db",
+        "golden_chunk_ids": [
+            "influenza_0047",
+            "influenza_0072"
+        ]
+    },
+    {
+        "query_id": "b23e25ea",
+        "golden_chunk_ids": [
+            "diabetes_0067"
+        ]
+    },
+    {
+        "query_id": "d3ed3a3e",
+        "golden_chunk_ids": [
+            "influenza_0047"
+        ]
+    },
+    {
+        "query_id": "cd538c35",
+        "golden_chunk_ids": [
+            "angst_0054"
+        ]
+    },
+    {
+        "query_id": "4ecbf37a",
+        "golden_chunk_ids": [
+            "influenza_0047",
+            "influenza_0072"
+        ]
+    },
+    {
+        "query_id": "3a4f20ad",
+        "golden_chunk_ids": [
+            "chronische nierschade_0073"
+        ]
+    },
+    {
+        "query_id": "2a1d1c4f",
+        "golden_chunk_ids": [
+            "angst_0054"
+        ]
+    },
+    {
+        "query_id": "a4c14c42",
+        "golden_chunk_ids": [
+            "angst_0055"
+        ]
+    },
+    {
+        "query_id": "0ee54053",
+        "golden_chunk_ids": [
+            "influenza_0072"
+        ]
+    },
+    {
+        "query_id": "376a681b",
+        "golden_chunk_ids": [
+            "chronische nierschade_0067"
+        ]
+    },
+    {
+        "query_id": "1caa5527",
+        "golden_chunk_ids": [
+            "depressie_0042"
+        ]
+    },
+    {
+        "query_id": "954837b8",
+        "golden_chunk_ids": [
+            "chronische nierschade_0059"
+        ]
+    },
+    {
+        "query_id": "13901c73",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0120"
+        ]
+    },
+    {
+        "query_id": "95b6fc41",
+        "golden_chunk_ids": ["depressie_0042"]
+    },
+    {
+        "query_id": "5519eda5",
+        "golden_chunk_ids": [
+            "COPD_0112"
+        ]
+    },
+    {
+        "query_id": "07334ff6",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0120"
+        ]
+    },
+    {
+        "query_id": "dfbb4872",
+        "golden_chunk_ids": [
+            "COPD_0119"
+        ]
+    },
+    {
+        "query_id": "7d153c4f",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0121"
+        ]
+    },
+    {
+        "query_id": "8e5c476d",
+        "golden_chunk_ids": [
+            "influenza_0047",
+            "influenza_0072"
+        ]
+    },
+    {
+        "query_id": "43cb91e4",
+        "golden_chunk_ids": [
+            "diabetes_0064"
+        ]
+    },
+    {
+        "query_id": "d45870d3",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0080"
+        ]
+    },
+    {
+        "query_id": "77fa76ed",
+        "golden_chunk_ids": [
+            "diabetes_0262"
+        ]
+    },
+    {
+        "query_id": "8d856f4e",
+        "golden_chunk_ids": ["COPD_0045"]
+    },
+    {
+        "query_id": "8099cb48",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0079"
+        ]
+    },
+    {
+        "query_id": "fbf79128",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0083"
+        ]
+    },
+    {
+        "query_id": "eb5ee053",
+        "golden_chunk_ids": ["astma_bij_volwassenen_0240"]
+    },
+    {
+        "query_id": "e4aefe9a",
+        "golden_chunk_ids": [
+            "chronische nierschade_0058"
+        ]
+    },
+    {
+        "query_id": "0bcea948",
+        "golden_chunk_ids": [
+            "COPD_0115"
+        ]
+    },
+    {
+        "query_id": "809a64cb",
+        "golden_chunk_ids": [
+            "COPD_0044"
+        ]
+    },
+    {
+        "query_id": "2df177a8",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0241"
+        ]
+    },
+    {
+        "query_id": "8c6f88fe",
+        "golden_chunk_ids": [
+            "COPD_0044"
+        ]
+    },
+    {
+        "query_id": "43434440",
+        "golden_chunk_ids": [
+            "COPD_0051"
+        ]
+    },
+    {
+        "query_id": "ea65db45",
+        "golden_chunk_ids": [
+            "COPD_0048"
+        ]
+    },
+    {
+        "query_id": "a7b42c6f",
+        "golden_chunk_ids": [
+            "diabetes_0281"
+        ]
+    },
+    {
+        "query_id": "9d934fe5",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0081"
+        ]
+    },
+    {
+        "query_id": "91505631",
+        "golden_chunk_ids": [
+            "dementie_0215"
+        ]
+    },
+    {
+        "query_id": "0799ea04",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0127"
+        ]
+    },
+    {
+        "query_id": "b2b30436",
+        "golden_chunk_ids": [
+            "hartfalen_0256"
+        ]
+    },
+    {
+        "query_id": "14876b80",
+        "golden_chunk_ids": [
+            "dementie_0220"
+        ]
+    },
+    {
+        "query_id": "b6e81b27",
+        "golden_chunk_ids": [
+            "hartfalen_0256"
+        ]
+    },
+    {
+        "query_id": "54078445",
+        "golden_chunk_ids": [
+            "chronische nierschade_0058"
+        ]
+    },
+    {
+        "query_id": "b491a185",
+        "golden_chunk_ids": [
+            "chronische nierschade_0125"
+        ]
+    },
+    {
+        "query_id": "df29f8be",
+        "golden_chunk_ids": [
+            "hand-en-polsklachten_0186"
+        ]
+    },
+    {
+        "query_id": "d52e0c76",
+        "golden_chunk_ids": [
+            "COPD_0059"
+        ]
+    },
+    {
+        "query_id": "9b3c0e6b",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0073"
+        ]
+    },
+    {
+        "query_id": "f23879fc",
+        "golden_chunk_ids": [
+            "COPD_0062"
+        ]
+    },
+    {
+        "query_id": "0bd5271f",
+        "golden_chunk_ids": [
+            "astma_bij_volwassenen_0073"
+        ]
+    },
+    {
+        "query_id": "383c5bac",
+        "golden_chunk_ids": [
+            "chronische nierschade_0028"
+        ]
+    },
+    {
+        "query_id": "c5f2913c",
+        "golden_chunk_ids": ["influenza_0038"]
+    },
+    {
+        "query_id": "6f8e9889",
+        "golden_chunk_ids": [
+            "influenza_0038"
+        ]
+    }
+]

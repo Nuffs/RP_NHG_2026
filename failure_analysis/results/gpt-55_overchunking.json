@@ -1,0 +1,361 @@
+{
+  "input_file": "model_benchmarking\\results\\factual\\answers_gpt-55.json",
+  "total_questions": 20,
+  "questions_with_consecutive_chunks": 12,
+  "pct_questions_with_consecutive": 60.0,
+  "total_consecutive_pairs": 20,
+  "per_question": [
+    {
+      "query_id": "astma_bij_volwassenen_0008_0001",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0254",
+        "astma_bij_volwassenen_0109",
+        "astma_bij_volwassenen_0255",
+        "astma_bij_volwassenen_0209",
+        "astma_bij_volwassenen_0002"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0254",
+          "astma_bij_volwassenen_0255"
+        ]
+      ],
+      "num_consecutive_pairs": 1
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0006_0002",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0193",
+        "astma_bij_volwassenen_0167",
+        "astma_bij_volwassenen_0131",
+        "astma_bij_volwassenen_0095",
+        "astma_bij_volwassenen_0096"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0095",
+          "astma_bij_volwassenen_0096"
+        ]
+      ],
+      "num_consecutive_pairs": 1
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0008_0003",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0131",
+        "astma_bij_volwassenen_0246",
+        "astma_bij_volwassenen_0139",
+        "astma_bij_volwassenen_0138",
+        "astma_bij_volwassenen_0249"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0138",
+          "astma_bij_volwassenen_0139"
+        ]
+      ],
+      "num_consecutive_pairs": 1
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0012_0001",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0272",
+        "astma_bij_volwassenen_0271",
+        "astma_bij_volwassenen_0275",
+        "astma_bij_volwassenen_0269",
+        "astma_bij_volwassenen_0274"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0271",
+          "astma_bij_volwassenen_0272"
+        ],
+        [
+          "astma_bij_volwassenen_0274",
+          "astma_bij_volwassenen_0275"
+        ]
+      ],
+      "num_consecutive_pairs": 2
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0014_0003",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0284",
+        "astma_bij_volwassenen_0285",
+        "astma_bij_volwassenen_0283",
+        "astma_bij_volwassenen_0275",
+        "astma_bij_volwassenen_0131"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0283",
+          "astma_bij_volwassenen_0284"
+        ],
+        [
+          "astma_bij_volwassenen_0284",
+          "astma_bij_volwassenen_0285"
+        ]
+      ],
+      "num_consecutive_pairs": 2
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0014_0002",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0282",
+        "astma_bij_volwassenen_0131",
+        "astma_bij_volwassenen_0246",
+        "astma_bij_volwassenen_0255",
+        "astma_bij_volwassenen_0002"
+      ],
+      "consecutive_pairs": [],
+      "num_consecutive_pairs": 0
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0013_0001",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0279",
+        "astma_bij_volwassenen_0282",
+        "astma_bij_volwassenen_0007",
+        "astma_bij_volwassenen_0283",
+        "astma_bij_volwassenen_0280"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0279",
+          "astma_bij_volwassenen_0280"
+        ],
+        [
+          "astma_bij_volwassenen_0282",
+          "astma_bij_volwassenen_0283"
+        ]
+      ],
+      "num_consecutive_pairs": 2
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0011_0001",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0243",
+        "astma_bij_volwassenen_0267",
+        "astma_bij_volwassenen_0275",
+        "astma_bij_volwassenen_0284",
+        "astma_bij_volwassenen_0002"
+      ],
+      "consecutive_pairs": [],
+      "num_consecutive_pairs": 0
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0011_0002",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0244",
+        "astma_bij_volwassenen_0246",
+        "astma_bij_volwassenen_0250",
+        "astma_bij_volwassenen_0131",
+        "astma_bij_volwassenen_0054"
+      ],
+      "consecutive_pairs": [],
+      "num_consecutive_pairs": 0
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0008_0004",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0131",
+        "astma_bij_volwassenen_0142",
+        "astma_bij_volwassenen_0148",
+        "astma_bij_volwassenen_0149",
+        "astma_bij_volwassenen_0255"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0148",
+          "astma_bij_volwassenen_0149"
+        ]
+      ],
+      "num_consecutive_pairs": 1
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0001_0001",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0034",
+        "astma_bij_volwassenen_0033",
+        "astma_bij_volwassenen_0035",
+        "astma_bij_volwassenen_0150",
+        "astma_bij_volwassenen_0131"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0033",
+          "astma_bij_volwassenen_0034"
+        ],
+        [
+          "astma_bij_volwassenen_0034",
+          "astma_bij_volwassenen_0035"
+        ]
+      ],
+      "num_consecutive_pairs": 2
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0008_0006",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0178",
+        "astma_bij_volwassenen_0162",
+        "astma_bij_volwassenen_0149",
+        "astma_bij_volwassenen_0147",
+        "astma_bij_volwassenen_0148"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0147",
+          "astma_bij_volwassenen_0148"
+        ],
+        [
+          "astma_bij_volwassenen_0148",
+          "astma_bij_volwassenen_0149"
+        ]
+      ],
+      "num_consecutive_pairs": 2
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0008_0005",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0209",
+        "astma_bij_volwassenen_0186",
+        "astma_bij_volwassenen_0203",
+        "astma_bij_volwassenen_0202",
+        "astma_bij_volwassenen_0204"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0202",
+          "astma_bij_volwassenen_0203"
+        ],
+        [
+          "astma_bij_volwassenen_0203",
+          "astma_bij_volwassenen_0204"
+        ]
+      ],
+      "num_consecutive_pairs": 2
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0003_0001",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0090",
+        "astma_bij_volwassenen_0027",
+        "astma_bij_volwassenen_0131",
+        "astma_bij_volwassenen_0062",
+        "astma_bij_volwassenen_0092"
+      ],
+      "consecutive_pairs": [],
+      "num_consecutive_pairs": 0
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0012_0002",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0272",
+        "astma_bij_volwassenen_0276",
+        "astma_bij_volwassenen_0131",
+        "astma_bij_volwassenen_0139",
+        "astma_bij_volwassenen_0274"
+      ],
+      "consecutive_pairs": [],
+      "num_consecutive_pairs": 0
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0008_0002",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0131",
+        "astma_bij_volwassenen_0201",
+        "astma_bij_volwassenen_0209",
+        "astma_bij_volwassenen_0216",
+        "astma_bij_volwassenen_0228"
+      ],
+      "consecutive_pairs": [],
+      "num_consecutive_pairs": 0
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0006_0001",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0093",
+        "astma_bij_volwassenen_0094",
+        "astma_bij_volwassenen_0092",
+        "astma_bij_volwassenen_0131",
+        "astma_bij_volwassenen_0193"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0092",
+          "astma_bij_volwassenen_0093"
+        ],
+        [
+          "astma_bij_volwassenen_0093",
+          "astma_bij_volwassenen_0094"
+        ]
+      ],
+      "num_consecutive_pairs": 2
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0011_0003",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0256",
+        "astma_bij_volwassenen_0043",
+        "astma_bij_volwassenen_0244",
+        "astma_bij_volwassenen_0250",
+        "astma_bij_volwassenen_0054"
+      ],
+      "consecutive_pairs": [],
+      "num_consecutive_pairs": 0
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0003_0002",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0075",
+        "astma_bij_volwassenen_0076",
+        "astma_bij_volwassenen_0077",
+        "astma_bij_volwassenen_0054",
+        "astma_bij_volwassenen_0281"
+      ],
+      "consecutive_pairs": [
+        [
+          "astma_bij_volwassenen_0075",
+          "astma_bij_volwassenen_0076"
+        ],
+        [
+          "astma_bij_volwassenen_0076",
+          "astma_bij_volwassenen_0077"
+        ]
+      ],
+      "num_consecutive_pairs": 2
+    },
+    {
+      "query_id": "astma_bij_volwassenen_0014_0001",
+      "num_retrieved": 5,
+      "doc_ids": [
+        "astma_bij_volwassenen_0246",
+        "astma_bij_volwassenen_0131",
+        "astma_bij_volwassenen_0243",
+        "astma_bij_volwassenen_0249",
+        "astma_bij_volwassenen_0062"
+      ],
+      "consecutive_pairs": [],
+      "num_consecutive_pairs": 0
+    }
+  ]
+}

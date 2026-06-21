@@ -52,7 +52,7 @@ from pipeline.new_query_vector import (  # noqa: E402
 load_dotenv()
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
-INPUT_PATH  = Path("factual_benchmark/results/qa_final_dataset.json")
+INPUT_PATH  = Path("model_benchmarking/datasets/qa_final_dataset.json")
 RESULTS_DIR = Path("model_benchmarking/results/factual/results_full")
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 

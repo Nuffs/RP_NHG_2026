@@ -53,7 +53,7 @@ load_dotenv()
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 INPUT_PATH  = Path("factual_benchmark/results/qa_final_dataset.json")
-RESULTS_DIR = Path("model_benchmarking/results/factual")
+RESULTS_DIR = Path("model_benchmarking/results/factual/results_full")
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # Max concurrent LLM requests per model
@@ -472,7 +472,7 @@ async def main() -> None:
     print(f"Loaded {len(items)} QA items from {INPUT_PATH}")
 
     # ── Optional filter: restrict to a single guideline topic ─────────────────
-    FILTER_TOPIC: str | None = "astma_bij_volwassenen"   # set None for full run
+    FILTER_TOPIC: str | None = None   # set to e.g. "astma_bij_volwassenen" for partial run
     if FILTER_TOPIC:
         items = [i for i in items if i["chunk_id"].startswith(FILTER_TOPIC)]
         print(f"Filtered to '{FILTER_TOPIC}': {len(items)} items")

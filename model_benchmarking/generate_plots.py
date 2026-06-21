@@ -21,10 +21,10 @@ import seaborn as sns
 warnings.filterwarnings("ignore")
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
-FACTUAL_CSV      = Path("model_benchmarking/results/factual/metrics.xlsx")
-CLINICAL_CSV     = Path("model_benchmarking/results/clinical/metrics.csv")
-FACTUAL_RC_DIR   = Path("model_benchmarking/results/factual/ragchecker")
-CLINICAL_RC_DIR  = Path("model_benchmarking/results/clinical/ragchecker")
+FACTUAL_CSV      = Path("model_benchmarking/results/factual/results_full/metrics.csv")
+CLINICAL_CSV     = Path("model_benchmarking/results/clinical/results_full_200/metrics.csv")
+FACTUAL_RC_DIR   = Path("model_benchmarking/results/factual/results_full/ragchecker")
+CLINICAL_RC_DIR  = Path("model_benchmarking/results/clinical/results_full_200/ragchecker")
 PLOTS_DIR        = Path("model_benchmarking/plots")
 PLOTS_DIR.mkdir(parents=True, exist_ok=True)
 

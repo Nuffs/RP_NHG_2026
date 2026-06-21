@@ -1,30 +1,49 @@
-anthropic>=0.102.0
+# Core scraping / web
 beautifulsoup4==4.14.3
+lxml==6.1.0
+selenium==4.43.0
+webdriver-manager==4.0.2
+
+# HTTP / environment
+requests==2.33.1
+python-dotenv==1.2.2
+httpx>=0.24.0
+httpcore>=0.17.0
+
+# OpenAI / LLM clients
+anthropic>=0.102.0
+openai~=2.34.0
+tiktoken>=0.5.0
+
+# NLP / tokenization / evaluation
+spacy==3.8.14
+nl-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/nl_core_news_sm-3.8.0/nl_core_news_sm-3.8.0-py3-none-any.whl
+sentencepiece>=0.1.98
+bert-score==0.3.13
+transformers~=4.57.6
+torch~=2.12.0
+nltk~=3.9.4
+
+# Data science / utilities
+numpy>=1.24.0
+pandas~=2.3.0
+matplotlib>=3.10.0
+seaborn
+scikit-learn>=1.2.0
+statsmodels~=0.14.6
+openpyxl
+
+# Datasets & vector DBs
 datasets~=4.8.5
-google-genai>=0.1.0
+qdrant-client
+
+# RAG / retrieval / evaluation tooling
 langchain==0.3.0
 langchain-core==0.3.0
 langchain-openai==0.2.0
 langchain-community==0.3.0
-lxml==6.1.0
-matplotlib>=3.10.0
-nltk~=3.9.4
-numpy>=1.24.0
-openai~=2.34.0
-openpyxl
-pandas~=2.3.0
-python-dotenv==1.2.2
-qdrant-client
-query~=0.1.4
 ragas==0.3.4
 ragchecker~=0.1.9
-requests==2.33.1
-seaborn
-selenium==4.43.0
-spacy==3.8.14
-statsmodels~=0.14.6
+google-genai>=0.1.0
+query~=0.1.4
 tenacity
-tiktoken>=0.5.0
-torch~=2.12.0
-transformers~=4.57.6
-webdriver-manager==4.0.2

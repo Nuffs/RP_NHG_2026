@@ -18,29 +18,14 @@ def evaluate_qa_pairs_grounding(scraped_chunks, qa_pairs):
     Higher scores indicate answers that are semantically aligned with the source material.
     
     Args:
-        scraped_chunks (list): List of source chunk dictionaries with keys:
-            - 'chunk_id' (str): Unique chunk identifier
-            - 'text' (str): Source text content
-        qa_pairs (list): List of QA pair dictionaries with keys:
-            - 'chunk_id' (str): Reference to source chunk
-            - 'question' (str): Generated question
-            - 'answer' (str): Generated answer
-    
+        scraped_chunks (list): Source chunk dicts.
+        qa_pairs (list): Generated QA pair dicts.
+
     Returns:
-        list: List of per-pair evaluation scores with keys:
-            - 'chunk_id' (str): Chunk identifier
-            - 'question' (str): The question
-            - 'answer' (str): The generated answer
-            - 'source_text' (str): The source text
-            - 'precision' (float): BERTScore precision (0-1)
-            - 'recall' (float): BERTScore recall (0-1)
-            - 'f1' (float): BERTScore F1 score (0-1)
-    
-    Raises:
-        KeyError: If required keys are missing from inputs
+        list: Per-pair BERTScore metrics.
     """
     chunk_lookup = {chunk["chunk_id"]: chunk["text"] for chunk in scraped_chunks}
-    
+
     # source chunks
     source_chunks = []
     # generated answers
@@ -51,16 +36,16 @@ def evaluate_qa_pairs_grounding(scraped_chunks, qa_pairs):
         context = chunk_lookup.get(qa["chunk_id"], "NO_SOURCE_FOUND")
         if context == "NO_SOURCE_FOUND":
             print(f"No source chunk found for chunk_id {qa['chunk_id']}")
-            continue  
+            continue
         hypotheses.append(qa["answer"])
         source_chunks.append(context)
         valid_pairs.append({**qa, "source_text": context})
-    
+
     P, R, F1 = bert_score(
         hypotheses,
         source_chunks,
         lang="nl",
-        verbose=True
+        verbose=True,
     )
 
     per_pair_scores = []
@@ -72,21 +57,22 @@ def evaluate_qa_pairs_grounding(scraped_chunks, qa_pairs):
             "source_text": qa["source_text"],
             "precision": P[i].item(),
             "recall": R[i].item(),
-            "f1": F1[i].item()
+            "f1": F1[i].item(),
         })
 
     return per_pair_scores
 
 def get_roundtrip_answer(question, context):
     """
-    Get the model's answer to a question given the source context.
-    
+    Obtain a roundtrip answer from the LLM using only the provided source
+    context.
+
     Args:
-        question (str): The question to answer
-        context (str): The source context/chunk to answer from
-    
+        question (str): The question to ask the model.
+        context (str): The source text to be provided as context.
+
     Returns:
-        str: The model's answer to the question
+        str: The model-produced answer (stripped).
     """
     
     response = client.chat.completions.create(

@@ -1,0 +1,111 @@
+chunk_id,strategy,score
+astma_bij_volwassenen_0005,cot,0.9987919926643372
+astma_bij_volwassenen_0005,few_shot,0.4985436904244125
+astma_bij_volwassenen_0005,few_shot_cot,0.001370566664263606
+astma_bij_volwassenen_0005,few_shot_cot_refine,0.9950716495513916
+astma_bij_volwassenen_0005,few_shot_refine,0.009085913188755512
+astma_bij_volwassenen_0008,cot,0.0004607520531862974
+astma_bij_volwassenen_0008,few_shot,0.00030029640765860677
+astma_bij_volwassenen_0008,few_shot_cot,0.0003121260670013726
+astma_bij_volwassenen_0008,few_shot_cot_refine,0.00030028054607100785
+astma_bij_volwassenen_0008,few_shot_refine,0.0007564651896245778
+astma_bij_volwassenen_0010,cot,0.9954794645309448
+astma_bij_volwassenen_0010,few_shot,0.9960412979125977
+astma_bij_volwassenen_0010,few_shot_cot,0.9960412979125977
+astma_bij_volwassenen_0010,few_shot_cot_refine,0.9960412979125977
+astma_bij_volwassenen_0010,few_shot_refine,0.9960412979125977
+chronische nierschade_0003,cot,0.5032518631778657
+chronische nierschade_0003,few_shot,0.9946850538253784
+chronische nierschade_0003,few_shot_cot,0.9946850538253784
+chronische nierschade_0003,few_shot_cot_refine,0.9946850538253784
+chronische nierschade_0003,few_shot_refine,0.9946850538253784
+chronische nierschade_0012,cot,0.031030528247356415
+chronische nierschade_0012,few_shot,0.9940411448478699
+chronische nierschade_0012,few_shot_cot,0.9982511401176453
+chronische nierschade_0012,few_shot_cot_refine,0.0023118075914680958
+chronische nierschade_0012,few_shot_refine,0.9990203380584717
+dementie_0008,cot,0.974080502986908
+dementie_0008,few_shot,0.0008871945319697261
+dementie_0008,few_shot_cot,0.9978064894676208
+dementie_0008,few_shot_cot_refine,0.9972667694091797
+dementie_0008,few_shot_refine,0.04621373116970062
+depressie_0001,cot,0.0007121292874217033
+depressie_0001,few_shot,0.0003503747866488993
+depressie_0001,few_shot_cot,0.012229795946041122
+depressie_0001,few_shot_cot_refine,0.0020734467543661594
+depressie_0001,few_shot_refine,0.4984988645883277
+diabetes_0001,cot,0.9953851103782654
+diabetes_0001,few_shot,0.0006159018375910819
+diabetes_0001,few_shot_cot,0.997723400592804
+diabetes_0001,few_shot_cot_refine,0.0006159018375910819
+diabetes_0001,few_shot_refine,0.0006159018375910819
+diabetes_0004,cot,0.00017520241090096533
+diabetes_0004,few_shot,0.9867204427719116
+diabetes_0004,few_shot_cot,0.986971914768219
+diabetes_0004,few_shot_cot_refine,0.005098531488329172
+diabetes_0004,few_shot_refine,0.001627337303943932
+diabetes_0006,cot,0.0002580643049441278
+diabetes_0006,few_shot,0.4999818921496626
+diabetes_0006,few_shot_cot,0.501060304697603
+diabetes_0006,few_shot_cot_refine,0.7197080453236898
+diabetes_0006,few_shot_refine,0.9980658888816833
+diabetes_0007,cot,0.001359882764518261
+diabetes_0007,few_shot,0.9976425766944885
+diabetes_0007,few_shot_cot,0.9982824921607971
+diabetes_0007,few_shot_cot_refine,0.9976425766944885
+diabetes_0007,few_shot_refine,0.49928724732308183
+diabetes_0008,cot,0.9981649518013
+diabetes_0008,few_shot,0.03388415335211903
+diabetes_0008,few_shot_cot,0.9981649518013
+diabetes_0008,few_shot_cot_refine,0.12186625599861145
+diabetes_0008,few_shot_refine,0.9981649518013
+hand-en-polsklachten_0003,cot,0.0004225269367452711
+hand-en-polsklachten_0003,few_shot,0.9972918629646301
+hand-en-polsklachten_0003,few_shot_cot,0.9945829510688782
+hand-en-polsklachten_0003,few_shot_cot_refine,0.00043710065074265003
+hand-en-polsklachten_0003,few_shot_refine,0.030857376754283905
+hand-en-polsklachten_0004,cot,0.0006457224953919649
+hand-en-polsklachten_0004,few_shot,0.0021206631790846586
+hand-en-polsklachten_0004,few_shot_cot,0.0002830432204063982
+hand-en-polsklachten_0004,few_shot_cot_refine,0.00037006090860813856
+hand-en-polsklachten_0004,few_shot_refine,0.000640945858322084
+hand-en-polsklachten_0007,cot,0.002001798013225198
+hand-en-polsklachten_0007,few_shot,0.0003376991953700781
+hand-en-polsklachten_0007,few_shot_cot,0.5294891335070133
+hand-en-polsklachten_0007,few_shot_cot_refine,0.00018311278836335987
+hand-en-polsklachten_0007,few_shot_refine,0.0005721067427657545
+hand-en-polsklachten_0009,cot,0.001797183882445097
+hand-en-polsklachten_0009,few_shot,0.0016404878406319767
+hand-en-polsklachten_0009,few_shot_cot,0.000889039714820683
+hand-en-polsklachten_0009,few_shot_cot_refine,0.0011807783739641309
+hand-en-polsklachten_0009,few_shot_refine,0.49975494272075593
+hand-en-polsklachten_0012,cot,0.9977952241897583
+hand-en-polsklachten_0012,few_shot,0.49957074983103666
+hand-en-polsklachten_0012,few_shot_cot,0.9984983205795288
+hand-en-polsklachten_0012,few_shot_cot_refine,0.0009462134621571749
+hand-en-polsklachten_0012,few_shot_refine,0.9988742470741272
+hand-en-polsklachten_0027,cot,0.00028091768035665154
+hand-en-polsklachten_0027,few_shot,0.9961244463920593
+hand-en-polsklachten_0027,few_shot_cot,0.9961244463920593
+hand-en-polsklachten_0027,few_shot_cot_refine,0.992592990398407
+hand-en-polsklachten_0027,few_shot_refine,0.007829335576388985
+hand-en-polsklachten_0028,cot,0.161611869931221
+hand-en-polsklachten_0028,few_shot,0.9848114252090454
+hand-en-polsklachten_0028,few_shot_cot,0.9848114252090454
+hand-en-polsklachten_0028,few_shot_cot_refine,0.9902945756912231
+hand-en-polsklachten_0028,few_shot_refine,0.9869944453239441
+hartfalen_0003,cot,0.0006898209103383124
+hartfalen_0003,few_shot,0.4977273286203854
+hartfalen_0003,few_shot_cot,0.0012513482943177223
+hartfalen_0003,few_shot_cot_refine,0.053967710584402084
+hartfalen_0003,few_shot_refine,0.9911853075027466
+influenza_0010,cot,0.9975906610488892
+influenza_0010,few_shot,0.9988238215446472
+influenza_0010,few_shot_cot,0.9975906610488892
+influenza_0010,few_shot_cot_refine,0.9975906610488892
+influenza_0010,few_shot_refine,0.994468092918396
+influenza_0011,cot,0.00024910029605962336
+influenza_0011,few_shot,0.00038389096152968705
+influenza_0011,few_shot_cot,0.0006566481315530837
+influenza_0011,few_shot_cot_refine,0.0002901088446378708
+influenza_0011,few_shot_refine,0.49933571633300744

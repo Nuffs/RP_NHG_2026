@@ -7,16 +7,24 @@ client = OpenAI()
 
 RESULTS_DIR = "factual_benchmark/results"
 
+
 def generate_qa_pairs(scraped_chunks, prompt_config):
     """
-    Generate QA pairs from scraped chunks using OpenAI API.
-    
+    Generate QA pairs from scraped chunks using the OpenAI API.
+
     Args:
-        scraped_chunks (list): List of chunk dictionaries with 'text', 'chunk_id', etc.
-        prompt_config (dict): Prompt configuration with 'model', 'system_prompt', 'prompt_template', 'name'
-    
+        scraped_chunks (list): List of chunk dictionaries with keys such as
+            'text', 'chunk_id', 'doc_id', and 'tokens'.
+        prompt_config (dict): Prompt configuration with keys:
+            - 'model': model id to call
+            - 'system_prompt': system message text
+            - 'prompt_template': template string to format with chunk text
+            - 'name': short name for output filename
+
     Returns:
-        list: List of QA pair dictionaries generated from chunks
+        list: List of QA pair dictionaries generated from chunks. Each dict
+        includes 'chunk_id', 'doc_id', 'section_path', 'source_text',
+        'question', 'answer', and 'prompt_technique'.
     """
     qa_pairs = []
 

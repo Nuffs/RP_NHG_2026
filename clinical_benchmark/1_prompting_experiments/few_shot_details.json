@@ -1,0 +1,730 @@
+[
+  {
+    "query_id": "20a1825f",
+    "query": "De heer Jansen, 67 jaar, komt op uw spreekuur met een bloedglucosewaarde van 18 mmol/L. Hij heeft sinds de afgelopen vijf uur last van braken en voelt zich erg moe. Bij lichamelijk onderzoek observeert u tekenen van dehydratie en verwardheid. Wat is het meest aangewezen beleid voor deze patiënt?",
+    "gt_answer": "Leg onmiddellijk een visite af en overleg met de internist of geriater, waarschijnlijk is een klinische opname noodzakelijk.",
+    "source_span": "Bij braken > 4 uur in combinatie met tekenen van dehydratie, verwardheid of apathie: leg onmiddellijk een visite af. overleg met de internist of geriater, waarschijnlijk is een klinische opname noodzakelijk.",
+    "retrieval_query": "zeer ernstige hyperglykemie beleid braken dehydratie verwardheid",
+    "doc_id": "diabetes",
+    "chunk_id": "diabetes_0001",
+    "section_path": [
+      "Richtlijnen spoed",
+      "Zeer ernstige hyperglykemie"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.0006159018375910819,
+    "nli_hallucination": 0.0004110133450012654,
+    "nli_neutral": 0.9989731311798096,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "57f456c3",
+    "query": "De heer Jansen, 45 jaar, komt op uw spreekuur vanwege aanhoudende somberheid en een gebrek aan energie. Hij heeft deze klachten de afgelopen drie maanden en voelt zich vaak lusteloos. Hij heeft een geschiedenis van lichte depressieve episodes, maar heeft nog nooit medicatie hiervoor gekregen. Hij rookt niet, drinkt af en toe alcohol en werkt fulltime als accountant. Bij de anamnese geeft hij aan dat hij geen voorkeur heeft voor psychotherapie en het liefst medicatie wil starten. U overweegt de start van een antidepressivum. Welk antidepressivum heeft de voorkeur bij deze patiënt?",
+    "gt_answer": "Bij (jong)volwassenen is een van de volgende SSRI’s het middel van eerste keus: citalopram, escitalopram, fluoxetine of sertraline; gezien de voorkeur van de patiënt voor medicatie heeft u één van deze middelen als eerste keus.",
+    "source_span": "Bij (jong)volwassenen is een van de volgende SSRI’s het middel van eerste keus: citalopram, escitalopram, fluoxetine of sertraline.",
+    "retrieval_query": "voorkeursmiddelen antidepressiva bij volwassenen met een depressie",
+    "doc_id": "depressie",
+    "chunk_id": "depressie_0006",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Medicamenteuze behandeling"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "miss",
+    "nli_faithfulness": 0.0009407095494680107,
+    "nli_hallucination": 0.00025280489353463054,
+    "nli_neutral": 0.9988064765930176,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "9d1c29e8",
+    "query": "De heer Jansen, 67 jaar, komt op uw spreekuur met klachten van vermoeidheid en oedeem in de benen. Bij laboratoriumonderzoek blijkt zijn eGFR verlaagd te zijn en zijn albuminurie verhoogd. Hij heeft een voorgeschiedenis van diabetes mellitus en hypertensie, en gebruikt medicatie hiervoor. U overweegt de diagnose chronische nierschade. Wat is het meest aangewezen beleid als u vermoedt dat zijn nierschade progressief is?",
+    "gt_answer": "Verwijs bij progressie van chronische nierschade de internist-nefroloog. Dit is noodzakelijk bij de aanwijzing van progressie.",
+    "source_span": "Verwijs bij progressie van chronische nierschade.",
+    "retrieval_query": "verwijs internist-nefroloog progressie chronische nierschade",
+    "doc_id": "chronische nierschade",
+    "chunk_id": "chronische nierschade_0005",
+    "section_path": [
+      "Richtlijnen diagnostiek",
+      "Evaluatie"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "miss",
+    "nli_faithfulness": 0.04583998175803572,
+    "nli_hallucination": 0.000592679949477315,
+    "nli_neutral": 0.9535673558712006,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "8ec91fcc",
+    "query": "De heer Jansen, 78 jaar, komt op uw spreekuur met klachten van geheugenverlies en desoriëntatie. Hij heeft een voorgeschiedenis van hypertensie en diabetes type 2. Bij lichamelijk onderzoek zijn er geen afwijkingen. U overweegt de diagnose ziekte van Alzheimer. Hij vraagt naar de mogelijkheden van medicatie. U legt hem uit dat cholinesteraseremmers of memantine bij patiënten met de ziekte van Alzheimer niet of weinig effectief zijn, maar wel bijwerkingen kunnen geven. Wat is het beleid als de heer Jansen ondanks uw uitleg toch een proefbehandeling wil?",
+    "gt_answer": "Verwijs de heer Jansen naar een specialist die ervaring heeft met deze middelen, aangezien hij een proefbehandeling wil.",
+    "source_span": "Wanneer de patiënt na deze uitleg aangeeft toch een proefbehandeling te willen, verwijs dan een specialist die ervaring heeft met deze middelen.",
+    "retrieval_query": "behandeling cholinesteraseremmers memantine ziekte van Alzheimer",
+    "doc_id": "dementie",
+    "chunk_id": "dementie_0008",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Medicamenteuze behandeling"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.0008871945319697261,
+    "nli_hallucination": 0.0002274713187944144,
+    "nli_neutral": 0.9988853335380554,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 5,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 5.0
+  },
+  {
+    "query_id": "75fc165d",
+    "query": "De heer Jansen, 68 jaar, komt op uw spreekuur omdat hij de afgelopen weken meer last heeft van kortademigheid bij inspanning en heeft opgezette benen. Hij heeft een voorgeschiedenis van hypertensie en diabetes type 2 en gebruikt hiervoor lisdiuretica en een ACE-remmer. Bij het lichamelijk onderzoek vindt u een verhoogde bloeddruk van 160/95 mmHg, een polsfrequentie van 80/min en een gewichtstoename van 2 kg ten opzichte van de vorige controle. U overweegt dat hij mogelijk een exacerbatie van hartfalen heeft. Wat is het meest aangewezen beleid bij deze patiënt?",
+    "gt_answer": "Bij exacerbaties van hartfalen moet u de dosering van het diureticum gedurende 3 dagen verdubbelen. Dit is het geëigende beleid volgens de richtlijn.",
+    "source_span": "Verdubbel de dosering van het diureticum gedurende 3 dagen.",
+    "retrieval_query": "exacerbatie hartfalen beleid medicatie diuretica",
+    "doc_id": "hartfalen",
+    "chunk_id": "hartfalen_0008",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Controles"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.0005962171999271959,
+    "nli_hallucination": 0.0002796521221171133,
+    "nli_neutral": 0.9991241097450256,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "ff63983b",
+    "query": "Meneer Jansen, 45 jaar, komt met pijn aan de radiale zijde van zijn pols, die hij al drie maanden ervaart. Hij geeft aan dat de pijn toeneemt bij het schrijven en dat hij de pijn aanwijsbaar heeft ter hoogte van de processus styloideus radii. Bij lichamelijk onderzoek merkt u drukpijn op de radiale zijde van de pols en zwelling over het eerste dorsale compartiment. U overweegt een tendovaginitis van De Quervain. Welke test is het meest geschikt om deze diagnose uit te sluiten?",
+    "gt_answer": "Een negatieve test sluit een tendovaginitis van De Quervain goed uit, en de test van Finkelstein is een nuttige optie.",
+    "source_span": "Een negatieve test sluit een tendovaginitis van De Quervain goed uit.",
+    "retrieval_query": "test van Finkelstein tendovaginitis van De Quervain diagnostiek",
+    "doc_id": "hand-en-polsklachten",
+    "chunk_id": "hand-en-polsklachten_0007",
+    "section_path": [
+      "Richtlijnen diagnostiek",
+      "Diagnostiek bij tendovaginitis van De Quervain"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.0003376991953700781,
+    "nli_hallucination": 0.00027640332700684667,
+    "nli_neutral": 0.9993858337402344,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 4,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.6
+  },
+  {
+    "query_id": "a52150ba",
+    "query": "De heer Jansen, 68 jaar, komt op uw spreekuur met toenemende kortademigheid en een aanhoudende hoest die hij de afgelopen weken heeft. Hij heeft een voorgeschiedenis van COPD en rookt niet meer sinds twee jaar. Bij lichamelijk onderzoek vindt u een verhoogde ademhalingsfrequentie en een lichte cyanose. U overweegt een controleafspraak in te plannen. Wanneer moet u de heer Jansen instrueren om contact op te nemen?",
+    "gt_answer": "U moet de patiënt instrueren contact op te nemen bij toenemende klachten of achteruitgang kortademigheid/benauwdheid.",
+    "source_span": "Instrueer de patiënt in ieder geval contact op te nemen bij: toenemende klachten of achteruitgang kortademigheid/benauwdheid.",
+    "retrieval_query": "controle afspraak toenemende klachten kortademigheid COPD",
+    "doc_id": "influenza",
+    "chunk_id": "influenza_0010",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Controle"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "miss",
+    "nli_faithfulness": 0.9988238215446472,
+    "nli_hallucination": 0.00016620103269815445,
+    "nli_neutral": 0.0010099351638928056,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "5e644004",
+    "query": "De heer Jansen, 65 jaar, komt op uw spreekuur voor controle van zijn diabetes mellitus type 2. Hij heeft een voorgeschiedenis van hypertensie en rookt niet. Bij het voetonderzoek heeft hij kleurstandsafwijkingen aan beide voeten en meldt hij dat hij soms een doof gevoel in zijn tenen ervaart. U overweegt een risicoclassificatie voor een diabetische voet. Welk aanvullend onderzoek is noodzakelijk om de protectieve sensibiliteit te beoordelen?",
+    "gt_answer": "Onderzoek de protectieve sensibiliteit met een 10 g Semmes-Weinsteinmonofilament op 3 plaatsen onder de voet: hallux, MTP-1, MTP-5.",
+    "source_span": "Onderzoek de protectieve sensibiliteit met een 10 g semmes-weinsteinmonofilament op 3 plaatsen onder de voet: hallux MTP-1 MTP-5.",
+    "retrieval_query": "onderzoek protectieve sensibiliteit diabetische voet Semmes-Weinsteinmonofilament",
+    "doc_id": "diabetes",
+    "chunk_id": "diabetes_0004",
+    "section_path": [
+      "Richtlijnen diagnostiek",
+      "Risico-inventarisatie"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "miss",
+    "nli_faithfulness": 0.9867204427719116,
+    "nli_hallucination": 0.000604266591835767,
+    "nli_neutral": 0.01267529372125864,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "16d95e4a",
+    "query": "De heer Jansen, 45 jaar, komt op uw spreekuur met een aanhoudende hoest en kortademigheid bij inspanning. Hij heeft al meer dan een jaar deze klachten, die lijken te verergeren, vooral 's nachts. Hij rookt niet en heeft geen significante medische voorgeschiedenis. Bij de anamnese geeft hij aan dat hij denkt dat zijn astma goed onder controle is, maar bij het invullen van de ACQ-vragenlijst komt hij uit op een score van 2,5. Wat is het meest aangewezen beleid voor deze patiënt?",
+    "gt_answer": "Maak bij blijvend onvoldoende astmacontrole afspraken over haalbare (persoonlijke) behandeldoelen. Aangezien de score op de ACQ wijst op onvoldoende controle, is het belangrijk om het beleid aan te passen.",
+    "source_span": "Maak bij blijvend onvoldoende astmacontrole afspraken over haalbare (persoonlijke) behandeldoelen.",
+    "retrieval_query": "astma beleid persoonlijke behandeldoelen ACQ score",
+    "doc_id": "astma_bij_volwassenen",
+    "chunk_id": "astma_bij_volwassenen_0005",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Behandeldoel"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.4985436904244125,
+    "nli_hallucination": 0.0003656996923382394,
+    "nli_neutral": 0.5010906476527452,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 4,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.6
+  },
+  {
+    "query_id": "76ba0d4e",
+    "query": "De heer Jansen, 65 jaar, komt op uw spreekuur met klachten van toenemende kortademigheid bij inspanning en een aanhoudende hoest die al enkele maanden aanhoudt. Hij rookt al 40 jaar, een pakje per dag. Bij lichamelijk onderzoek zijn er geen afwijkingen te horen bij auscultatie van de longen. U overweegt de mogelijkheid van COPD. Welke diagnostische procedure is het meest aangewezen om obstructie aan te tonen of uit te sluiten?",
+    "gt_answer": "Verricht diagnostische spirometrie bij patiënten met aanwijzingen voor COPD om na te gaan of er obstructie is en zo ja, om de ernst en de reversibiliteit hiervan te bepalen.",
+    "source_span": "Verricht diagnostische spirometrie bij patiënten met aanwijzingen voor COPD.",
+    "retrieval_query": "diagnostische spirometrie COPD obstructie aantonen",
+    "doc_id": "COPD",
+    "chunk_id": "COPD_0003",
+    "section_path": [
+      "Richtlijnen diagnostiek",
+      "Aanvullend onderzoek"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.000417459785239771,
+    "nli_hallucination": 0.0003212974697817117,
+    "nli_neutral": 0.9992613196372986,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "84aaa231",
+    "query": "Meneer Jansen, 58 jaar, komt op uw spreekuur met pijnklachten in de duim bij het uitvoeren van wringende bewegingen, zoals het openen van een fles. Hij geeft aan dat de pijn al enkele maanden aanhoudt en dat hij moeite heeft met het uitvoeren van dagelijkse activiteiten. Bij de anamnese blijkt dat hij geen ochtendstijfheid heeft, maar wel pijn en crepitaties voelt tijdens het bewegen van de duim. Wat is de meest waarschijnlijke diagnose?",
+    "gt_answer": "De meest waarschijnlijke diagnose is handartrose, gezien zijn leeftijd (> 45 jaar), pijn tijdens bewegen in het CMC1-gewricht en de afwezigheid van langdurige stijfheid.",
+    "source_span": "Stel de diagnose ‘handartrose’ op basis van anamnese en lichamelijk onderzoek bij: leeftijd > 45 jaar, geen of kortdurende stijfheid (< 30 minuten) bij bewegen in de ochtend of na een periode van rust, pijn (en crepitaties) tijdens bewegen in een of meer hand- en polsgewrichten.",
+    "retrieval_query": "diagnose handartrose bij pijn in de duim",
+    "doc_id": "hand-en-polsklachten",
+    "chunk_id": "hand-en-polsklachten_0004",
+    "section_path": [
+      "Richtlijnen diagnostiek",
+      "Diagnostiek bij handartrose"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "miss",
+    "nli_faithfulness": 0.0021206631790846586,
+    "nli_hallucination": 0.0003967497614212334,
+    "nli_neutral": 0.9974825978279114,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 4,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.6
+  },
+  {
+    "query_id": "5be87591",
+    "query": "De heer Jansen, 45 jaar, komt op uw spreekuur met aanhoudende astmaklachten ondanks het gebruik van een inhalatiecorticosteroïde. Hij heeft een voorgeschiedenis van allergische rinitis en gebruikt daarnaast dagelijks een antihistaminicum. Tijdens het gesprek uit hij zorgen over het gebruik van extra medicatie en vraagt naar de effectiviteit van bètablokkers in combinatie met zijn astma. U overweegt de behandeling te optimaliseren. Welke medicamenteuze behandeling heeft de voorkeur?",
+    "gt_answer": "Bij licht of matig ernstig astma veroorzaken bèta-1-selectieve bètablokkers op korte termijn geen respiratoire bijwerkingen, waardoor ze veilig kunnen worden overwogen in deze situatie.",
+    "source_span": "Bij licht of matig ernstig astma veroorzaken bèta-1-selectieve bètablokkers op korte termijn geen respiratoire bijwerkingen.",
+    "retrieval_query": "bètablokkers astma behandeling veilig gebruik",
+    "doc_id": "astma_bij_volwassenen",
+    "chunk_id": "astma_bij_volwassenen_0009",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Overige geneesmiddelen bij astma"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.0010315760737285018,
+    "nli_hallucination": 0.00019886500376742333,
+    "nli_neutral": 0.9987695813179016,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 4,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.6
+  },
+  {
+    "query_id": "43befdce",
+    "query": "Meneer Jansen, 75 jaar, komt bij u op het spreekuur met koorts, hoest en toenemende kortademigheid. Hij heeft een voorgeschiedenis van COPD en is recent behandeld voor een longontsteking. Bij lichamelijk onderzoek vindt u een verhoogde ademhalingsfrequentie en een saturatie van 90% op lucht. U overweegt een ernstige longinfectie. Bij welke omstandigheden overweegt u een verwijzing naar de internist, longarts of geriater?",
+    "gt_answer": "Verwijs een ernstig zieke patiënt de internist, longarts of geriater voor beoordeling, vooral bij toenemende of persisterende klachten.",
+    "source_span": "Verwijs een ernstig zieke patiënt de internist, longarts of geriater voor beoordeling.",
+    "retrieval_query": "verwijzing ernstig zieke patiënt internist longarts geriater klachten",
+    "doc_id": "influenza",
+    "chunk_id": "influenza_0011",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Consultatie en verwijzing"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.00038389096152968705,
+    "nli_hallucination": 0.0002851238823495805,
+    "nli_neutral": 0.9993311166763306,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 4,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.6
+  },
+  {
+    "query_id": "36014730",
+    "query": "Meneer Jansen, 45 jaar, komt op uw spreekuur met pijn aan de duim aan de zijde van de pols. De klachten bestaan al 8 weken en verergeren bij het uitvoeren van dagelijkse activiteiten, zoals het tillen van voorwerpen. Hij is een actieve bouwer en vraagt zich af of hij moet stoppen met zijn werkzaamheden. Bij onderzoek merkt u dat de pijn toeneemt bij het bewegen van de duim en pols. U overweegt de diagnose tendovaginitis van De Quervain. Wat is het meest aangewezen beleid voor deze patiënt?",
+    "gt_answer": "Overweeg een spalkbehandeling of een corticosteroïdinjectie bij patiënten bij wie klachten > circa 6 weken bestaan en afwachtend beleid geen effect heeft.",
+    "source_span": "Overweeg een spalkbehandeling of een corticosteroïdinjectie bij patiënten bij wie klachten > circa 6 weken bestaan en afwachtend beleid geen effect heeft.",
+    "retrieval_query": "tendovaginitis van De Quervain spalkbehandeling corticosteroïdinjectie beleid",
+    "doc_id": "hand-en-polsklachten",
+    "chunk_id": "hand-en-polsklachten_0027",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Beleid bij tendovaginitis van De Quervain"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.9961244463920593,
+    "nli_hallucination": 0.00044948732829652727,
+    "nli_neutral": 0.003426114795729518,
+    "llm_judge_details": {
+      "correctness": 4,
+      "guideline_adherence": 3,
+      "reasoning": 3,
+      "safety": 4,
+      "non_hallucination": 5
+    },
+    "llm_judge": 3.8
+  },
+  {
+    "query_id": "1a809e6c",
+    "query": "De heer Jansen, 68 jaar, komt op uw spreekuur met klachten van kortademigheid bij inspanning en lichte oedeem in zijn benen. Hij heeft een voorgeschiedenis van hypertensie en is momenteel medicatie aan het gebruiken voor hoge bloeddruk. Bij lichamelijk onderzoek constateert u een lichte verhoogde bloeddruk en oedeem van de enkels. U overweegt hartfalen als mogelijke diagnose. Welk aanvullend onderzoek is het meest aangewezen bij deze patiënt?",
+    "gt_answer": "Aanvullend onderzoek bij een vermoeden van hartfalen bestaat uit bepaling van het (NT-pro)BNP en een ecg. Dit is de aanbevolen werkwijze volgens de richtlijn.",
+    "source_span": "Aanvullend onderzoek bij een vermoeden van hartfalen bestaat uit bepaling van het (NT-pro)BNP en een ecg.",
+    "retrieval_query": "aanvullend onderzoek hartfalen NT-proBNP ecg",
+    "doc_id": "hartfalen",
+    "chunk_id": "hartfalen_0003",
+    "section_path": [
+      "Richtlijnen diagnostiek",
+      "Aanvullend onderzoek"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "miss",
+    "nli_faithfulness": 0.4977273286203854,
+    "nli_hallucination": 0.00038193945511011407,
+    "nli_neutral": 0.501890734070912,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "fe6e66b5",
+    "query": "De heer Jansen, 45 jaar, komt bij u op het spreekuur met een zwelling aan de dorsale zijde van zijn pols, die hij de afgelopen twee maanden heeft opgemerkt. Hij beschrijft de zwelling als pijnloos, maar hij maakt zich zorgen over de mogelijkheid van een kwaadaardige aandoening. Bij lichamelijk onderzoek voelt u een gladde en vast-elastische zwelling, die gefixeerd is aan de onderlaag. U overweegt de diagnose ganglion. Wat is de meest waarschijnlijke diagnose?",
+    "gt_answer": "De diagnose ‘ganglion’ kan op basis van anamnese en lichamelijk onderzoek goed gesteld worden.",
+    "source_span": "De diagnose ‘ganglion’ kan op basis van anamnese en lichamelijk onderzoek goed gesteld worden.",
+    "retrieval_query": "diagnose ganglion anamnese lichamelijk onderzoek",
+    "doc_id": "hand-en-polsklachten",
+    "chunk_id": "hand-en-polsklachten_0003",
+    "section_path": [
+      "Richtlijnen diagnostiek",
+      "Diagnostiek bij ganglion"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.9972918629646301,
+    "nli_hallucination": 0.0001850187691161409,
+    "nli_neutral": 0.0025231624022126198,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 4,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.6
+  },
+  {
+    "query_id": "187b8f1b",
+    "query": "Jeroen van Dijk, 35 jaar, komt op uw spreekuur met klachten van kortademigheid bij inspanning en piepende ademhaling. Hij heeft deze klachten al drie maanden en gebruikt af en toe een inhalator met salbutamol. Hij rookt niet en heeft een actieve levensstijl. Bij de anamnese vertelt hij dat hij meer dan twee keer per week salbutamol nodig heeft voor dyspneu. Bij lichamelijk onderzoek zijn er geen afwijkingen te vinden. U overweegt de behandeling van zijn astma. Wat is de meest aangewezen stap in de medicamenteuze behandeling?",
+    "gt_answer": "Gezien het gebruik van salbutamol meer dan twee keer per week, wijst dit op onvoldoende astmacontrole en dient u in samenspraak met de patiënt een volgende stap te overwegen in de behandeling.",
+    "source_span": "Gebruik > 2/week wijst op onvoldoende astmacontrole.",
+    "retrieval_query": "astma onvoldoende controle salbutamol behandeling",
+    "doc_id": "astma_bij_volwassenen",
+    "chunk_id": "astma_bij_volwassenen_0008",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Stappenplan medicamenteuze behandeling astma"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.00030029640765860677,
+    "nli_hallucination": 0.0002354254393139854,
+    "nli_neutral": 0.9994643330574036,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 4,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.6
+  },
+  {
+    "query_id": "b0a95f1d",
+    "query": "Dhr. Jansen, 34 jaar, komt op uw spreekuur na een val op zijn hand tijdens het skateboarden. Hij heeft pijn in zijn rechterpols, die inmiddels 2 dagen aanhoudt. Bij lichamelijk onderzoek vindt u zwelling en beperkte beweging van de pols, maar geen duidelijke misvorming. U vermoedt een mogelijke fractuur. Wat is het meest aangewezen beleid in deze situatie?",
+    "gt_answer": "Verwijs, gezien het risico op blijvende schade, altijd bij acuut letsel met een vermoeden van: pees- of zenuwletsel intra-articulaire fracturen (sub)luxaties skiduim jersey finger.",
+    "source_span": "Verwijs, gezien het risico op blijvende schade, altijd bij acuut letsel met een vermoeden van: pees- of zenuwletsel intra-articulaire fracturen (sub)luxaties skiduim jersey finger.",
+    "retrieval_query": "verwijzing acuut letsel fractuur pols hand",
+    "doc_id": "hand-en-polsklachten",
+    "chunk_id": "hand-en-polsklachten_0028",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Beleid bij traumatische klachten"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "miss",
+    "nli_faithfulness": 0.9848114252090454,
+    "nli_hallucination": 0.0012231969740241766,
+    "nli_neutral": 0.013965451158583164,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "06fd5cdb",
+    "query": "De heer Jansen, 68 jaar, komt op uw spreekuur voor controle van zijn diabetes mellitus type 2. Bij de laatste controle was zijn HbA1c 58 mmol/mol. Hij heeft een geschiedenis van hypertensie en is een actieve roker. Hij heeft geen hart- of vaatziekten doorgemaakt en zijn eGFR is 70 ml/min/1,73 m2. Wat is het meest aangewezen beleid met betrekking tot zijn medicamenteuze behandeling voor diabetes?",
+    "gt_answer": "Start met bloedglucoseverlagende medicatie, aangezien het HbA1c > 53 mmol/mol is en niet gelukt is om dit met niet-medicamenteuze behandeling te bereiken. Dit is de richtlijn.",
+    "source_span": "Start met bloedglucoseverlagende medicatie indien het niet lukt om met niet-medicamenteuze behandeling een HbA1c van ≤ 53 mmol/mol te bereiken binnen enkele maanden.",
+    "retrieval_query": "medicamenteuze behandeling diabetes HbA1c beleid",
+    "doc_id": "diabetes",
+    "chunk_id": "diabetes_0008",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Medicamenteuze behandeling"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.03388415335211903,
+    "nli_hallucination": 0.4328531523933634,
+    "nli_neutral": 0.5332626923918724,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 4,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.6
+  },
+  {
+    "query_id": "74d94a09",
+    "query": "Meneer Jansen, 45 jaar, bezoekt uw praktijk omdat hij de afgelopen maand zich vaak somber en hopeloos heeft gevoeld. Hij heeft ook weinig interesse in zijn hobby's en heeft moeite om zijn dagelijkse taken uit te voeren. Tijdens het gesprek geeft hij aan dat hij graag hulp zou willen. Wat is de volgende stap die u moet ondernemen om zijn klachten verder te verkennen?",
+    "gt_answer": "U dient de klachten verder te verkennen, aangezien de patiënt bevestigend heeft geantwoord op de screeningvragen en aangeeft hulp te willen hebben.",
+    "source_span": "Als de patiënt deze vraag bevestigend beantwoordt, is er reden om de klachten verder te verkennen.",
+    "retrieval_query": "verkennen van depressieve klachten hulpbehoefte screening",
+    "doc_id": "depressie",
+    "chunk_id": "depressie_0001",
+    "section_path": [
+      "Richtlijnen diagnostiek",
+      "Anamnese"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.0003503747866488993,
+    "nli_hallucination": 0.0001915633911266923,
+    "nli_neutral": 0.9994580149650574,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 5,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 5.0
+  },
+  {
+    "query_id": "fba55f0f",
+    "query": "De heer Janssen, 58 jaar, komt op uw spreekuur voor controle van zijn diabetes type 2. Hij heeft een BMI van 31 en meldt dat hij moeite heeft met afvallen en zich niet gemotiveerd voelt om meer te bewegen. Hij rookt 15 sigaretten per dag en heeft geen andere relevante medische voorgeschiedenis. U overweegt om hem leefstijladviezen te geven. Welke interventie is het meest aangewezen om hem te ondersteunen bij het verbeteren van zijn leefstijl?",
+    "gt_answer": "Overweeg een combinatiebehandeling van een beweeg- en dieetinterventie als de patiënt gemotiveerd is en zijn gezondheid het toelaat.",
+    "source_span": "Overweeg een combinatiebehandeling van een beweeg- en dieetinterventie als de patiënt gemotiveerd is en zijn gezondheid het toelaat.",
+    "retrieval_query": "leefstijlinterventie diabetes type 2 bewegen dieet",
+    "doc_id": "diabetes",
+    "chunk_id": "diabetes_0007",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Niet-medicamenteuze adviezen"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.9976425766944885,
+    "nli_hallucination": 0.00013318292621988803,
+    "nli_neutral": 0.0022242418490350246,
+    "llm_judge_details": {
+      "correctness": 4,
+      "guideline_adherence": 3,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.2
+  },
+  {
+    "query_id": "21ddca07",
+    "query": "De heer Jansen, 68 jaar, komt op uw spreekuur voor zijn jaarlijkse controle. Bij het laboratoriumonderzoek blijkt zijn eGFR 28 ml/min/1,73 m2 te zijn. Hij heeft een voorgeschiedenis van hypertensie en is in behandeling met lisdiuretica. Hij voelt zich verder niet ziek, maar maakt zich zorgen over zijn nierfunctie. Wat is het meest aangewezen beleid in deze situatie?",
+    "gt_answer": "Overweeg directe verwijzing de internist-nefroloog bij een eGFR < 30 ml/min/1,73 m2, vooral bij een zieke patiënt.",
+    "source_span": "Overweeg directe verwijzing de internist-nefroloog bij een eGFR < 30 ml/min/1,73 m 2 , vooral bij een zieke patiënt.",
+    "retrieval_query": "verwijzing internist-nefroloog eGFR < 30 ml/min/1,73 m2",
+    "doc_id": "chronische nierschade",
+    "chunk_id": "chronische nierschade_0003",
+    "section_path": [
+      "Richtlijnen diagnostiek",
+      "Aanvullend onderzoek"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.9946850538253784,
+    "nli_hallucination": 0.00033810012973845005,
+    "nli_neutral": 0.004976845812052488,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "455f3a29",
+    "query": "De heer Jansen, 65 jaar, komt op uw spreekuur voor controle van zijn chronische nierschade. Hij heeft diabetes mellitus type 2 en een eGFR van 25 ml/min/1,73 m2. Bij de labuitslagen blijkt hij een serumkaliumgehalte van 6,2 mmol/L te hebben. Hij maakt zich zorgen over de gevolgen van deze hyperkaliëmie en vraagt wat er moet gebeuren. Wat is het meest aangewezen beleid bij een serumkaliumgehalte > 5,5 mmol/L?",
+    "gt_answer": "Overleg bij een serumkaliumgehalte > 5,5 mmol/L over het te volgen beleid met de internist-nefroloog.",
+    "source_span": "Overleg bij een serumkaliumgehalte > 5,5 mmol/L over het te volgen beleid met de internist-nefroloog.",
+    "retrieval_query": "hyperkaliëmie chronische nierschade beleid internist-nefroloog",
+    "doc_id": "chronische nierschade",
+    "chunk_id": "chronische nierschade_0012",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Metabole complicaties"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.9940411448478699,
+    "nli_hallucination": 0.0005921326810494065,
+    "nli_neutral": 0.005366723984479904,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "684754ae",
+    "query": "De heer Jansen, 45 jaar, komt bij u op het spreekuur met pijn en zwelling van zijn duim. Hij heeft al enkele maanden last van deze klachten, vooral bij het uitvoeren van handelingen zoals schrijven en openen van potjes. Na lichamelijk onderzoek concludeert u dat er sprake is van een tendovaginitis van De Quervain. U overweegt een behandeling met corticosteroïden. Welk medicament heeft de voorkeur voor de injectie?",
+    "gt_answer": "Een corticosteroïdinjectie is een van de behandelopties voor tendovaginitis van De Quervain, maar de keuze van het specifieke corticosteroïd kan variëren. Dit is gebaseerd op de richtlijn.",
+    "source_span": "In deze standaard is een corticosteroïdinjectie een van de behandelopties voor CTS, triggervinger en tendovaginitis van De Quervain (zwakke aanbevelingen).",
+    "retrieval_query": "corticosteroïdinjectie behandeling tendovaginitis van De Quervain",
+    "doc_id": "hand-en-polsklachten",
+    "chunk_id": "hand-en-polsklachten_0012",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Inleiding"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.49957074983103666,
+    "nli_hallucination": 0.0002291402342962101,
+    "nli_neutral": 0.500200086273253,
+    "llm_judge_details": {
+      "correctness": 3,
+      "guideline_adherence": 2,
+      "reasoning": 3,
+      "safety": 4,
+      "non_hallucination": 4
+    },
+    "llm_judge": 3.2
+  },
+  {
+    "query_id": "d09c5e03",
+    "query": "De heer Jansen, 58 jaar, komt op uw spreekuur voor een controle van zijn diabetes type 2. Hij heeft de diagnose al vijf jaar en gebruikt metformine. Tijdens het gesprek geeft hij aan dat hij moeite heeft om zijn bloedsuikerwaarden goed te houden en dat hij zich vaak moe voelt. U overweegt hem voor te lichten over leefstijlverandering en het belang van zelfmanagement. Welke aanpak is het meest aangewezen om de heer Jansen te ondersteunen in zijn zelfmanagement?",
+    "gt_answer": "Probeer ervoor te zorgen dat de patiënt zijn eigen doelen formuleert. Dit is essentieel voor effectieve educatie en gedragsverandering.",
+    "source_span": "Probeer ervoor te zorgen dat de patiënt zijn eigen doelen formuleert.",
+    "retrieval_query": "voorlichting zelfmanagement diabetes type 2 leefstijl",
+    "doc_id": "diabetes",
+    "chunk_id": "diabetes_0006",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Voorlichting en advies"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.4999818921496626,
+    "nli_hallucination": 0.00013425893121166155,
+    "nli_neutral": 0.4998838258034084,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  },
+  {
+    "query_id": "27e82197",
+    "query": "De heer Jansen, 34 jaar, komt op uw spreekuur na een val tijdens het snowboarden. Hij heeft pijn aan zijn rechterpols en kan zijn duim niet goed gebruiken. Bij lichamelijk onderzoek constateert u drukpijn over de ulnaire zijde van het MCP1-gewricht en zwakte bij knijpen met de duim. U overweegt een skiduim. Welk aanvullend onderzoek is het meest aangewezen om de diagnose te bevestigen?",
+    "gt_answer": "Bij vermoeden van een skiduim is het belangrijk om röntgenfoto’s te laten maken om ossaal letsel uit te sluiten. Dit is de aangewezen methode volgens de richtlijn.",
+    "source_span": "Laat röntgenfoto’s maken bij vermoeden van ossaal letsel.",
+    "retrieval_query": "skiduim röntgenfoto aanvullend onderzoek letsel",
+    "doc_id": "hand-en-polsklachten",
+    "chunk_id": "hand-en-polsklachten_0009",
+    "section_path": [
+      "Richtlijnen diagnostiek",
+      "Diagnostiek bij traumatische klachten"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "miss",
+    "nli_faithfulness": 0.0016404878406319767,
+    "nli_hallucination": 0.0010440058686072007,
+    "nli_neutral": 0.9973154962062836,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 4,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.6
+  },
+  {
+    "query_id": "2d9b942a",
+    "query": "De heer Jansen, 64 jaar, komt op uw spreekuur voor controle van zijn diabetes mellitus type 2. Hij gebruikt metformine en gliclazide. Zijn HbA1c bedraagt 8,2% (66 mmol/mol) en hij heeft de laatste tijd klachten van vermoeidheid en frequent urineren. Hij is een ex-roker, BMI is 32. U overweegt verdere medicamenteuze behandeling. Welk medicament heeft de voorkeur in deze situatie?",
+    "gt_answer": "Gliclazide heeft de voorkeur vanwege het lagere risico op ernstige hypoglykemieën in vergelijking met de andere SU-derivaten. Dit is belangrijk gezien zijn huidige medicatie en klachten.",
+    "source_span": "Gliclazide heeft de voorkeur vanwege het lagere risico op ernstige hypoglykemieën in vergelijking met de andere SU-derivaten.",
+    "retrieval_query": "gliclazide voorkeur SU-derivaten diabetes mellitus type 2",
+    "doc_id": "diabetes",
+    "chunk_id": "diabetes_0009",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Afbeelding1.png"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "miss",
+    "nli_faithfulness": 0.49809933503274806,
+    "nli_hallucination": 0.0002198339716414921,
+    "nli_neutral": 0.5016808081418276,
+    "llm_judge_details": {
+      "correctness": 4,
+      "guideline_adherence": 3,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 4
+    },
+    "llm_judge": 4.0
+  },
+  {
+    "query_id": "82378400",
+    "query": "Mevrouw Jansen, 28 jaar, is 26 weken zwanger en komt op uw spreekuur met ademhalingsproblemen en een recente longaanval. Ze gebruikt momenteel salbutamol en vraagt zich af of het veilig is om deze medicatie voort te zetten of dat ze moet stoppen uit angst voor bijwerkingen voor haar ongeboren kind. Wat is uw advies over de medicamenteuze behandeling van astma tijdens de zwangerschap?",
+    "gt_answer": "Goede astmacontrole met medicamenteuze behandeling tijdens de zwangerschap is veiliger en geeft minder complicaties dan het accepteren van astmaklachten en longaanvallen door het staken van medicatie uit zorg over bijwerkingen voor het kind.",
+    "source_span": "Goede astmacontrole met medicamenteuze behandeling tijdens de zwangerschap is veiliger en geeft minder complicaties dan het accepteren van astmaklachten en longaanvallen door het staken van medicatie uit zorg over bijwerkingen voor het kind.",
+    "retrieval_query": "astma zwangerschap medicamenteuze behandeling veiligheid bijwerkingen",
+    "doc_id": "astma_bij_volwassenen",
+    "chunk_id": "astma_bij_volwassenen_0010",
+    "section_path": [
+      "Richtlijnen beleid",
+      "Zwangerschap en borstvoeding"
+    ],
+    "strategy": "few_shot",
+    "round_trip_probe": "grounded_but_retrieval_miss",
+    "nli_faithfulness": 0.9960412979125977,
+    "nli_hallucination": 0.00016778078861534595,
+    "nli_neutral": 0.0037909187376499176,
+    "llm_judge_details": {
+      "correctness": 5,
+      "guideline_adherence": 5,
+      "reasoning": 4,
+      "safety": 5,
+      "non_hallucination": 5
+    },
+    "llm_judge": 4.8
+  }
+]

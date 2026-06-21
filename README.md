@@ -8,12 +8,13 @@ This work is part of the Research Project course 2025/2026 at TU Delft.
 ## Project structure
 
 ```
-scraping/           — NHG guideline scrapers (Selenium + BeautifulSoup)
-pipeline/           — RAG retrieval pipeline (vector, BM25, combined RRF)
-factual_benchmark/  — Factual QA benchmark for the RAG pipeline
-clinical_QA/        — Clinical QA benchmark for the RAG pipeline
-data/               — Scraped NHG guidelines (JSONL)
-ragchecker/         — RAGChecker evaluation framework
+scraping/            — NHG guideline scrapers (Selenium + BeautifulSoup)
+pipeline/            — RAG retrieval pipeline (vector, BM25, combined RRF)
+factual_benchmark/   — Factual QA benchmark for the RAG pipeline
+clinical_benchmark/  — Clinical QA benchmark for the RAG pipeline
+model_benchmarking/  — Multi-LLM benchmarking over the RAG pipeline (factual + clinical)
+data/                — Scraped NHG guidelines (JSONL)
+ragchecker/          — RAGChecker evaluation framework
 ```
 
 Each module is self-contained and can be run independently. Intermediate outputs are checkpointed as JSON/JSONL files.
@@ -34,6 +35,9 @@ Create a `.env` file at the repo root:
 ```
 OPENAI_API_KEY=sk-...
 QDRANT_URL=http://localhost:6333
+GEMINI_API_KEY=...        # query embeddings for vector retrieval
+ANTHROPIC_API_KEY=...     # required for model_benchmarking (Claude)
+# Additional provider keys (Moonshot, DeepSeek, Z.ai) for model_benchmarking
 ```
 
 ---
@@ -64,6 +68,29 @@ python factual_benchmark/run_ragchecker.py
 
 Final factual qa benchmark dataset: `factual_benchmark/results/qa_final_dataset.json`
 
+**Model benchmarking** (compares 6 LLMs over the RAG pipeline on both the factual and clinical QA sets)
+
+```bash
+python model_benchmarking/run_models_factual.py    # factual set  (qa_final_dataset.json)
+python model_benchmarking/run_models_clinical.py   # clinical set (qa_subset_200.json)
+python model_benchmarking/generate_plots.py        # aggregate metrics + plots + LaTeX table
+```
+
+Models benchmarked: `gpt-5.5`, `gpt-5.4`, `claude-opus-4-7`, `kimi-k2.6`, `deepseek-v4-pro`, `glm-5.1`.
+
+Each runner retrieves context via the vector pipeline (`pipeline/new_query_vector.py`), queries every
+model concurrently, and incrementally checkpoints results so interrupted runs can resume:
+
+```
+model_benchmarking/datasets/                 — benchmark input datasets (factual + clinical)
+model_benchmarking/results/factual/          — per-model answers, metrics.csv/xlsx, RAGChecker output
+model_benchmarking/results/clinical/         — same layout for the clinical set
+model_benchmarking/plots/                    — efficiency, factual-vs-clinical, and RAG safety plots
+```
+
+Per-question metrics captured: latency, input/output/reasoning tokens, cost (USD), and inference
+speed (tokens/s). RAGChecker scores (F1, faithfulness, context precision/utilization) are produced
+per model under each `results/.../ragchecker/` folder.
 
 ---
 
@@ -87,7 +114,7 @@ Scraped guidelines are stored as JSONL in `data/`. Each line:
 
 ## Dependencies
 
-Key packages: `selenium`, `beautifulsoup4`, `spacy`, `transformers`, `BERTScore`, `ragchecker`, `qdrant-client`, `openai`. See `requirements.txt` for the full pinned list.
+Key packages: `selenium`, `beautifulsoup4`, `spacy`, `transformers`, `BERTScore`, `ragchecker`, `qdrant-client`, `openai`, `anthropic`, `google-genai`, `tenacity`, `pandas`, `matplotlib`, `seaborn`. See `requirements.txt` for the full pinned list.
 
 ---
 
